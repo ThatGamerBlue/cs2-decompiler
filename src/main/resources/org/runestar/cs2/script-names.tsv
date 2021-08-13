@@ -1396,6 +1396,7 @@
 1763	785
 1764	1041
 1765	1297
+1766	[clientscript,helper_agility_highlight_obstacles]
 1767	1809
 1768	2065
 1769	2321
@@ -1483,6 +1484,7 @@
 1851	784
 1852	1040
 1853	1296
+1854	[proc,helper_agility_highlight_obstacles]
 1855	1808
 1856	2064
 1857	2320
@@ -3016,6 +3018,7 @@
 3898	[proc,settings_zoom_slider_specific_pos]
 3899	[proc,settings_camera_do_zoom]
 3900	[proc,settings_zoom_position_slider]
+3901	[clientscript,settings_zoom_trans_timer]
 3902	[proc,settings_button_choose_transmit]
 3903	[clientscript,settings_button_init]
 3904	[clientscript,settings_button_repeat]
@@ -3173,6 +3176,7 @@
 4125	[clientscript,side_container_init]
 4126	[clientscript,side_container_reload]
 4127	[proc,side_container_reload]
+4130	[clientscript,stat_boosts_hud_init]
 4131	[proc,magic_spellbook_unlocked]
 4133	[proc,arceuus_autocast_spellpos]
 4141	[clientscript,tutorial_displayname_onkey]
@@ -3408,6 +3412,8 @@
 4508	[proc,hex_string_to_int]
 4511	[proc,ancient_autocast_spellpos]
 4512	[proc,standard_autocast_spellpos]
+4513	[clientscript,stat_boosts_hud_update_enabled]
+4514	[clientscript,stat_boosts_hud_update_displays]
 4561	[proc,welcome_screen_toggle]
 4564	[clientscript,settings_player_attack_options]
 4565	[clientscript,settings_npc_attack_options]
@@ -3436,6 +3442,7 @@
 4595	[proc,settings_buff_teleblock]
 4618	[clientscript,antidrag_toggle]
 4619	[proc,antidrag_toggle]
+4624	[proc,test_setup_highlights]
 4649	[clientscript,chattimestamp]
 4651	[proc,mescoord]
 4652	[clientscript,client_type_mes]
@@ -3485,6 +3492,10 @@
 4713	[proc,helper_generic_set_string]
 4714	[proc,helper_generic_get_string]
 4715	[clientscript,helper_new_toplevel]
+4716	[clientscript,health_regen_timer]
+4718	[proc,health_regen_timer]
+4721	[clientscript,spec_regen_timer]
+4723	[proc,spec_regen_timer]
 4727	[proc,mouseover_text]
 4728	[proc,mouseover_tooltip]
 4744	[clientscript,highlight_npc_on]
