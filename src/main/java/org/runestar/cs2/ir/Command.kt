@@ -8,6 +8,7 @@ import org.runestar.cs2.ir.COORD as _COORD
 import org.runestar.cs2.ir.CLIENTTYPE as _CLIENTTYPE
 import org.runestar.cs2.ir.ENUM as _ENUM
 import org.runestar.cs2.ir.MES as _MES
+import org.runestar.cs2.ir.PLATFORMTYPE as _PLATFORMTYPE
 import org.runestar.cs2.ir.STAT as _STAT
 import org.runestar.cs2.bin.string
 import org.runestar.cs2.util.Loader
@@ -800,7 +801,7 @@ interface Command {
         MOBILE_BATTERYLEVEL(listOf(), listOf(INT)),
         MOBILE_BATTERYCHARGING(listOf(), listOf(BOOLEAN)),
         MOBILE_WIFIAVAILABLE(listOf(), listOf(BOOLEAN)),
-        _6527(listOf(), listOf(INT)),
+        PLATFORMTYPE(listOf(), listOf(_PLATFORMTYPE)),
 
         _6600(listOf(), listOf()),
         WORLDMAP_GETMAPNAME(listOf(MAPAREA), listOf(STRING)),
