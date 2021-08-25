@@ -341,7 +341,6 @@
 386	[proc,pvp_icons_layout]
 387	[proc,pvp_icons_comlevelrange]
 388	[clientscript,pvp_icons_wildernesslevel]
-389	[clientscript,combat_level_transmit]
 390	[clientscript,combat_wilderness_transmit]
 391	[clientscript,poh_options_doors]
 392	[clientscript,steelbox]

@@ -1006,6 +1006,7 @@
 1016	tabs_large,1
 1017	chat_background
 1018	main_stones_bottom
+1020	pvpw_icons,4
 1021	menu_buttons,4
 1022	menu_buttons,5
 1023	magic_necro_on,50
@@ -3156,8 +3157,11 @@
 3377	mod_icons_interface,47
 3378	mod_icons_interface,48
 3379	mod_icons_interface,49
+3380	pvpw_icons,5
+3381	pvpw_icons,6
 3386	account_icons,0
 3387	account_icons,1
 3388	account_icons,2
 3389	account_icons,3
 3390	account_icons,4
+3406	pvpw_icons,7
