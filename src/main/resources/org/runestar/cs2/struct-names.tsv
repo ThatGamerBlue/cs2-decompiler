@@ -315,7 +315,6 @@
 2232	show_wiki_entity_lookup
 2255	notifications
 2730	transparent_chatbox
-2731	show_the_store_button
 2732	game_client_layout
 2733	scroll_wheel_can_change_zoom_distance
 2734	camera_zoom_distance
@@ -557,3 +556,5 @@
 3656	view_distance
 3657	interface_scaling_mode
 3658	remaining_ammo
+3709	show_the_store_button_on_mobile
+3710	show_the_store_button_on_desktop
