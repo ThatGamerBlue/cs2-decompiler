@@ -16,6 +16,8 @@ enum class Type(desc: Char = 0.toChar()) {
     GRAPHIC('d'),
     INT('i'),
     INTERFACE('a'),
+    TOPLEVELINTERFACE('F'),
+    OVERLAYINTERFACE('L'),
     INV('v'),
     LOC('l'),
     MAPAREA('`'),

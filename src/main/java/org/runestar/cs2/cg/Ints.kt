@@ -72,6 +72,8 @@ private val INT_CONSTANTS = Loader(mapOf(
 ))
 
 private val INTERFACES = unique(INTERFACE, INTERFACE_NAMES)
+private val TOPLEVELINTERFACES = unique(TOPLEVELINTERFACE, INTERFACE_NAMES)
+private val OVERLAYINTERFACES = unique(OVERLAYINTERFACE, INTERFACE_NAMES)
 
 private val COMPONENTS = Loader { INTERFACES.loadNotNull(it shr 16) + ':' + (it and 0xFFFF) }
 
@@ -113,6 +115,8 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
     this[SYNTH] = unique(SYNTH, SYNTH_NAMES)
     this[PARAM] = unique(PARAM, PARAM_NAMES)
     this[INTERFACE] = INTERFACES
+    this[TOPLEVELINTERFACE] = TOPLEVELINTERFACES
+    this[OVERLAYINTERFACE] = OVERLAYINTERFACES
 
     this[OBJ] = nonUnique(OBJ, OBJ_NAMES)
     this[LOC] = nonUnique(LOC, LOC_NAMES)
