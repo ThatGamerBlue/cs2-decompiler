@@ -288,7 +288,7 @@ interface Command {
         _1125(listOf(INT), listOf(), true),
         CC_SETLINEDIRECTION(listOf(BOOLEAN), listOf(), true),
         CC_SETMODELTRANSPARENT(listOf(BOOLEAN), listOf(), true),
-        _1128(listOf(INT, INT), listOf()),
+        CC_SETARC(listOf(INT, INT), listOf()),
 
         CC_SETOBJECT(listOf(OBJ, NUM), listOf(), true),
         CC_SETNPCHEAD(listOf(NPC), listOf(), true),
@@ -382,7 +382,7 @@ interface Command {
         _2125(listOf(INT, COMPONENT), listOf()),
         IF_SETLINEDIRECTION(listOf(BOOLEAN, COMPONENT), listOf()),
         IF_SETMODELTRANSPARENT(listOf(BOOLEAN, COMPONENT), listOf()),
-        _2128(listOf(INT, INT, COMPONENT), listOf()),
+        IF_SETARC(listOf(INT, INT, COMPONENT), listOf()),
 
         IF_SETOBJECT(listOf(OBJ, NUM, COMPONENT), listOf()),
         IF_SETNPCHEAD(listOf(NPC, COMPONENT), listOf()),
@@ -435,7 +435,7 @@ interface Command {
         IF_GETINVOBJECT(listOf(COMPONENT), listOf(OBJ)),
         IF_GETINVCOUNT(listOf(COMPONENT), listOf(COUNT)),
         IF_HASSUB(listOf(COMPONENT), listOf(BOOLEAN)),
-        IF_GETTOP(listOf(), listOf(INTERFACE)),
+        IF_GETTOP(listOf(), listOf(TOPLEVELINTERFACE)),
 
         IF_GETTARGETMASK(listOf(COMPONENT), listOf(INT)),
         IF_GETOP(listOf(INT, COMPONENT), listOf(OP)),
@@ -755,7 +755,7 @@ interface Command {
         SETDEFAULTWINDOWMODE(listOf(WINDOWMODE), listOf()),
         _5310(listOf(INT), listOf()),
         _5311(listOf(INT, INT), listOf()),
-        _5312(listOf(INT), listOf()),
+        _5312(listOf(BOOLEAN), listOf()),
         
         _5350(listOf(INT, STRING, STRING), listOf()),
         _5351(listOf(STRING), listOf()),
