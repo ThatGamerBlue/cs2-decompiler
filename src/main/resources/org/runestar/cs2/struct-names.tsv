@@ -315,6 +315,7 @@
 2232	show_wiki_entity_lookup
 2255	notifications
 2730	transparent_chatbox
+2731	iron_loot_restriction_indicator
 2732	game_client_layout
 2733	scroll_wheel_can_change_zoom_distance
 2734	camera_zoom_distance
@@ -558,3 +559,4 @@
 3658	remaining_ammo
 3709	show_the_store_button_on_mobile
 3710	show_the_store_button_on_desktop
+3711	iron_loot_restriction_messages
