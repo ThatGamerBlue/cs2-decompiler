@@ -3,6 +3,7 @@ package org.runestar.cs2.cg
 import org.runestar.cs2.BOOLEAN_NAMES
 import org.runestar.cs2.CHATFILTER_NAMES
 import org.runestar.cs2.CHATTYPE_NAMES
+import org.runestar.cs2.CLANTYPE_NAMES
 import org.runestar.cs2.CLIENTTYPE_NAMES
 import org.runestar.cs2.FONTMETRICS_NAMES
 import org.runestar.cs2.GRAPHIC_NAMES
@@ -138,6 +139,8 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
     this[CLIENTTYPE] = cst(CLIENTTYPE.identifier, CLIENTTYPE_NAMES)
     this[CHATFILTER] = cst(CHATFILTER.identifier, CHATFILTER_NAMES)
     this[PLATFORMTYPE] = cst(PLATFORMTYPE.identifier, PLATFORMTYPE_NAMES)
+    this[CLANTYPE] = cst(CLANTYPE.identifier, CLANTYPE_NAMES)
+    this[CLANSLOT] = NULL.orElse(VALUE)
 }
 
 fun intConstantToString(n: Int, prototype: Prototype): String {

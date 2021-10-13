@@ -246,7 +246,7 @@ interface Command {
     ) : Command {
         CC_CREATE(listOf(COMPONENT, IFTYPE, COMSUBID), listOf(), true),
         CC_DELETE(listOf(), listOf(), true),
-        _103(listOf(NEWVAR, INT, INT), listOf()),
+        _103(listOf(NEWVAR, IFTYPE, COMSUBID), listOf()),
         _104(listOf(NEWVAR), listOf()),
         CC_DELETEALL(listOf(COMPONENT), listOf()),
         CC_FIND(listOf(COMPONENT, COMSUBID), listOf(BOOL), true),
@@ -600,7 +600,7 @@ interface Command {
         _3702(listOf(), listOf(INT)),
 
         ACTIVECLANSETTINGS_FIND_LISTENED(listOf(), listOf(BOOLEAN)),
-        ACTIVECLANSETTINGS_FIND_AFFINED(listOf(CLANSLOT), listOf(BOOLEAN)),
+        ACTIVECLANSETTINGS_FIND_AFFINED(listOf(CLANTYPE), listOf(BOOLEAN)),
         ACTIVECLANSETTINGS_GETCLANNAME(listOf(), listOf(STRING)),
         ACTIVECLANSETTINGS_GETALLOWUNAFFINED(listOf(), listOf(BOOLEAN)),
         ACTIVECLANSETTINGS_GETRANKTALK(listOf(), listOf(INT)),
@@ -623,7 +623,7 @@ interface Command {
         ACTIVECLANSETTINGS_GETAFFINEDMUTED(listOf(CLANSLOT), listOf(BOOLEAN)),
 
         ACTIVECLANCHANNEL_FIND_LISTENED(listOf(), listOf(BOOLEAN)),
-        ACTIVECLANCHANNEL_FIND_AFFINED(listOf(CLANSLOT), listOf(BOOLEAN)),
+        ACTIVECLANCHANNEL_FIND_AFFINED(listOf(CLANTYPE), listOf(BOOLEAN)),
         ACTIVECLANCHANNEL_GETCLANNAME(listOf(), listOf(STRING)),
         ACTIVECLANCHANNEL_GETRANKKICK(listOf(), listOf(INT)),
         ACTIVECLANCHANNEL_GETRANKTALK(listOf(), listOf(INT)),
@@ -734,7 +734,7 @@ interface Command {
         CHAT_GETFILTER_PRIVATE(listOf(), listOf(CHATFILTER)),
         CHAT_SENDPUBLIC(listOf(_MES, INT), listOf()),
         CHAT_SENDPRIVATE(listOf(USERNAME, _MES), listOf()),
-        CHAT_SENDCLAN(listOf(_MES, INT, INT), listOf()),
+        CHAT_SENDCLAN(listOf(_MES, INT, CLANTYPE), listOf()),
         CHAT_PLAYERNAME(listOf(), listOf(USERNAME)),
         CHAT_GETFILTER_TRADE(listOf(), listOf(CHATFILTER)),
         CHAT_GETHISTORYLENGTH(listOf(CHATTYPE), listOf(LENGTH)),
