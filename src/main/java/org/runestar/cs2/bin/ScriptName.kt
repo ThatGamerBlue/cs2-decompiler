@@ -15,15 +15,15 @@ fun ScriptName(cacheName: String): ScriptName {
         ScriptName(Trigger.valueOf(cacheName.substring(1, comma)), cacheName.substring(comma + 1, cacheName.length - 1))
     } else {
         var t = n + 512
-        if (t in 10..50) {
+        if (t in 0..255) {
             // global trigger
             ScriptName(Trigger.of(t), "_")
         } else {
-            val c = abs((n shl 8) - 3)
-            t = (c shr 8) + n + 768
+            val c = abs((n shr 8) + 3)
+            t = (c shl 8) + n + 768
             if (t in 0..255) {
                 // category trigger
-                ScriptName(Trigger.of(n + 512), "_category_$c")
+                ScriptName(Trigger.of(t), "_category_$c")
             } else {
                 // type trigger
                 ScriptName(Trigger.of(n and 0xFF), (n shr 8).toString())

@@ -10,6 +10,7 @@ enum class Trigger(val id: Int) {
     worldmapelementmouseover(15),
     worldmapelementmouseleave(16),
     worldmapelementmouserepeat(17),
+    loadnpc(35),
     trigger_47(47),
     trigger_48(48),
     trigger_49(49),
