@@ -560,3 +560,14 @@
 3709	show_the_store_button_on_mobile
 3710	show_the_store_button_on_desktop
 3711	iron_loot_restriction_messages
+3729	popout_windows
+3730	other_notifications
+3731	timers_and_notifications
+3732	slayer_helper
+3733	logout_notifier
+3734	poison_damage
+3735	ore_respawn_timer
+3736	woodcutting_respawn_timer
+3737	bird_nest_desktop_notification
+3738	highlight_entities_on_mouse_over
+3739	xp_tracker
