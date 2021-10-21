@@ -13,6 +13,7 @@ import org.runestar.cs2.INV_NAMES
 import org.runestar.cs2.KEY_NAMES
 import org.runestar.cs2.LOC_NAMES
 import org.runestar.cs2.MAPAREA_NAMES
+import org.runestar.cs2.MINIMENU_ENTRY_TYPE_NAMES
 import org.runestar.cs2.MODEL_NAMES
 import org.runestar.cs2.NPC_NAMES
 import org.runestar.cs2.OBJ_NAMES
@@ -95,10 +96,12 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
     this[COORD] = NULL.orElse(COORDS)
     this[COLOUR] = NULL.orElse(COLOUR_CONSTANTS).orElse(COLOURS)
     this[COMPONENT] = NULL.orElse(COMPONENTS)
+    this[NEWVAR] = NULL.orElse(VALUE)
     this[TYPE] = Loader { Type.of(it.toByte()).literal }
     this[BOOL] = BOOLEAN_NAMES.prefix("^").orElse(NULL)
     this[GRAPHIC] = NULL.orElse(GRAPHIC_NAMES.orElse(Loader(GRAPHIC.identifier).idSuffix()).quote())
-    this[NPC_UID] = VALUE
+    this[NPC_UID] = NULL.orElse(VALUE)
+    this[PLAYER_UID] = NULL.orElse(VALUE)
 
     this[ENUM] = unknown(ENUM)
     this[CATEGORY] = unknown(CATEGORY)
@@ -121,6 +124,7 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
 
     this[OBJ] = nonUnique(OBJ, OBJ_NAMES)
     this[LOC] = nonUnique(LOC, LOC_NAMES)
+    this[LOCSHAPE] = unknown(LOCSHAPE)
     this[MODEL] = nonUnique(MODEL, MODEL_NAMES)
     this[STRUCT] = nonUnique(STRUCT, STRUCT_NAMES)
     this[NPC] = nonUnique(NPC, NPC_NAMES)
@@ -141,6 +145,7 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
     this[PLATFORMTYPE] = cst(PLATFORMTYPE.identifier, PLATFORMTYPE_NAMES)
     this[CLANTYPE] = cst(CLANTYPE.identifier, CLANTYPE_NAMES)
     this[CLANSLOT] = NULL.orElse(VALUE)
+    this[MINIMENU_ENTRY_TYPE] = cst(MINIMENU_ENTRY_TYPE.identifier, MINIMENU_ENTRY_TYPE_NAMES)
 }
 
 fun intConstantToString(n: Int, prototype: Prototype): String {

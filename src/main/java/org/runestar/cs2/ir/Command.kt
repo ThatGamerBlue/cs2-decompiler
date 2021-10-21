@@ -10,6 +10,8 @@ import org.runestar.cs2.ir.ENUM as _ENUM
 import org.runestar.cs2.ir.MES as _MES
 import org.runestar.cs2.ir.PLATFORMTYPE as _PLATFORMTYPE
 import org.runestar.cs2.ir.STAT as _STAT
+import org.runestar.cs2.ir.NPC_UID as _NPC_UID
+import org.runestar.cs2.ir.PLAYER_UID as _PLAYER_UID
 import org.runestar.cs2.bin.string
 import org.runestar.cs2.util.Loader
 import org.runestar.cs2.util.loadNotNull
@@ -251,8 +253,8 @@ interface Command {
         CC_DELETEALL(listOf(COMPONENT), listOf()),
         CC_FIND(listOf(COMPONENT, COMSUBID), listOf(BOOL), true),
         IF_FIND(listOf(COMPONENT), listOf(BOOLEAN), true),
-        _202(listOf(NEWVAR), listOf(INT)),
-        _203(listOf(NEWVAR), listOf(INT)),
+        _202(listOf(NEWVAR), listOf(BOOL)),
+        _203(listOf(INT, COMSUBID), listOf(BOOL)),
 
         CC_SETPOSITION(listOf(X, Y, SETPOSH, SETPOSV), listOf(), true),
         CC_SETSIZE(listOf(WIDTH, HEIGHT, SETSIZE, SETSIZE), listOf(), true),
@@ -382,7 +384,7 @@ interface Command {
         _2125(listOf(INT, COMPONENT), listOf()),
         IF_SETLINEDIRECTION(listOf(BOOLEAN, COMPONENT), listOf()),
         IF_SETMODELTRANSPARENT(listOf(BOOLEAN, COMPONENT), listOf()),
-        IF_SETARC(listOf(INT, INT, COMPONENT), listOf()),
+        IF_SETARC(listOf(INT, COLOUR, COMPONENT), listOf()),
 
         IF_SETOBJECT(listOf(OBJ, NUM, COMPONENT), listOf()),
         IF_SETNPCHEAD(listOf(NPC, COMPONENT), listOf()),
@@ -489,6 +491,7 @@ interface Command {
         GETREMEMBERUSERNAME(listOf(), listOf(BOOLEAN)),
         SHOW_IOS_REVIEW(listOf(), listOf()),
         _3157(listOf(INT, INT), listOf()),
+        _3170(listOf(STRING, STRING, INT, INT), listOf(INT)),
         SETBRIGHTNESS(listOf(INT), listOf()),
         GETBRIGHTNESS(listOf(), listOf(INT)),
         SETANTIDRAG(listOf(BOOLEAN), listOf()),
@@ -532,6 +535,8 @@ interface Command {
         MOVECOORD(listOf(_COORD, X, Y, Z), listOf(_COORD)),
         MOUSE_GETX(listOf(), listOf(X)),
         MOUSE_GETY(listOf(), listOf(Y)),
+        _3328(listOf(), listOf(INT)),
+        _3329(listOf(), listOf()),
         _3330(listOf(), listOf(_COORD)),
 
         ENUM_STRING(listOf(_ENUM, INT), listOf(STRING)),
@@ -779,10 +784,11 @@ interface Command {
         VIEWPORT_GETFOV(listOf(), listOf(INT, INT)),
         _6210(listOf(INT), listOf()),
         _6212(listOf(), listOf()),
-        _6220(listOf(), listOf(INT)),
-        _6221(listOf(), listOf(INT)),
-        _6222(listOf(), listOf(INT)),
-        _6223(listOf(), listOf(INT)),
+        VIEWPORT_GETX(listOf(), listOf(INT)),
+        VIEWPORT_GETY(listOf(), listOf(INT)),
+        VIEWPORT_GETWIDTH(listOf(), listOf(INT)),
+        VIEWPORT_GETHEIGHT(listOf(), listOf(INT)),
+        _6230(listOf(INT), listOf()),
 
         WORLDLIST_FETCH(listOf(), listOf(BOOLEAN)),
         WORLDLIST_START(listOf(), listOf(WORLD, FLAGS, STRING, INT, COUNT, STRING)),
@@ -862,33 +868,35 @@ interface Command {
         _6707(listOf(INT), listOf()),
         _6708(listOf(INT, STRING, INT), listOf()),
         _6709(listOf(INT), listOf()),
-        
-        _6750(listOf(), listOf(STRING)),
-        _6751(listOf(), listOf(NPC_UID)),
+
+        NPC_NAME(listOf(), listOf(STRING)),
+        NPC_UID(listOf(), listOf(_NPC_UID)),
         _6752(listOf(), listOf(INT)),
-        _6753(listOf(), listOf(NPC)),
+        NPC_TYPE(listOf(), listOf(NPC)),
         NC_NAME(listOf(NPC), listOf(STRING)),
+        NPC_FIND(listOf(_NPC_UID), listOf(BOOLEAN)),
 
-        _6800(listOf(), listOf(STRING)),
-        _6801(listOf(), listOf(_COORD)),
-        _6802(listOf(), listOf(LOC)),
+        LOC_NAME(listOf(), listOf(STRING)),
+        LOC_COORD(listOf(), listOf(_COORD)),
+        LOC_TYPE(listOf(), listOf(LOC)),
+        LOC_FIND(listOf(_COORD, LOC), listOf(BOOLEAN)),
 
-        _6850(listOf(), listOf(STRING)),
-        _6851(listOf(), listOf(_COORD)),
-        _6852(listOf(), listOf(OBJ)),
+        OBJ_NAME(listOf(), listOf(STRING)),
+        OBJ_COORD(listOf(), listOf(_COORD)),
+        OBJ_TYPE(listOf(), listOf(OBJ)),
         _6853(listOf(), listOf(INT)),
-        
-        _6900(listOf(), listOf(STRING)),
+
+        PLAYER_NAME(listOf(), listOf(STRING)),
         _6902(listOf(), listOf(INT)),
         _6903(listOf(INT), listOf(_COORD)),
-        _6904(listOf(), listOf(PLAYER_UID)),
-        _6905(listOf(), listOf(PLAYER_UID)),
+        PLAYER_UID(listOf(), listOf(_PLAYER_UID)),
+        SELF_PLAYER_UID(listOf(), listOf(_PLAYER_UID)),
 
         _6950(listOf(), listOf(_COORD)),
         
         _7000(listOf(INT, COLOUR, INT, INT, INT), listOf()),
-        HIGHLIGHT_NPC_ON(listOf(NPC_UID, _COORD, INT), listOf()),
-        HIGHLIGHT_NPC_OFF(listOf(NPC_UID, _COORD, INT), listOf()),
+        HIGHLIGHT_NPC_ON(listOf(_NPC_UID, INT, INT), listOf()),
+        HIGHLIGHT_NPC_OFF(listOf(_NPC_UID, INT, INT), listOf()),
         _7003(listOf(NPC, _COORD, INT), listOf(BOOLEAN)),
         _7004(listOf(INT), listOf()),
         _7005(listOf(INT, COLOUR, INT, INT, INT), listOf()),
@@ -926,27 +934,27 @@ interface Command {
         HIGHLIGHT_TILE_OFF(listOf(_COORD, INT, INT), listOf()),
         _7038(listOf(_COORD, INT, INT), listOf(BOOLEAN)),
         _7039(listOf(INT), listOf()),
-        
-        _7100(listOf(), listOf(INT)),
-        _7101(listOf(), listOf(STRING, STRING)),
-        _7102(listOf(), listOf(INT)),
-        _7103(listOf(), listOf(INT)),
-        _7104(listOf(), listOf(INT)),
-        _7105(listOf(), listOf(INT)),
+
+        GET_ACTIVE_MINIMENU_ENTRY_TYPE(listOf(), listOf(MINIMENU_ENTRY_TYPE)),
+        GET_ACTIVE_MINIMENU_ENTRY(listOf(), listOf(STRING, STRING)),
+        NPC_FIND_ACTIVE_MINIMENU_ENTRY(listOf(), listOf(BOOLEAN)),
+        LOC_FIND_ACTIVE_MINIMENU_ENTRY(listOf(), listOf(BOOLEAN)),
+        OBJ_FIND_ACTIVE_MINIMENU_ENTRY(listOf(), listOf(BOOLEAN)),
+        PLAYER_FIND_ACTIVE_MINIMENU_ENTRY(listOf(), listOf(BOOLEAN)),
         _7106(listOf(), listOf(INT)),
         _7107(listOf(), listOf(INT)),
         _7108(listOf(), listOf(BOOLEAN)),
-        _7109(listOf(), listOf(INT)),
-        _7110(listOf(), listOf(INT)),
+        TARGETMODE_ACTIVE(listOf(), listOf(BOOLEAN)),
+        GET_MINIMENU_LENGTH(listOf(), listOf(INT)),
         _7120(listOf(INT), listOf(INT)),
         _7121(listOf(INT, INT), listOf(INT)),
         _7122(listOf(INT, INT), listOf(INT)),
         
         _7200(listOf(INT, INT, INT, INT, INT), listOf(NEWVAR)),
-        _7201(listOf(INT, INT, INT, INT, INT), listOf(INT)),
-        _7202(listOf(INT, INT, INT, INT, INT), listOf(INT)),
-        _7203(listOf(INT, INT, INT, INT, INT), listOf(INT)),
-        _7204(listOf(INT, INT, INT, INT, INT, INT), listOf(INT)),
+        _7201(listOf(INT, INT, INT, INT, INT), listOf(NEWVAR)),
+        _7202(listOf(INT, INT, INT, INT, INT), listOf(NEWVAR)),
+        _7203(listOf(INT, INT, INT, INT, INT), listOf(NEWVAR)),
+        _7204(listOf(_COORD, INT, INT, INT, INT, INT), listOf(NEWVAR)),
         _7205(listOf(), listOf(INT)),
         _7206(listOf(), listOf(INT)),
         _7207(listOf(), listOf(INT)),
@@ -956,7 +964,7 @@ interface Command {
         _7211(listOf(INT), listOf()),
         _7212(listOf(INT), listOf()),
         _7213(listOf(INT), listOf()),
-        _7214(listOf(INT, INT), listOf()),
+        _7214(listOf(_COORD, INT), listOf()),
         SETMINIMAPLOCK(listOf(BOOLEAN), listOf()),
         _7252(listOf(INT), listOf()),
         ;
