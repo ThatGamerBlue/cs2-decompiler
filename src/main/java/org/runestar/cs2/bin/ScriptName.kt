@@ -1,5 +1,7 @@
 package org.runestar.cs2.bin
 
+import org.runestar.cs2.cg.intConstantToString
+import org.runestar.cs2.ir.CATEGORY
 import kotlin.math.abs
 
 data class ScriptName(val trigger: Trigger, val name: String) {
@@ -23,10 +25,12 @@ fun ScriptName(cacheName: String): ScriptName {
             t = (c shl 8) + n + 768
             if (t in 0..255) {
                 // category trigger
-                ScriptName(Trigger.of(t), "_category_$c")
+                ScriptName(Trigger.of(t), "_${intConstantToString(c, CATEGORY)}")
             } else {
                 // type trigger
-                ScriptName(Trigger.of(n and 0xFF), (n shr 8).toString())
+                val trigger = Trigger.of(n and 0xFF)
+                val subjectType = trigger.subjectType ?: error("no subject type defined for $trigger")
+                ScriptName(trigger, intConstantToString((n shr 8), subjectType))
             }
         }
     }

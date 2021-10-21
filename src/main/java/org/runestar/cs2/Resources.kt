@@ -24,9 +24,6 @@ private fun readNames(fileName: String): Loader.Map<String> = readLoader(fileNam
 
 val PARAM_TYPES = readLoader("param-types.tsv") { Type.ofAuto(it.toByte()) }
 
-val SCRIPT_NAMES = readLoader("script-names.tsv") { ScriptName(it) }
-val SCRIPT_ARGS = readLoader("script-arguments.tsv") { it.map { c -> Type.ofAuto(c.toByte()) } }
-
 val BOOLEAN_NAMES = readNames("boolean-names.tsv")
 val FONTMETRICS_NAMES = readNames("fontmetrics-names.tsv")
 val GRAPHIC_NAMES = readNames("graphic-names.tsv")
@@ -57,3 +54,7 @@ val WINDOWMODE_NAMES = readNames("windowmode-names.tsv")
 val PLATFORMTYPE_NAMES = readNames("platformtype-names.tsv")
 val CLANTYPE_NAMES = readNames("clantype-names.tsv")
 val MINIMENU_ENTRY_TYPE_NAMES = readNames("minimenu-entry-type-names.tsv")
+
+// must be at the bottom since it relies on other type names
+val SCRIPT_NAMES = readLoader("script-names.tsv") { ScriptName(it) }
+val SCRIPT_ARGS = readLoader("script-arguments.tsv") { it.map { c -> Type.ofAuto(c.toByte()) } }

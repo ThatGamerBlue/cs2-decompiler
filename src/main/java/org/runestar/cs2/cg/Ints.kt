@@ -105,10 +105,10 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
 
     this[ENUM] = unknown(ENUM)
     this[CATEGORY] = unknown(CATEGORY)
+    this[MAPELEMENT] = unknown(MAPELEMENT)
 
     this[CHAR] = NULL
     this[AREA] = NULL
-    this[MAPELEMENT] = NULL
 
     this[BOOLEAN] = uniqueExhaustive(BOOLEAN_NAMES)
     this[STAT] = uniqueExhaustive(STAT_NAMES)

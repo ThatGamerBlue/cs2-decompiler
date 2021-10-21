@@ -1,16 +1,20 @@
 package org.runestar.cs2.bin
 
-enum class Trigger(val id: Int) {
+import org.runestar.cs2.ir.MAPELEMENT
+import org.runestar.cs2.ir.NPC
+import org.runestar.cs2.ir.Prototype
 
-    opworldmapelement1(10),
-    opworldmapelement2(11),
-    opworldmapelement3(12),
-    opworldmapelement4(13),
-    opworldmapelement5(14),
-    worldmapelementmouseover(15),
-    worldmapelementmouseleave(16),
-    worldmapelementmouserepeat(17),
-    loadnpc(35),
+enum class Trigger(val id: Int, val subjectType: Prototype? = null) {
+
+    opworldmapelement1(10, MAPELEMENT),
+    opworldmapelement2(11, MAPELEMENT),
+    opworldmapelement3(12, MAPELEMENT),
+    opworldmapelement4(13, MAPELEMENT),
+    opworldmapelement5(14, MAPELEMENT),
+    worldmapelementmouseover(15, MAPELEMENT),
+    worldmapelementmouseleave(16, MAPELEMENT),
+    worldmapelementmouserepeat(17, MAPELEMENT),
+    loadnpc(35, NPC),
     trigger_47(47),
     trigger_48(48),
     trigger_49(49),
