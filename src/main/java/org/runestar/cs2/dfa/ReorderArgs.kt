@@ -5,10 +5,7 @@ import org.runestar.cs2.bin.Type
 import org.runestar.cs2.ir.Function
 import org.runestar.cs2.ir.FunctionSet
 import org.runestar.cs2.ir.Prototype
-import org.runestar.cs2.ir.Typing
 import org.runestar.cs2.ir.assign
-import org.runestar.cs2.ir.identifier
-import org.runestar.cs2.ir.replace
 
 object ReorderArgs : Phase.Individual() {
 
