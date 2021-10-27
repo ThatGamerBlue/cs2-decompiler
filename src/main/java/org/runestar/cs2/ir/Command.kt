@@ -491,7 +491,7 @@ interface Command {
         GETREMEMBERUSERNAME(listOf(), listOf(BOOLEAN)),
         SHOW_IOS_REVIEW(listOf(), listOf()),
         _3157(listOf(INT, INT), listOf()),
-        _3170(listOf(STRING, STRING, INT, INT), listOf(INT)),
+        LOCAL_NOTIFICATION(listOf(STRING, STRING, INT, INT), listOf(INT)),
         SETBRIGHTNESS(listOf(INT), listOf()),
         GETBRIGHTNESS(listOf(), listOf(INT)),
         SETANTIDRAG(listOf(BOOLEAN), listOf()),
