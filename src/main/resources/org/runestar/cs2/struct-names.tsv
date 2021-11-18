@@ -568,7 +568,7 @@
 3734	poison_damage
 3735	ore_respawn_timer
 3736	woodcutting_respawn_timer
-3737	bird_nest_desktop_notification
+3737	bird_nest_notification
 3738	highlight_entities_on_mouse_over
 3739	xp_tracker
 3743	show_confirmation_when_paying_for_items_from_gravestone
