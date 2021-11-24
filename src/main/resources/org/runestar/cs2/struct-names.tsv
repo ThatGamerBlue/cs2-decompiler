@@ -572,3 +572,16 @@
 3738	highlight_entities_on_mouse_over
 3739	xp_tracker
 3743	show_confirmation_when_paying_for_items_from_gravestone
+3744	iron_group_notifications
+3745	iron_group_chat
+3746	iron_group_chat
+3747	clan_broadcasts
+3748	clan_broadcasts
+3749	iron_group_broadcasts
+3750	iron_group_broadcasts
+3751	iron_group_loot_broadcast_threshold
+3752	iron_group_loot_broadcasts
+3753	iron_group_levelup_broadcasts
+3754	iron_group_quest_complete_broadcasts
+3755	iron_group_combat_achievement_broadcasts
+3756	chatbox_mode_set_automatically

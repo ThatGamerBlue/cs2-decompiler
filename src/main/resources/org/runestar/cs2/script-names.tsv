@@ -86,7 +86,6 @@
 93	[clientscript,v2_stone_button_filled]
 94	[clientscript,v2_stone_button_in]
 95	[proc,chat_autotyper_updateop]
-96	[proc,chat_sendpublic]
 97	[clientscript,v2_stone_button_out_filled]
 98	[proc,create_graphic]
 99	[clientscript,duel_check_button]
@@ -4189,3 +4188,4 @@
 5487	[clientscript,highlighting_on]
 5488	[proc,highlighting_on]
 5498	[clientscript,duel_options_radio_buttons]
+5517	[proc,chat_send]
