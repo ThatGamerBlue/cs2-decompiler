@@ -716,6 +716,7 @@ interface Command {
         REMOVETAGS(listOf(STRING), listOf(STRING)),
         STRING_INDEXOF_CHAR(listOf(STRING, CHAR), listOf(INDEX)),
         STRING_INDEXOF_STRING(listOf(STRING, STRING, INDEX), listOf(INDEX)),
+        UPPERCASE(listOf(STRING), listOf(STRING)),
 
         OC_NAME(listOf(OBJ), listOf(STRING)),
         OC_OP(listOf(OBJ, OPINDEX), listOf(OP)),
