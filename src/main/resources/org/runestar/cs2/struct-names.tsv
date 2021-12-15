@@ -585,3 +585,9 @@
 3754	iron_group_quest_complete_broadcasts
 3755	iron_group_combat_achievement_broadcasts
 3756	chatbox_mode_set_automatically
+3757	show_number_of_options_in_mouseover_tooltips
+3758	highlight_agility_shortcuts_shortcut_requirements
+3759	desert_heat_damage
+3760	pk_skull_prevention
+3761	accept_trade_delay
+3762	ctrl_click_to_invert_run_mode
