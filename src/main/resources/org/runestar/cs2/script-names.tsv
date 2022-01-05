@@ -3590,6 +3590,7 @@
 4727	[proc,mouseover_text]
 4728	[proc,mouseover_tooltip]
 4741	[clientscript,blast_furnace_plan_init]
+4742	[proc,affixtimestamp]
 4744	[clientscript,highlight_npc_on]
 4745	[clientscript,highlight_npc_off]
 4746	[clientscript,highlight_npctype_on]
