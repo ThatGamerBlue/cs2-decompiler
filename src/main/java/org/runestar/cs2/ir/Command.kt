@@ -248,9 +248,9 @@ interface Command {
     ) : Command {
         CC_CREATE(listOf(COMPONENT, IFTYPE, COMSUBID), listOf(), true),
         CC_DELETE(listOf(), listOf(), true),
+        CC_DELETEALL(listOf(COMPONENT), listOf()),
         _103(listOf(NEWVAR, IFTYPE, COMSUBID), listOf()),
         _104(listOf(NEWVAR), listOf()),
-        CC_DELETEALL(listOf(COMPONENT), listOf()),
         CC_FIND(listOf(COMPONENT, COMSUBID), listOf(BOOL), true),
         IF_FIND(listOf(COMPONENT), listOf(BOOLEAN), true),
         _202(listOf(NEWVAR), listOf(BOOL)),
