@@ -463,7 +463,7 @@
 3016	show_attack_style
 3017	display_buff_bar
 3018	tooltips_for_buffs
-3019	display_relics
+3019	display_fragments
 3020	home_teleport_cooldown
 3021	minigame_teleport_cooldown
 3022	teleport_block_duration
@@ -593,3 +593,4 @@
 3762	ctrl_click_to_invert_run_mode
 3768	the_frozen_door
 3769	nex
+3771	leagues_iii_shattered_relics

@@ -506,8 +506,8 @@ interface Command {
         GETVOLUMESOUNDS(listOf(), listOf(INT)),
         SETVOLUMEAREASOUNDS(listOf(INT), listOf()),
         GETVOLUMEAREASOUNDS(listOf(), listOf(INT)),
-        _3209(listOf(INT, INT), listOf()),
-        _3210(listOf(INT), listOf(INT)),
+        SETPREFERENCE(listOf(PREF, INT), listOf()),
+        GETPREFERENCE(listOf(PREF), listOf(INT)),
 
         CLIENTCLOCK(listOf(), listOf(CLOCK)),
         INV_GETOBJ(listOf(INV, SLOT), listOf(OBJ)),
