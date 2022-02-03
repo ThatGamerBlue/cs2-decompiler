@@ -1066,6 +1066,7 @@
 1295	[clientscript,br_loadout_menudragging]
 1297	[clientscript,slayer_rewards_unlock_draw]
 1298	[proc,slayer_rewards_unlock_desc]
+1299	[proc,string_findandreplace]
 1300	[clientscript,soulbearer_repair]
 1301	[clientscript,soulbearer_repair_update]
 1302	[proc,soulbearer_repair_update]
