@@ -1828,6 +1828,7 @@
 7503	mystical_barrier
 7526	guardian_ready
 7542	reshi_ready
+7543	party_balloons
 7545	screaming_banshee_ready
 7564	tzkal_zuk_ready
 7567	ancestral_glyph_ready
@@ -2254,3 +2255,8 @@
 9335	portal
 9336	machine
 9338	portal
+9341	hassan_ready
+9342	hassan_walk_f
+9343	hassan_walk_l
+9344	hassan_walk_r
+9345	hassan_walk_b
