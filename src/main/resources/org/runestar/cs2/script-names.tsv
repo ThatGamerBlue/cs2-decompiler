@@ -4009,7 +4009,6 @@
 5190	[proc,settings_minimap_lock]
 5191	[clientscript,settings_minimap_lock]
 5193	[proc,settings_set_draw_distance]
-5194	[clientscript,settings_set_draw_distance]
 5197	-464
 5203	-463
 5209	-465
@@ -4086,7 +4085,6 @@
 5326	[proc,logout_timer_notifier]
 5327	[clientscript,logout_timer_notifier]
 5328	[proc,settings_get_colour_default]
-5330	[clientscript,settings_toggle_roof]
 5331	[proc,settings_helper_slayer]
 5332	[proc,settings_buff_poison_damage]
 5333	[proc,settings_popout_xptracker]

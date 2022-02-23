@@ -492,6 +492,10 @@ interface Command {
         SHOW_IOS_REVIEW(listOf(), listOf()),
         _3157(listOf(INT, INT), listOf()),
         LOCAL_NOTIFICATION(listOf(STRING, STRING, INT, INT), listOf(INT)),
+        _3177(listOf(), listOf()),
+        _3178(listOf(STRING), listOf()),
+        _3179(listOf(), listOf()),
+        _3180(listOf(STRING), listOf()),
         SETBRIGHTNESS(listOf(INT), listOf()),
         GETBRIGHTNESS(listOf(), listOf(INT)),
         SETANTIDRAG(listOf(BOOLEAN), listOf()),
@@ -898,7 +902,7 @@ interface Command {
         _7000(listOf(INT, COLOUR, INT, INT, INT), listOf()),
         HIGHLIGHT_NPC_ON(listOf(_NPC_UID, INT, INT), listOf()),
         HIGHLIGHT_NPC_OFF(listOf(_NPC_UID, INT, INT), listOf()),
-        _7003(listOf(NPC, _COORD, INT), listOf(BOOLEAN)),
+        _7003(listOf(_NPC_UID, INT, INT), listOf(BOOLEAN)),
         _7004(listOf(INT), listOf()),
         _7005(listOf(INT, COLOUR, INT, INT, INT), listOf()),
         HIGHLIGHT_NPCTYPE_ON(listOf(NPC, INT), listOf()),
@@ -908,7 +912,7 @@ interface Command {
         _7010(listOf(INT, COLOUR, INT, INT, INT), listOf()),
         HIGHLIGHT_LOC_ON(listOf(LOC, _COORD, INT, INT), listOf()),
         HIGHLIGHT_LOC_OFF(listOf(LOC, _COORD, INT, INT), listOf()),
-        _7013(listOf(LOC, INT, INT, INT), listOf(BOOLEAN)),
+        _7013(listOf(LOC, _COORD, INT, INT), listOf(BOOLEAN)),
         _7014(listOf(INT), listOf()),
         _7015(listOf(INT, COLOUR, INT, INT, INT), listOf()),
         HIGHLIGHT_LOCTYPE_ON(listOf(LOC, INT), listOf()),
@@ -968,6 +972,13 @@ interface Command {
         _7214(listOf(_COORD, INT), listOf()),
         SETMINIMAPLOCK(listOf(BOOLEAN), listOf()),
         _7252(listOf(INT), listOf()),
+
+        _7451(listOf(INT), listOf(INT)),
+        _7453(listOf(INT), listOf(BOOLEAN)),
+        _7454(listOf(INT), listOf(BOOLEAN)),
+        _7455(listOf(INT), listOf(BOOLEAN)),
+        _7456(listOf(INT), listOf(BOOLEAN)),
+        _7460(listOf(), listOf(INT)),
         ;
 
         override val id = opcodes.getValue(name)
