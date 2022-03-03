@@ -4211,6 +4211,7 @@
 5511	[clientscript,gim_settings_checksize]
 5516	[proc,gim_sidepanel_drawchannel]
 5517	[proc,chat_send]
+5529	[proc,string_isnullorempty]
 5530	[proc,string_trim]
 5531	[proc,string_trim_left]
 5532	[proc,string_trim_right]
