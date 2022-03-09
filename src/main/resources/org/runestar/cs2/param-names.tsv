@@ -18,3 +18,10 @@
 605	spell_type
 606	magic_runetype_4
 607	magic_runecount_4
+873	league_task_id
+874	league_task_name
+875	league_task_description
+876	league_task_tier
+1018	league_task_skill
+1017	league_task_area
+1016	league_task_category

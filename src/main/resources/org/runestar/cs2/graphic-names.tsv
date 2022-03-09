@@ -3363,6 +3363,8 @@
 3577	popout_icons,0
 3578	popout_icons,1
 3579	popout_icons,2
+3581	speedrun_trophies,0
+3582	speedrun_trophies,1
 3583	membership_banner_skill
 3584	membership_banner_area
 3585	membership_banner_boss
@@ -3984,4 +3986,10 @@
 4230	league_3_tutorial,3
 4231	league_3_tutorial,4
 4232	league_3_tutorial,5
+4340	speedrun_trophies,2
+4341	speedrun_trophies,3
+4342	arrows_curved,0
+4343	arrows_curved,1
+4344	arrows_curved,2
+4345	arrows_curved,3
 4350	worldswitcher_stars,6
