@@ -642,8 +642,8 @@
 3737	bird_nest_notification
 3738	highlight_entities_on_mouse_over
 3739	xp_tracker
-3740	buff_next_poison_hit
-3741	buff_next_venom_hit
+3740	buff_time_till_next_poison_hit
+3741	buff_time_till_next_venom_hit
 3743	show_confirmation_when_paying_for_items_from_gravestone
 3745	iron_group_chat
 3746	iron_group_chat
@@ -700,7 +700,6 @@
 4154	buff_antifire
 4155	buff_superior_antifire
 4156	buff_greater_corruption
-4157	buff_next_venom_hit
 4158	buff_cannon_ammo
 4159	buff_cannon_ammo_granite_cannonball
 4229	notifications
