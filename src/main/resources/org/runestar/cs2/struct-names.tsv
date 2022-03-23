@@ -313,6 +313,7 @@
 1768	hide_roofs
 2154	show_data_orbs
 2232	show_wiki_entity_lookup
+2255	quest_list
 2730	transparent_chatbox
 2731	iron_loot_restriction_indicator
 2732	game_client_layout
@@ -550,7 +551,10 @@
 3104	buff_anti_venom
 3105	buff_antipoison
 3106	joining_leaving_clan
+3107	quest_list_sorting
+3108	show_quests_you_lack_the_requirements_for
 3109	loot_broadcast_value
+3110	show_quests_you_lack_the_recommended_stats_for
 3112	corruption_active_and_duration
 3113	mark_of_darkness_active
 3114	shadow_veil_active_and_duration
@@ -589,6 +593,7 @@
 3153	skippy_and_the_mogres
 3154	waterfall_quest
 3155	x_marks_the_spot
+3599	hide_unstarted_quests
 3623	general
 3624	general
 3625	skills
@@ -645,12 +650,18 @@
 3740	buff_time_till_next_poison_hit
 3741	buff_time_till_next_venom_hit
 3743	show_confirmation_when_paying_for_items_from_gravestone
+3744	hide_quests_in_progress
 3745	iron_group_chat
 3746	iron_group_chat
 3747	clan_broadcasts
 3748	clan_broadcasts
 3749	iron_group_broadcasts
 3750	iron_group_broadcasts
+3751	hide_completed_quests
+3752	hide_miniquests
+3753	hide_quests
+3754	quest_list_text_size
+3755	disable_quest_list_text_shadows
 3756	chatbox_mode_set_automatically
 3757	show_number_of_options_in_mouseover_tooltips
 3758	highlight_agility_shortcuts_shortcut_requirements
@@ -700,6 +711,7 @@
 4154	buff_antifire
 4155	buff_superior_antifire
 4156	buff_greater_corruption
+4157	unstarted_quest_text_colour
 4158	buff_cannon_ammo
 4159	buff_cannon_ammo_granite_cannonball
 4229	notifications
@@ -722,3 +734,9 @@
 4246	pk_broadcasts
 4247	pk_broadcast_value
 4248	player_defeat_broadcasts
+4249	in_progress_quest_text_colour
+4250	completed_quest_text_colour
+4251	unavailable_quest_text_colour
+4252	reset_quest_list_text_colours
+4273	temple_of_the_eye
+4274	guardians_of_the_rift
