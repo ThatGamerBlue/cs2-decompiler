@@ -29,12 +29,12 @@ interface Construct {
         override var next: Construct? = null
     }
 
+    class SwitchCase(val keys: Set<Int>?, val body: Construct)
+
     class Switch(
             val expression: Expression,
-            val cases: Map<Set<Int>, Construct>
+            val cases: List<SwitchCase>
     ) : Construct {
-
-        var default: Construct? = null
 
         override var next: Construct? = null
     }

@@ -40,7 +40,8 @@ private fun reconstructBlock(
         }
         is Instruction.Switch -> {
             var after: BasicBlock? = null
-            val cases = LinkedHashMap<Set<Int>, Construct>()
+            val cases = mutableListOf<Construct.SwitchCase>()
+            val casesBlocks = mutableMapOf<Construct.SwitchCase, Int>()
             val switch = Construct.Switch(tail.expression, cases)
             seq.next = switch
             for (v in tail.cases.values.toSet()) {
@@ -49,17 +50,25 @@ private fun reconstructBlock(
                     if (e.value == v) keys.add(e.key)
                 }
                 val nxt = Construct.Seq()
-                cases[keys] = nxt
+                val case = Construct.SwitchCase(keys, nxt)
+                cases.add(case)
                 val dst = flow.blocks.block(v)
+                casesBlocks[case] = dst.index
                 after = reconstructBlock(flow, nxt, dst, dst) ?: after
             }
             val next = flow.blocks.next(block)
             val default = Construct.Seq()
-            switch.default = default
             after = reconstructBlock(flow, default, next, next) ?: after
-            if (default.instructions.isEmpty() && default.next == null) {
-                switch.default = null
+            if (default.instructions.isNotEmpty() || default.next != null) {
+                val branch = next.head
+                // This check is necessary because the branch instruction is optimised
+                // out when default is defined at the top
+                val index = if (branch is Instruction.Goto) flow.blocks.block(branch.label).index else next.index
+                val case = Construct.SwitchCase(null, default)
+                cases.add(case)
+                casesBlocks[case] = index
             }
+            cases.sortBy { casesBlocks[it] }
             if (after != null) {
                 return reconstructBlock(flow, switch, block, after)
             }

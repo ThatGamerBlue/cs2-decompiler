@@ -156,27 +156,19 @@ private class Writer(
         nextLine()
         val prototype = fs.typings.of(construct.expression).single().prototype
         append("switch_").append(prototype.literal).append(" (").appendExpr(construct.expression).append(") {")
-        for ((ns, body) in construct.cases) {
+        for (case in construct.cases) {
             indent {
+                val keys = case.keys
                 nextLine()
-                val cases = ns.iterator()
-                append("case ").append(intConstantToString(cases.next(), prototype))
-                for (case in cases) {
-                    append(", ").append(intConstantToString(case, prototype))
+                append("case ")
+                if (keys != null) {
+                    append(keys.joinToString(", ") { intConstantToString(it, prototype) })
+                } else {
+                    append("default")
                 }
                 append(" :")
                 indent {
-                    appendConstruct(body)
-                }
-            }
-        }
-        val default = construct.default
-        if (default != null) {
-            indent {
-                nextLine()
-                append("case default :")
-                indent {
-                    appendConstruct(default)
+                    appendConstruct(case.body)
                 }
             }
         }
