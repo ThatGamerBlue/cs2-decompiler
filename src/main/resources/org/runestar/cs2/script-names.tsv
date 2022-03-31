@@ -1110,6 +1110,7 @@
 1348	[proc,settings_buff_ward_of_arceuus]
 1349	[proc,settings_buff_resurrection]
 1350	[clientscript,questlist_init]
+1351	[proc,on_ios]
 1352	[proc,questlist_sort]
 1355	[clientscript,questlist_qp]
 1356	[proc,questlist_qp]
