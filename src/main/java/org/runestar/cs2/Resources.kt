@@ -58,4 +58,4 @@ val PREF_NAMES = readNames("pref-names.tsv")
 
 // must be at the bottom since it relies on other type names
 val SCRIPT_NAMES = readLoader("script-names.tsv") { ScriptName(it) }
-val SCRIPT_ARGS = readLoader("script-arguments.tsv") { it.map { c -> Type.ofAuto(c.toByte()) } }
+val SCRIPT_ARGS = readLoader("script-arguments.tsv") { it.split(",").map { literal -> Type.of(literal) } }

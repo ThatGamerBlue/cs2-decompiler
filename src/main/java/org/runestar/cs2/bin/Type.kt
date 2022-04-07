@@ -56,8 +56,6 @@ enum class Type(desc: Char = 0.toChar()) {
         fun of(desc: Byte): Type = VALUES.getValue(desc)
         fun of(literal: String): Type = VALUES_BY_LITERAL.getValue(literal)
 
-        fun ofAuto(desc: Byte): Type = if (desc == 0.toByte()) INT else of(desc)
-
         fun union(types: Set<Type>): Type? {
             when (types.size) {
                 0 -> return null
