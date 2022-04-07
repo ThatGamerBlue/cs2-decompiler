@@ -22,7 +22,7 @@ private fun <T : Any> readLoader(fileName: String, valueMapper: (String) -> T): 
 
 private fun readNames(fileName: String): Loader.Map<String> = readLoader(fileName) { it }
 
-val PARAM_TYPES = readLoader("param-types.tsv") { Type.ofAuto(it.toByte()) }
+val PARAM_TYPES = readLoader("param-types.tsv") { Type.of(it) }
 
 val BOOLEAN_NAMES = readNames("boolean-names.tsv")
 val FONTMETRICS_NAMES = readNames("fontmetrics-names.tsv")

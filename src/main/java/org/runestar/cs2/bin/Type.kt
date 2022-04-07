@@ -51,8 +51,10 @@ enum class Type(desc: Char = 0.toChar()) {
     companion object {
 
         private val VALUES = values().filter { it.desc != 0.toByte() }.associateBy { it.desc }
+        private val VALUES_BY_LITERAL = values().associateBy { it.literal }
 
         fun of(desc: Byte): Type = VALUES.getValue(desc)
+        fun of(literal: String): Type = VALUES_BY_LITERAL.getValue(literal)
 
         fun ofAuto(desc: Byte): Type = if (desc == 0.toByte()) INT else of(desc)
 
