@@ -3,7 +3,10 @@ package org.runestar.cs2
 import org.runestar.cs2.bin.ScriptName
 import org.runestar.cs2.bin.StackType
 import org.runestar.cs2.bin.Type
+import org.runestar.cs2.ir.PROTOTYPE_LOOKUP_TABLE
+import org.runestar.cs2.ir.Prototype
 import org.runestar.cs2.util.Loader
+import org.runestar.cs2.util.orElse
 import org.runestar.cs2.util.thisClass
 
 private fun <T : Any> readLoader(fileName: String, valueMapper: (String) -> T): Loader.Map<T> {
@@ -21,8 +24,9 @@ private fun <T : Any> readLoader(fileName: String, valueMapper: (String) -> T): 
 }
 
 private fun readNames(fileName: String): Loader.Map<String> = readLoader(fileName) { it }
+private fun readPrototype(fileName: String): Loader.Map<Prototype> = readLoader(fileName) { PROTOTYPE_LOOKUP_TABLE[it] ?: Prototype(Type.of(it)) }
 
-val PARAM_TYPES = readLoader("param-types.tsv") { Type.of(it) }
+val PARAM_TYPES = readPrototype("param-types-override.tsv").orElse(readPrototype("param-types.tsv"))
 
 val BOOLEAN_NAMES = readNames("boolean-names.tsv")
 val FONTMETRICS_NAMES = readNames("fontmetrics-names.tsv")

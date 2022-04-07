@@ -107,3 +107,6 @@ val CLIENTTYPE = Prototype(Type.INT, "clienttype")
 val PLATFORMTYPE = Prototype(Type.INT, "platformtype")
 val MINIMENU_ENTRY_TYPE = Prototype(Type.INT, "minimenu_entry_type")
 val PREF = Prototype(Type.INT, "pref")
+
+val PROTOTYPE_LOOKUP_TABLE = mapOf(
+)
