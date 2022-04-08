@@ -1138,7 +1138,8 @@ interface Command {
 
         override fun translate(state: InterpreterState): Instruction {
             val paramId = checkNotNull(state.peekValue()).int
-            val paramType = state.paramTypes.loadNotNull(paramId)
+            val paramPrototype = state.paramTypes.loadNotNull(paramId)
+            val paramType = paramPrototype.type
             val param = state.pop(StackType.INT)
             assign(state.typings.of(param), state.typings.of(PARAM))
             val recv = state.pop(StackType.INT)
@@ -1147,7 +1148,7 @@ interface Command {
             val operationTyping = state.typings.of(operation).single()
             operationTyping.freeze(paramType)
             val def = state.push(paramType.stackType)
-            assign(operationTyping, state.typings.of(def))
+            assign(operationTyping, state.typings.of(paramPrototype))
             return Instruction.Assignment(def, operation)
         }
     }

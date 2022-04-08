@@ -16,7 +16,7 @@ import org.runestar.cs2.util.toUnsignedInt
 fun interpret(
         scripts: Loader.Keyed<Script>,
         commands: Loader<Command>,
-        paramTypes: Loader<Type>
+        paramTypes: Loader<Prototype>
 ) : FunctionSet {
     return Interpreter(scripts, commands, paramTypes).interpret()
 }
@@ -24,7 +24,7 @@ fun interpret(
 private class Interpreter(
         private val scripts: Loader.Keyed<Script>,
         private val commands: Loader<Command>,
-        private val paramTypes: Loader<Type>
+        private val paramTypes: Loader<Prototype>
 ) {
 
     private val typings = Typings()
@@ -83,7 +83,7 @@ private class Interpreter(
 
 class InterpreterState(
         val scripts: Loader<Script>,
-        val paramTypes: Loader<Type>,
+        val paramTypes: Loader<Prototype>,
         val scriptId: Int,
         val script: Script,
         val typings: Typings,
