@@ -18,6 +18,8 @@
 605	spell_type
 606	magic_runetype_4
 607	magic_runecount_4
+842	adventurepath_description_free
+843	adventurepath_description_member
 873	league_task_id
 874	league_task_name
 875	league_task_description
