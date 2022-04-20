@@ -349,6 +349,7 @@ interface Command {
         CC_GETOPBASE(listOf(), listOf(OPBASE), true),
 
         CC_CALLONRESIZE(listOf(BOOLEAN), listOf()),
+        CC_TRIGGEROP(listOf(OPINDEX), listOf(), true),
 
         IF_SETPOSITION(listOf(X, Y, SETPOSH, SETPOSV, COMPONENT), listOf()),
         IF_SETSIZE(listOf(WIDTH, HEIGHT, SETSIZE, SETSIZE, COMPONENT), listOf()),
@@ -512,6 +513,10 @@ interface Command {
         GETVOLUMEAREASOUNDS(listOf(), listOf(INT)),
         SETPREFERENCE(listOf(PREF, INT), listOf()),
         GETPREFERENCE(listOf(PREF), listOf(INT)),
+        SETDEVICEOPTION(listOf(PREF, INT), listOf()),
+        SETGAMEOPTION(listOf(PREF, INT), listOf()),
+        GETDEVICEOPTION(listOf(PREF), listOf(INT)),
+        GETGAMEOPTION(listOf(PREF), listOf(INT)),
 
         CLIENTCLOCK(listOf(), listOf(CLOCK)),
         INV_GETOBJ(listOf(INV, SLOT), listOf(OBJ)),
@@ -545,6 +550,8 @@ interface Command {
 
         ENUM_STRING(listOf(_ENUM, INT), listOf(STRING)),
         ENUM_GETOUTPUTCOUNT(listOf(_ENUM), listOf(COUNT)),
+
+        KEYHELD(listOf(KEY), listOf(BOOLEAN)),
 
         FRIEND_COUNT(listOf(), listOf(COUNT)),
         FRIEND_GETNAME(listOf(INDEX), listOf(USERNAME, USERNAME)),
@@ -735,6 +742,7 @@ interface Command {
         OC_FIND(listOf(STRING, BOOLEAN), listOf(INT)),
         OC_FINDNEXT(listOf(), listOf(OBJ)),
         OC_FINDRESET(listOf(), listOf()),
+        OC_SHIFTCLICKOP(listOf(OBJ), listOf(INT)),
 
         CHAT_GETFILTER_PUBLIC(listOf(), listOf(CHATFILTER)),
         CHAT_SETFILTER(listOf(CHATFILTER, CHATFILTER, CHATFILTER), listOf()),
@@ -1043,6 +1051,8 @@ interface Command {
         CC_SETONRESIZE,
         CC_SETONCLANSETTINGSTRANSMIT,
         CC_SETONCLANCHANNELTRANSMIT,
+        _1430,
+        _1431,
         IF_SETONCLICK,
         IF_SETONHOLD,
         IF_SETONRELEASE,
@@ -1072,6 +1082,8 @@ interface Command {
         IF_SETONRESIZE,
         IF_SETONCLANSETTINGSTRANSMIT,
         IF_SETONCLANCHANNELTRANSMIT,
+        _2430,
+        _2431,
         ;
 
         override val id = opcodes.getValue(name)

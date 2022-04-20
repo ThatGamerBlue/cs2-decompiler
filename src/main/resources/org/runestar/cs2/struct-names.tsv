@@ -319,7 +319,6 @@
 2732	game_client_layout
 2733	scroll_wheel_can_change_zoom_distance
 2734	camera_zoom_distance
-2735	limit_framerate
 2736	screen_brightness
 2737	player_attack_options
 2738	npc_attack_options
@@ -452,7 +451,7 @@
 3005	tile_highlight_colour
 3006	show_mouseover_tooltips
 3007	show_mouseover_text
-3008	shift_anti_drag
+3008	limit_framerate
 3009	data_orbs_regeneration_indicators
 3010	clear_your_highlighted_tiles
 3011	chambers_of_xeric_helper
@@ -740,3 +739,14 @@
 4252	reset_quest_list_text_colours
 4273	temple_of_the_eye
 4274	guardians_of_the_rift
+4275	examine_price_info_grand_exchange
+4276	examine_price_info_alchemy
+4277	anti_drag
+4278	anti_drag_delay
+4279	anti_drag_enable_key
+4280	anti_drag_disable_key
+4281	vibrate_on_interaction
+4282	vibrate_on_drag
+4283	vibrate_when_minimenu_opens
+4284	vibrate_when_hovering_over_minimenu_entries
+4285	minimenu_long_press_time
