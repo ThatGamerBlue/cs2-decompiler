@@ -43,6 +43,7 @@ val SEQ_NAMES = readNames("seq-names.tsv")
 val STAT_NAMES = readNames("stat-names.tsv")
 val STRUCT_NAMES = readNames("struct-names.tsv")
 val SYNTH_NAMES = readNames("synth-names.tsv")
+val LOCSHAPE_NAMES = readNames("locshape-names.tsv")
 
 val CHATFILTER_NAMES = readNames("chatfilter-names.tsv")
 val CHATTYPE_NAMES = readNames("chattype-names.tsv")
@@ -58,7 +59,8 @@ val WINDOWMODE_NAMES = readNames("windowmode-names.tsv")
 val PLATFORMTYPE_NAMES = readNames("platformtype-names.tsv")
 val CLANTYPE_NAMES = readNames("clantype-names.tsv")
 val MINIMENU_ENTRY_TYPE_NAMES = readNames("minimenu-entry-type-names.tsv")
-val PREF_NAMES = readNames("pref-names.tsv")
+val DEVICEOPTION_NAMES = readNames("deviceoption-names.tsv")
+val GAMEOPTION_NAMES = readNames("gameoption-names.tsv")
 val SETTING_NAMES = readNames("setting-names.tsv")
 
 // must be at the bottom since it relies on other type names

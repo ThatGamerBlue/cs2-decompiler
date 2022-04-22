@@ -5,12 +5,15 @@ import org.runestar.cs2.CHATFILTER_NAMES
 import org.runestar.cs2.CHATTYPE_NAMES
 import org.runestar.cs2.CLANTYPE_NAMES
 import org.runestar.cs2.CLIENTTYPE_NAMES
+import org.runestar.cs2.DEVICEOPTION_NAMES
 import org.runestar.cs2.FONTMETRICS_NAMES
+import org.runestar.cs2.GAMEOPTION_NAMES
 import org.runestar.cs2.GRAPHIC_NAMES
 import org.runestar.cs2.IFTYPE_NAMES
 import org.runestar.cs2.INTERFACE_NAMES
 import org.runestar.cs2.INV_NAMES
 import org.runestar.cs2.KEY_NAMES
+import org.runestar.cs2.LOCSHAPE_NAMES
 import org.runestar.cs2.LOC_NAMES
 import org.runestar.cs2.MAPAREA_NAMES
 import org.runestar.cs2.MINIMENU_ENTRY_TYPE_NAMES
@@ -19,7 +22,6 @@ import org.runestar.cs2.NPC_NAMES
 import org.runestar.cs2.OBJ_NAMES
 import org.runestar.cs2.PARAM_NAMES
 import org.runestar.cs2.PLATFORMTYPE_NAMES
-import org.runestar.cs2.PREF_NAMES
 import org.runestar.cs2.SEQ_NAMES
 import org.runestar.cs2.SETTING_NAMES
 import org.runestar.cs2.SETPOSH_NAMES
@@ -126,7 +128,7 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
 
     this[OBJ] = nonUnique(OBJ, OBJ_NAMES)
     this[LOC] = nonUnique(LOC, LOC_NAMES)
-    this[LOCSHAPE] = unknown(LOCSHAPE)
+    this[LOCSHAPE] = uniqueExhaustive(LOCSHAPE_NAMES)
     this[MODEL] = nonUnique(MODEL, MODEL_NAMES)
     this[STRUCT] = nonUnique(STRUCT, STRUCT_NAMES)
     this[NPC] = nonUnique(NPC, NPC_NAMES)
@@ -148,7 +150,8 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
     this[CLANTYPE] = cst(CLANTYPE.identifier, CLANTYPE_NAMES)
     this[CLANSLOT] = NULL.orElse(VALUE)
     this[MINIMENU_ENTRY_TYPE] = cst(MINIMENU_ENTRY_TYPE.identifier, MINIMENU_ENTRY_TYPE_NAMES)
-    this[PREF] = cst(PREF.identifier, PREF_NAMES)
+    this[DEVICEOPTION] = cst(DEVICEOPTION.identifier, DEVICEOPTION_NAMES)
+    this[GAMEOPTION] = cst(GAMEOPTION.identifier, GAMEOPTION_NAMES)
     this[SETTING] = cst(SETTING.identifier, SETTING_NAMES)
 }
 

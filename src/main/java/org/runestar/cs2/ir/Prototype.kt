@@ -106,7 +106,8 @@ val WINDOWMODE = Prototype(Type.INT, "windowmode")
 val CLIENTTYPE = Prototype(Type.INT, "clienttype")
 val PLATFORMTYPE = Prototype(Type.INT, "platformtype")
 val MINIMENU_ENTRY_TYPE = Prototype(Type.INT, "minimenu_entry_type")
-val PREF = Prototype(Type.INT, "pref")
+val DEVICEOPTION = Prototype(Type.INT, "deviceoption")
+val GAMEOPTION = Prototype(Type.INT, "gameoption")
 val SETTING = Prototype(Type.INT, "setting")
 
 val PROTOTYPE_LOOKUP_TABLE = mapOf(

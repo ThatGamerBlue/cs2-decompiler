@@ -52,3 +52,4 @@
 4653	boolean,string
 5258	component,component,component,component,component,component
 5474	coord,loc,locshape,int,int,int,int
+6003	obj,int,string,boolean,int,boolean,int,int
