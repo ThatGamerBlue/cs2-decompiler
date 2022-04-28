@@ -1291,7 +1291,6 @@
 1290	boolean
 1291	obj
 1292	boolean
-1293	int
 1294	int
 1295	int
 1296	int
@@ -1602,3 +1601,9 @@
 1601	int
 1602	boolean
 1603	int
+1604	int
+1605	int
+1606	int
+1607	int
+1608	boolean
+1609	npc

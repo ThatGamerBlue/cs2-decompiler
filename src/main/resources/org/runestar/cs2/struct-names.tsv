@@ -319,6 +319,7 @@
 2732	game_client_layout
 2733	scroll_wheel_can_change_zoom_distance
 2734	camera_zoom_distance
+2735	hide_unavailable_quests
 2736	screen_brightness
 2737	player_attack_options
 2738	npc_attack_options
@@ -750,3 +751,5 @@
 4283	vibrate_when_minimenu_opens
 4284	vibrate_when_hovering_over_minimenu_entries
 4285	minimenu_long_press_time
+4286	hide_quest_list_headers
+4287	beneath_cursed_sands

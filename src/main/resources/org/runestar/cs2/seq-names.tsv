@@ -89,7 +89,7 @@
 448	rod_fishing_spot_walk_f
 449	broken_barrel
 456	whirlpool
-459	speartrap
+459	trap
 464	ship_hull
 467	lamp
 468	charms
@@ -406,7 +406,7 @@
 1953	bandit_ready
 1954	bandit_ready
 1955	bandit_ready
-1999	doorway
+1998	wall
 2011	locust_walk_f
 2012	locust_ready
 2016	vulture_walk_f
@@ -1054,7 +1054,8 @@
 4703	vyre_orator
 4706	vyrewatch_ready
 4707	vanstrom_klause_ready
-4709	slave_ready
+4709	citizen_ready
+4710	citizen_walk_f
 4711	vampyre_juvinate_ready
 4712	meiyerditch_citizen_ready
 4743	decorated_wall
@@ -1613,7 +1614,7 @@
 6637	magic_door
 6638	candle_stand
 6639	vines
-6645	fire
+6645	furnace
 6646	fire
 6652	jenkins
 6653	flames
@@ -2206,6 +2207,7 @@
 9052	queen_zyanyi_arkan_walk_l
 9053	queen_zyanyi_arkan_walk_r
 9054	queen_zyanyi_arkan_walk_b
+9056	head_menaphite_guard_ready
 9059	xamphur_ready
 9061	xamphur_ready
 9063	xamphur_ready
@@ -2269,3 +2271,12 @@
 9400	earth_energy
 9404	easter_bunny_walk_f
 9405	easter_bunny_ready
+9418	scabaras_ready
+9421	scabaras_walk_f
+9425	menaphite_akh_walk_f
+9426	menaphite_akh_ready
+9430	shadow_rift_ready
+9432	menaphite_akh_ready
+9435	head_menaphite_guard_ready
+9436	door
+9438	head_menaphite_guard_ready
