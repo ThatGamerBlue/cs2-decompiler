@@ -18810,7 +18810,6 @@
 32948	lift
 32949	gibbet
 32962	big_pirate_hat
-32963	easter_bunny
 32964	easter_egg_helm
 32965	easter_egg_helm
 32966	fighter_torso
@@ -24719,18 +24718,9 @@
 44139	easter_hat
 44141	washing_line
 44142	tanning_wheel
-44143	suspicious_crate
 44144	wooden_pole
 44145	blunt_scimitars
 44146	vat_dirty
-44147	easter_bunny
-44148	pile_of_junk
-44149	frozen_churning_machine
-44150	frozen_churning_machine
-44151	pile_of_junk
-44152	pile_of_junk
-44153	pile_of_junk
-44154	pile_of_junk
 44155	churning_machine
 44157	easter_hat
 44158	crate_ring
@@ -24742,7 +24732,6 @@
 44175	pharaoh_kemesis
 44176	champion_of_scabaras
 44177	high_priest_of_scabaras
-44178	lion_helm
 44179	menaphite_akh
 44180	odd_spectacles
 44181	coenus
@@ -24750,7 +24739,6 @@
 44183	menaphite_guard
 44184	menaphite_akh
 44185	maisa
-44186	lion_helm
 44187	keris_partisan
 44188	maisa
 44190	citizen
@@ -24864,7 +24852,6 @@
 44732	cactus
 44733	cactus
 44748	spirit
-44749	scabaras
 44750	warp
 44753	pharaoh_kemesis
 44754	spirit
@@ -24885,3 +24872,6 @@
 44770	lily_of_the_elid
 44771	furnace
 44774	furnace
+44775	menaphite_shadow
+44776	menaphite_shadow
+44777	menaphite_shadow
