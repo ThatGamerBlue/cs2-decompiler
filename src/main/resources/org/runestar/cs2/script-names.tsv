@@ -4502,6 +4502,7 @@
 6013	[clientscript,inventory_reorder]
 6014	[clientscript,inventory_op]
 6015	[clientscript,inventory_antidrag_update]
+6016	[proc,inventory_antidrag_active]
 6021	[clientscript,settings_set_draw_distance]
 6023	[clientscript,setdeviceoption]
 6026	[clientscript,setgameoption]
