@@ -38,6 +38,7 @@
 3110	int,string,int
 3162	component
 3413	string,int,boolean,boolean,component
+3343	string,string,int
 3532	enum,boolean,boolean
 3623	boolean,string,graphic,component
 3649	component,component,boolean
