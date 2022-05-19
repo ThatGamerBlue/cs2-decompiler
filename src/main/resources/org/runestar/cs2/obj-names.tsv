@@ -25844,7 +25844,6 @@
 26245	virtus_robe_bottoms
 26246	placeholder_virtus_robe_bottoms
 26247	pumpkin_pie
-26248	dummy_uncooked_apple_pie
 26249	placeholder_pumpkin_pie
 26250	jereds_empty_wine_bottle
 26251	placeholder_jereds_empty_wine_bottle
@@ -26592,3 +26591,17 @@
 26993	placeholder_amulet_of_the_eye
 26994	amulet_of_the_eye
 26995	placeholder_amulet_of_the_eye
+26996	ensouled_hellhound_head
+26997	ensouled_hellhound_head
+26998	cert_ensouled_hellhound_head
+26999	placeholder_ensouled_hellhound_head
+27000	void_knight_top_l_or
+27001	void_knight_robe_l_or
+27002	void_knight_gloves_l_or
+27003	elite_void_top_l_or
+27004	elite_void_robe_l_or
+27005	void_mage_helm_l_or
+27006	void_ranger_helm_l_or
+27007	void_melee_helm_l_or
+27008	dragon_defender_l_t
+27009	rune_defender_l_t
