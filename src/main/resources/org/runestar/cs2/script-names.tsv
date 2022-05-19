@@ -3529,6 +3529,7 @@
 4619	[proc,settings_chat_timestamps]
 4624	[proc,test_setup_highlights]
 4649	[clientscript,chattimestamp]
+4650	[proc,thinbox_entityoverlay]
 4651	[proc,mescoord]
 4652	[clientscript,client_type_mes]
 4653	[clientscript,helper_cox_init]
