@@ -11244,7 +11244,7 @@
 11415	medium_elemental_guardian
 11416	strong_elemental_guardian
 11417	overcharged_elemental_guardian
-11426	apprentice_tamara
+11426	apprentice_tamara_multi
 11427	apprentice_cordelia
 11428	greatish_guardian
 11429	abyssal_protector
@@ -11282,6 +11282,8 @@
 11461	apprentice_felix_multi
 11462	menaphite_shadow
 11463	reanimated_hellhound
+11464	apprentice_tamara
+11465	apprentice_tamara
 11473	tarik
 11474	maisa
 11475	maisa
