@@ -65,4 +65,4 @@ val SETTING_NAMES = readNames("setting-names.tsv")
 
 // must be at the bottom since it relies on other type names
 val SCRIPT_NAMES = readLoader("script-names.tsv") { ScriptName(it) }
-val SCRIPT_ARGS = readLoader("script-arguments.tsv") { it.split(",").map { literal -> Type.of(literal) } }
+val SCRIPT_ARGS = readLoader("script-arguments.tsv") { it.split(",").map { literal -> PROTOTYPE_LOOKUP_TABLE[literal] ?: Prototype(Type.of(literal)) } }

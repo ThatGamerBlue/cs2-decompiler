@@ -1,6 +1,7 @@
 package org.runestar.cs2.ir
 
 import org.runestar.cs2.bin.Type
+import org.runestar.cs2.util.thisClass
 
 data class Prototype(
         val type: Type,
@@ -110,6 +111,6 @@ val DEVICEOPTION = Prototype(Type.INT, "deviceoption")
 val GAMEOPTION = Prototype(Type.INT, "gameoption")
 val SETTING = Prototype(Type.INT, "setting")
 
-val PROTOTYPE_LOOKUP_TABLE = mapOf(
-    "setting" to SETTING
-)
+val PROTOTYPE_LOOKUP_TABLE = thisClass.declaredFields
+    .filter { it.type == Prototype::class.java }
+    .associate { it.name.toLowerCase() to it.get(null) as Prototype }
