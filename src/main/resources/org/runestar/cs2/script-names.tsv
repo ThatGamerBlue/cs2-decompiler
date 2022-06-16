@@ -4454,6 +4454,8 @@
 5847	[proc,buff_bar_dynamic_graphic]
 5848	[proc,buff_bar_dynamic_graphic2]
 5849	[proc,speedrunning_world]
+5866	218385
+5867	218384
 5868	[proc,speedrunning_misc_unlocks]
 5879	[clientscript,speedrunning_helper_update]
 5880	[proc,speedrunning_helper_draw]
@@ -4477,6 +4479,7 @@
 5907	[clientscript,speedrun_time_update]
 5908	[clientscript,speedrun_time_update_timer]
 5914	[clientscript,wildy_loot_init]
+5918	959525
 5922	[proc,settings_buff_cannon_ammo]
 5923	[proc,buff_bar_get_value]
 5928	[proc,buff_bar_dynamic_obj]
@@ -4488,7 +4491,14 @@
 5937	[clientscript,buff_bar_layout_redraw]
 5938	[proc,buff_bar_layout_redraw]
 5939	[clientscript,buff_bar_display_timer]
+5956	-432
+5957	-434
+5958	-433
+5959	-431
+5960	-430
 5969	[proc,settings_questlist_sort]
+5987	218641
+5988	218640
 5995	[proc,questlist_completed]
 5996	[proc,questlist_settings_button_init]
 5997	[clientscript,questdisplay]
@@ -4507,3 +4517,13 @@
 6021	[clientscript,settings_set_draw_distance]
 6023	[clientscript,setdeviceoption]
 6026	[clientscript,setgameoption]
+6046	219409
+6047	219408
+6074	219665
+6075	219921
+6076	220177
+6077	219664
+6078	219920
+6079	220176
+6080	220945
+6081	220944

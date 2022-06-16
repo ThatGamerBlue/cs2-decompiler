@@ -22,6 +22,11 @@ enum class Trigger(val id: Int, val subjectType: Prototype? = null) {
     trigger_49(49),
     proc(73),
     clientscript(76),
+    trigger_78(78),
+    trigger_79(79),
+    trigger_80(80),
+    trigger_81(81),
+    trigger_82(82),
     ;
 
     companion object {

@@ -816,6 +816,8 @@ interface Command {
         VIEWPORT_GETWIDTH(listOf(), listOf(INT)),
         VIEWPORT_GETHEIGHT(listOf(), listOf(INT)),
         _6230(listOf(INT), listOf()),
+        _6231(listOf(INT, INT), listOf()),
+        _6232(listOf(INT), listOf()),
 
         WORLDLIST_FETCH(listOf(), listOf(BOOLEAN)),
         WORLDLIST_START(listOf(), listOf(WORLD, FLAGS, STRING, INT, COUNT, STRING)),
