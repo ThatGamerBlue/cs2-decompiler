@@ -3,7 +3,7 @@ package org.runestar.cs2.bin
 import org.runestar.cs2.util.CP1252
 import org.runestar.cs2.util.toByte
 
-enum class Type(desc: Char = 0.toChar()) {
+enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
 
     AREA('R'),
     BOOLEAN('1'),
@@ -19,7 +19,7 @@ enum class Type(desc: Char = 0.toChar()) {
     INV('v'),
     LOC('l'),
     LOCSHAPE('H'),
-    MAPAREA('`'),
+    MAPAREA('`', "wma"),
     MAPELEMENT('µ'),
     MODEL('m'),
     NAMEDOBJ('O'),
@@ -44,7 +44,7 @@ enum class Type(desc: Char = 0.toChar()) {
 
     val stackType get() = if (this == STRING) StackType.STRING else StackType.INT
 
-    val literal = name.toLowerCase()
+    val literal = literal ?: name.toLowerCase()
 
     override fun toString() = literal
 
