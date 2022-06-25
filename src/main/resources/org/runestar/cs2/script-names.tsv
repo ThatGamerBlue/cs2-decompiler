@@ -816,6 +816,7 @@
 940	[clientscript,peng_observer_init]
 941	[clientscript,peng_observer_borders]
 942	[proc,peng_observer_borders]
+943	[proc,soul_wars_rewards_drawitem_other]
 946	[clientscript,zep_balloon_map_hover]
 948	[clientscript,fade_overlay]
 949	[clientscript,fade_overlay_update]
@@ -1787,6 +1788,7 @@
 2232	[clientscript,magic_flash]
 2233	[proc,welcome_screen_continue_text]
 2234	[clientscript,camera_do_zoom]
+2238	[clientscript,steelborder_closebutton]
 2239	[clientscript,keyboard_hide]
 2240	[clientscript,collection_init]
 2243	[proc,logout_layout_update]
@@ -4450,6 +4452,7 @@
 5840	[clientscript,league_3_intro_music_restore]
 5843	[clientscript,if_fade]
 5844	[clientscript,if_fade_timer]
+5845	[proc,dynamic_stone_button_filled_main]
 5846	[proc,buff_bar_dynamic_tooltip]
 5847	[proc,buff_bar_dynamic_graphic]
 5848	[proc,buff_bar_dynamic_graphic2]
@@ -4479,6 +4482,8 @@
 5907	[clientscript,speedrun_time_update]
 5908	[clientscript,speedrun_time_update_timer]
 5914	[clientscript,wildy_loot_init]
+5915	[clientscript,wildy_loot_itemnote_transmit]
+5916	[clientscript,wildy_loot_itemnote_switch]
 5918	959525
 5922	[proc,settings_buff_cannon_ammo]
 5923	[proc,buff_bar_get_value]
@@ -4519,6 +4524,8 @@
 6026	[clientscript,setgameoption]
 6046	219409
 6047	219408
+6058	[proc,spec_regen_timer_off]
+6060	[clientscript,spec_regen_vartransmit]
 6074	219665
 6075	219921
 6076	220177
