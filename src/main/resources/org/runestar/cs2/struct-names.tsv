@@ -756,3 +756,8 @@
 4289	full_screen
 4290	sleeping_giants
 4359	giants_foundry
+4360	popout_panel
+4361	popout_panel
+4362	show_warning_on_wilderness_teleport_levers
+4363	show_warning_on_wilderness_teleport_levers_on_high_risk_worlds
+4364	show_warning_on_exiting_ferox_enclave
