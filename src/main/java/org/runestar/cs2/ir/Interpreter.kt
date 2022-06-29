@@ -16,15 +16,17 @@ import org.runestar.cs2.util.toUnsignedInt
 fun interpret(
         scripts: Loader.Keyed<Script>,
         commands: Loader<Command>,
-        paramTypes: Loader<Prototype>
+        paramTypes: Loader<Prototype>,
+        dbtableTypes: Loader<Array<Prototype>>
 ) : FunctionSet {
-    return Interpreter(scripts, commands, paramTypes).interpret()
+    return Interpreter(scripts, commands, paramTypes, dbtableTypes).interpret()
 }
 
 private class Interpreter(
         private val scripts: Loader.Keyed<Script>,
         private val commands: Loader<Command>,
-        private val paramTypes: Loader<Prototype>
+        private val paramTypes: Loader<Prototype>,
+        private val dbtableTypes: Loader<Array<Prototype>>,
 ) {
 
     private val typings = Typings()
@@ -46,7 +48,7 @@ private class Interpreter(
         return Function(scriptId, args, instructions, state.script.returnTypes)
     }
 
-    private fun state(scriptId: Int) = InterpreterState(scripts, paramTypes, scriptId, scripts.loadNotNull(scriptId), typings, callGraph)
+    private fun state(scriptId: Int) = InterpreterState(scripts, paramTypes, dbtableTypes, scriptId, scripts.loadNotNull(scriptId), typings, callGraph)
 
     private fun interpretInstructions(state: InterpreterState): Array<Instruction> {
         return Array(state.script.opcodes.size) {
@@ -84,6 +86,7 @@ private class Interpreter(
 class InterpreterState(
         val scripts: Loader<Script>,
         val paramTypes: Loader<Prototype>,
+        val dbtableTypes: Loader<Array<Prototype>>,
         val scriptId: Int,
         val script: Script,
         val typings: Typings,

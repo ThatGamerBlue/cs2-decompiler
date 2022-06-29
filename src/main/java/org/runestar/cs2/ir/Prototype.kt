@@ -51,6 +51,7 @@ val PARAM = Prototype(Type.PARAM)
 val NEWVAR = Prototype(Type.NEWVAR)
 val NPC_UID = Prototype(Type.NPC_UID)
 val PLAYER_UID = Prototype(Type.PLAYER_UID)
+val DBROW = Prototype(Type.DBROW)
 
 val OPBASE = Prototype(Type.STRING, "opbase")
 val MOUSEX = Prototype(Type.INT, "mousex")
@@ -110,6 +111,10 @@ val MINIMENU_ENTRY_TYPE = Prototype(Type.INT, "minimenu_entry_type")
 val DEVICEOPTION = Prototype(Type.INT, "deviceoption")
 val GAMEOPTION = Prototype(Type.INT, "gameoption")
 val SETTING = Prototype(Type.INT, "setting")
+
+val DBTABLE = Prototype(Type.INT, "dbtable")
+val DBCOLUMN = Prototype(Type.INT, "dbcolumn")
+val DBFIELD = Prototype(Type.INT, "dbfield")
 
 val PROTOTYPE_LOOKUP_TABLE = thisClass.declaredFields
     .filter { it.type == Prototype::class.java }

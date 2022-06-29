@@ -11,6 +11,7 @@ enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
     CHAR('z'),
     COMPONENT('I'),
     COORD('c'),
+    DBROW('Ð'),
     ENUM('g'),
     FONTMETRICS('f'),
     GRAPHIC('d'),

@@ -34,6 +34,11 @@ interface Command {
             add(DefineArray)
             add(PushArrayInt)
             add(PopArrayInt)
+            add(DBGetField)
+            add(DbFind(DB_FIND))
+            add(DbFind(DB_FIND_WITH_COUNT))
+            add(DbFind(DB_FIND_FILTER))
+            add(DbFind(DB_FIND_FILTER_WITH_COUNT))
             addAll(BranchCompare.values().asList())
             addAll(Discard.values().asList())
             addAll(Assign.values().asList())
@@ -117,6 +122,66 @@ interface Command {
             return Instruction.Assignment(value, operation)
         }
     }
+
+    class DbFind(override val id: Int) : Command {
+
+        override fun translate(state: InterpreterState): Instruction {
+            val value = when (val typeId = state.popValue().int) {
+                0 -> state.pop(StackType.INT)
+                2 -> state.pop(StackType.STRING)
+                else -> error("Unrecognised type id: $typeId")
+            }
+            val column = checkNotNull(state.peekValue()).int
+            val tupleIndex = (column and 0xf) - 1
+            val columnVar = state.pop(StackType.INT)
+            if (tupleIndex != -1) {
+                val valueType = state.dbtableTypes.load(column and 0xf.inv())?.get(tupleIndex)
+                    ?: error("Missing types for DB Column ID: $column for Script ID: ${state.scriptId}")
+                assign(state.typings.of(value), state.typings.of(valueType))
+            }
+            assign(state.typings.of(columnVar), state.typings.of(DBCOLUMN))
+            val defs = if (id == DB_FIND_WITH_COUNT || id == DB_FIND_FILTER_WITH_COUNT) listOf(Type.INT) else emptyList()
+            val defStackTypes = defs.map { it.stackType }
+            val operation = Expression.Operation(defStackTypes, id, Expression(columnVar, value))
+            val operationTyping = state.typings.of(operation)
+            for (i in defs.indices) {
+                operationTyping[i].freeze(defs[i])
+            }
+            val opDefs = Expression(state.push(defStackTypes))
+            assign(state.typings.of(operation), state.typings.of(opDefs))
+            return Instruction.Assignment(opDefs, operation)
+        }
+    }
+
+    object DBGetField : Command {
+
+        override val id = DB_GETFIELD
+
+        override fun translate(state: InterpreterState): Instruction {
+            val field = state.pop(StackType.INT)
+            assign(state.typings.of(field), state.typings.of(DBFIELD))
+            val column = checkNotNull(state.peekValue()).int
+            val tupleIndex = (column and 0xf) - 1
+            val columnVar = state.pop(StackType.INT)
+            assign(state.typings.of(columnVar), state.typings.of(DBCOLUMN))
+            val dbrow = state.pop(StackType.INT)
+            assign(state.typings.of(dbrow), state.typings.of(DBROW))
+            var defs = state.dbtableTypes.load(column) ?: error("Missing types for DB Column ID: $column")
+            if (tupleIndex != -1) {
+                defs = arrayOf(defs[tupleIndex])
+            }
+            val defStackTypes = defs.map { it.stackType }
+            val operation = Expression.Operation(defStackTypes, id, Expression(dbrow, columnVar, field))
+            val operationTyping = state.typings.of(operation)
+            for (i in defs.indices) {
+                operationTyping[i].freeze(defs[i])
+            }
+            val opDefs = Expression(state.push(defStackTypes))
+            assign(state.typings.of(operation), state.typings.of(opDefs))
+            return Instruction.Assignment(opDefs, operation)
+        }
+    }
+
 
     enum class BranchCompare : Command {
 
@@ -788,7 +853,7 @@ interface Command {
         _5310(listOf(INT), listOf()),
         _5311(listOf(INT, INT), listOf()),
         _5312(listOf(BOOLEAN), listOf()),
-        
+
         _5350(listOf(INT, STRING, STRING), listOf()),
         _5351(listOf(STRING), listOf()),
 
@@ -922,7 +987,7 @@ interface Command {
         SELF_PLAYER_UID(listOf(), listOf(_PLAYER_UID)),
 
         _6950(listOf(), listOf(_COORD)),
-        
+
         _7000(listOf(INT, COLOUR, INT, INT, INT), listOf()),
         HIGHLIGHT_NPC_ON(listOf(_NPC_UID, INT, INT), listOf()),
         HIGHLIGHT_NPC_OFF(listOf(_NPC_UID, INT, INT), listOf()),
@@ -978,7 +1043,7 @@ interface Command {
         _7120(listOf(INT), listOf(INT)),
         _7121(listOf(INT, INT), listOf(INT)),
         _7122(listOf(INT, INT), listOf(INT)),
-        
+
         _7200(listOf(INT, INT, INT, INT, INT), listOf(NEWVAR)),
         _7201(listOf(INT, INT, INT, INT, INT), listOf(NEWVAR)),
         _7202(listOf(INT, INT, INT, INT, INT), listOf(NEWVAR)),
@@ -1003,6 +1068,11 @@ interface Command {
         _7455(listOf(INT), listOf(BOOLEAN)),
         _7456(listOf(INT), listOf(BOOLEAN)),
         _7460(listOf(), listOf(INT)),
+
+        DB_FINDNEXT(listOf(), listOf(DBROW)),
+        DB_GETFIELDCOUNT(listOf(DBROW, DBCOLUMN), listOf(INT)),
+        DB_FINDALL_WITH_COUNT(listOf(DBTABLE), listOf(INT)),
+        DB_GETROWTABLE(listOf(DBROW), listOf(DBTABLE)),
         ;
 
         override val id = opcodes.getValue(name)

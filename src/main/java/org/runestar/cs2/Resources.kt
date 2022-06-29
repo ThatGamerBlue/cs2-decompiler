@@ -25,7 +25,13 @@ private fun <T : Any> readLoader(fileName: String, valueMapper: (String) -> T): 
 
 private fun readNames(fileName: String): Loader.Map<String> = readLoader(fileName) { it }
 private fun readPrototype(fileName: String): Loader.Map<Prototype> = readLoader(fileName) { PROTOTYPE_LOOKUP_TABLE[it] ?: Prototype(Type.of(it)) }
+private fun readPrototypeArray(fileName: String): Loader.Map<Array<Prototype>> = readLoader(fileName) {
+    it.split(",").map {
+            split -> PROTOTYPE_LOOKUP_TABLE[split] ?: Prototype(Type.of(split))
+    }.toTypedArray()
+}
 
+val DBTABLE_TYPES = readPrototypeArray("dbtable-types")
 val PARAM_TYPES = readPrototype("param-types-override.tsv").orElse(readPrototype("param-types.tsv"))
 
 val BOOLEAN_NAMES = readNames("boolean-names.tsv")
