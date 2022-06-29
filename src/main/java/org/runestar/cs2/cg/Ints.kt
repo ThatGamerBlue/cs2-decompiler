@@ -160,7 +160,6 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
     this[DBROW] = unknown(DBROW)
     this[DBTABLE] = DBTABLES
     this[DBCOLUMN] = NULL.orElse(DBCOLUMNS)
-    this[DBFIELD] = NULL
 }
 
 fun intConstantToString(n: Int, prototype: Prototype): String {
