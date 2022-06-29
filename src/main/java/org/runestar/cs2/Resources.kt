@@ -31,13 +31,14 @@ private fun readPrototypeArray(fileName: String): Loader.Map<Array<Prototype>> =
     }.toTypedArray()
 }
 
-val DBTABLE_TYPES = readPrototypeArray("dbtable-types")
+val DBTABLE_TYPES = readPrototypeArray("dbtable-types.tsv")
 val PARAM_TYPES = readPrototype("param-types-override.tsv").orElse(readPrototype("param-types.tsv"))
 
 val BOOLEAN_NAMES = readNames("boolean-names.tsv")
 val FONTMETRICS_NAMES = readNames("fontmetrics-names.tsv")
 val GRAPHIC_NAMES = readNames("graphic-names.tsv")
 val INTERFACE_NAMES = readNames("interface-names.tsv")
+val DBTABLE_NAMES = readNames("dbtable-names.tsv")
 val INV_NAMES = readNames("inv-names.tsv")
 val LOC_NAMES = readNames("loc-names.tsv")
 val MAPAREA_NAMES = readNames("maparea-names.tsv")

@@ -12,7 +12,7 @@ fun decompile(
         scripts: Loader.Keyed<Script>,
         generator: Generator,
 ) {
-    val fs = interpret(scripts, Command.LOADER, PARAM_TYPES)
+    val fs = interpret(scripts, Command.LOADER, PARAM_TYPES, DBTABLE_TYPES)
     Phase.DEFAULT.transform(fs)
     fs.functions.values.forEach { generator.write(it, fs, reconstruct(it)) }
 }
