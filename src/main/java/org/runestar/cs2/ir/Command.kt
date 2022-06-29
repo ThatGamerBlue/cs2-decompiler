@@ -1073,6 +1073,7 @@ interface Command {
         DB_GETFIELDCOUNT(listOf(DBROW, DBCOLUMN), listOf(INT)),
         DB_FINDALL_WITH_COUNT(listOf(DBTABLE), listOf(INT)),
         DB_GETROWTABLE(listOf(DBROW), listOf(DBTABLE)),
+        DB_FINDALL(listOf(DBTABLE), listOf()),
         ;
 
         override val id = opcodes.getValue(name)
