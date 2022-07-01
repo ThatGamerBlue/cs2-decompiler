@@ -5,6 +5,7 @@ import org.runestar.cs2.CHATFILTER_NAMES
 import org.runestar.cs2.CHATTYPE_NAMES
 import org.runestar.cs2.CLANTYPE_NAMES
 import org.runestar.cs2.CLIENTTYPE_NAMES
+import org.runestar.cs2.DBCOLUMN_NAMES
 import org.runestar.cs2.DBTABLE_NAMES
 import org.runestar.cs2.DEVICEOPTION_NAMES
 import org.runestar.cs2.FONTMETRICS_NAMES
@@ -84,7 +85,11 @@ private val OVERLAYINTERFACES = unique(OVERLAYINTERFACE, INTERFACE_NAMES)
 private val DBTABLES = unique(DBTABLE, DBTABLE_NAMES)
 
 private val COMPONENTS = Loader { INTERFACES.loadNotNull(it shr 16) + ':' + (it and 0xFFFF) }
-private val DBCOLUMNS = Loader { DBTABLES.loadNotNull(it shr 12) + ':' + (it shr 4 and 0xFF) }
+private val DBCOLUMNS = Loader {
+    val tableName = DBTABLES.loadNotNull(it shr 12)
+    val columnName = DBCOLUMN_NAMES.load(it and 0xf.inv()) ?: (it shr 4 and 0xFF)
+    "$tableName:$columnName"
+}
 
 private fun cst(prefix: String, loader: Loader<String>) = loader.prefix('^' + prefix + '_').orElse(NULL).orElse(VALUE)
 
