@@ -9,13 +9,13 @@ import org.runestar.cs2.util.Loader
 import org.runestar.cs2.util.orElse
 import org.runestar.cs2.util.thisClass
 
-private fun <T : Any> readLoader(fileName: String, valueMapper: (String) -> T): Loader.Map<T> {
+private fun <T : Any> readLoader(fileName: String, keyMapper: (String) -> Int = { it.toInt() }, valueMapper: (String) -> T): Loader.Map<T> {
     val map = HashMap<Int, T>()
     thisClass.getResourceAsStream(fileName).bufferedReader().use {
         while (true) {
             val line = it.readLine() ?: break
             val tab = line.indexOf('\t')
-            val id = line.substring(0, tab).toInt()
+            val id = keyMapper(line.substring(0, tab))
             val v = valueMapper(line.substring(tab + 1))
             check(map.put(id, v) == null)
         }
@@ -23,7 +23,7 @@ private fun <T : Any> readLoader(fileName: String, valueMapper: (String) -> T): 
     return Loader(map)
 }
 
-private fun readNames(fileName: String): Loader.Map<String> = readLoader(fileName) { it }
+private fun readNames(fileName: String, keyMapper: (String) -> Int = { it.toInt() }): Loader.Map<String> = readLoader(fileName, keyMapper) { it }
 private fun readPrototype(fileName: String): Loader.Map<Prototype> = readLoader(fileName) { PROTOTYPE_LOOKUP_TABLE[it] ?: Prototype(Type.of(it)) }
 private fun readPrototypeArray(fileName: String): Loader.Map<Array<Prototype>> = readLoader(fileName) {
     it.split(",").map {
@@ -39,6 +39,10 @@ val FONTMETRICS_NAMES = readNames("fontmetrics-names.tsv")
 val GRAPHIC_NAMES = readNames("graphic-names.tsv")
 val INTERFACE_NAMES = readNames("interface-names.tsv")
 val DBTABLE_NAMES = readNames("dbtable-names.tsv")
+val DBCOLUMN_NAMES = readNames("dbcolumn-names.tsv") {
+    val split = it.split(",");
+    split[0].toInt() shl 12 or split[1].toInt() shl 4
+}
 val INV_NAMES = readNames("inv-names.tsv")
 val LOC_NAMES = readNames("loc-names.tsv")
 val MAPAREA_NAMES = readNames("maparea-names.tsv")
