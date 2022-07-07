@@ -554,6 +554,8 @@
 633	[proc,int_to_bool]
 634	[proc,displayname_draw]
 635	[clientscript,displayname_lookup]
+637	[proc,debug_mes_info]
+638	[proc,debug_mes_warn]
 639	[clientscript,poh_menagerie_initlist]
 640	[clientscript,poh_menagerie_drawlist]
 641	[proc,poh_menagerie_drawlist]
@@ -1959,6 +1961,7 @@
 2476	[proc,on_enhanced_mobile]
 2477	[clientscript,duel_stake_inv_cash]
 2478	[clientscript,duel_stake_inv_details]
+2479	[clientscript,load_stake_preset]
 2480	[clientscript,duel_stake_load_highlight]
 2481	[clientscript,duel_stake_load_mouseout]
 2482	[clientscript,duel_switch_setup_buttons]
@@ -2926,6 +2929,8 @@
 3745	[proc,meslayer_mode1_enabled]
 3758	[proc,recipe_for_disaster_button]
 3759	[clientscript,recipe_for_disaster_animate]
+3760	[clientscript,recipe_for_disaster_updatecolour]
+3761	[proc,recipe_for_disaster_getcolour]
 3762	[clientscript,recipe_for_disaster_op]
 3763	[clientscript,friendschat_op]
 3764	[proc,friendschat_sendkick]
@@ -3200,6 +3205,7 @@
 4130	[clientscript,stat_boosts_hud_init]
 4131	[proc,magic_spellbook_unlocked]
 4133	[proc,arceuus_autocast_spellpos]
+4136	[proc,quest_is_complete]
 4139	[clientscript,tutorial_displayname_allow_input]
 4140	[proc,tutorial_displayname_allow_input]
 4141	[clientscript,tutorial_displayname_onkey]
@@ -4501,6 +4507,7 @@
 5969	[proc,settings_questlist_sort]
 5987	218641
 5988	218640
+5989	[proc,quest_requirement_check]
 5995	[proc,questlist_completed]
 5996	[proc,questlist_settings_button_init]
 5997	[clientscript,questdisplay]
@@ -4531,3 +4538,10 @@
 6079	220176
 6080	220945
 6081	220944
+6082	[clientscript,reward_shop_init]
+6123	[clientscript,smithing_close]
+6124	[clientscript,crafting_init]
+6125	[clientscript,crafting_close]
+6151	[proc,debug_mes_error]
+6153	[proc,quest_is_subquest]
+6155	[proc,questdisplay_hide_quest]

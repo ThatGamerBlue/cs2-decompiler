@@ -44,6 +44,7 @@
 3532	enum,boolean,boolean
 3623	boolean,text,graphic,component
 3649	component,component,boolean
+3739	colour,string
 4140	component,component,component,component,component,boolean,boolean
 4179	string,int,int
 4212	string,component
@@ -55,4 +56,5 @@
 4653	boolean,string
 5258	component,component,component,component,component,component
 5474	coord,loc,locshape,int,int,colour,int
+5910	component,dbrow,inv,int,int
 6003	obj,int,mes,boolean,int,boolean,int,int
