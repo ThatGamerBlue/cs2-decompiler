@@ -1755,6 +1755,8 @@
 7191	lizardman_shaman_ready
 7195	lizardman_shaman_walk_f
 7204	pot_of_dynamite
+7220	fighter_ready
+7223	fighter_walk_f
 7230	tortured_gorilla_ready
 7233	tortured_gorilla_walk_f
 7234	kruk_walk_f

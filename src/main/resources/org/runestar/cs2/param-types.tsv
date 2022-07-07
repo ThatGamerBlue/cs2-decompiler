@@ -189,6 +189,7 @@
 188	int
 189	int
 190	int
+191	stat
 192	int
 193	int
 194	int
@@ -431,8 +432,8 @@
 431	int
 432	int
 433	int
-434	int
-435	int
+434	stat
+435	stat
 436	int
 437	int
 438	int
@@ -576,6 +577,7 @@
 576	int
 577	int
 578	namedobj
+579	stat
 580	int
 581	int
 582	int
@@ -606,6 +608,14 @@
 607	int
 608	obj
 609	int
+610	stat
+611	stat
+612	stat
+613	int
+614	int
+615	int
+616	int
+617	int
 658	int
 659	int
 660	string
@@ -798,7 +808,6 @@
 847	int
 848	int
 849	int
-850	int
 851	int
 852	int
 853	string
