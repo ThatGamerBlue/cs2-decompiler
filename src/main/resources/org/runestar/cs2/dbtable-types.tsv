@@ -33,3 +33,4 @@
 528	namedobj,int
 544	namedobj,int
 560	namedobj,int
+4096	string,namedobj,string
