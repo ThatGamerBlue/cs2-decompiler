@@ -2,6 +2,7 @@
 55	component,component,int,string,string,int
 110	text,int
 217	text,string,boolean
+249	component,int,boolean
 253	flags,flags,flags,flags,flags,flags,string,string,int,boolean
 255	string,coord
 264	boolean
@@ -36,7 +37,7 @@
 2523	boolean,int
 2821	component,component,component,component,component,component
 2956	component
-3092	graphic,op,int
+3092	graphic,op,boolean
 3110	comsubid,string,int
 3162	component
 3413	string,int,boolean,boolean,component
