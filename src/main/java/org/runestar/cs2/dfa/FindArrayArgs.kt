@@ -11,9 +11,14 @@ import org.runestar.cs2.ir.Variable
 import org.runestar.cs2.ir.asList
 import org.runestar.cs2.ir.assign
 
-object FindArrayArgs : Phase.Individual() {
+object FindArrayArgs : Phase {
 
-    override fun transform(f: Function, fs: FunctionSet) {
+    override fun transform(fs: FunctionSet) {
+        fs.functions.values.forEach { findArrayArgs(it, fs) }
+        while (findArrayRefs(fs));
+    }
+
+    private fun findArrayArgs(f: Function, fs: FunctionSet) {
         if (f.arguments.none { it.stackType == StackType.INT }) return
         val definedArrays =  mutableSetOf<Int>()
         for (insn in f.instructions) {
@@ -38,20 +43,8 @@ object FindArrayArgs : Phase.Individual() {
                     // array id to support multiple arrays, but we have no proof of such thing.
 
                     val argIndex = f.arguments.indexOfFirst { it.stackType == StackType.INT }
-                    val oldVar = f.arguments[argIndex]
-                    val newVar = Variable.array(f.id, 0)
-                    val newVars = f.arguments.toMutableList()
+                    replaceFunctionArgument(f, fs, argIndex)
 
-                    newVars[argIndex] = newVar
-                    f.arguments = newVars
-
-                    val t = fs.typings.of(newVar)
-                    val ts = fs.typings.args(f.id, f.arguments.map { it.stackType }).toMutableList()
-                    ts[argIndex] = t
-
-                    fs.typings.remove(oldVar)
-                    fs.typings.args[f.id] = ts
-                    transformCalls(f.id, fs, argIndex)
                 }
             }
         }
@@ -77,5 +70,65 @@ object FindArrayArgs : Phase.Individual() {
                 }
             }
         }
+    }
+
+    private fun findArrayRefs(fs: FunctionSet): Boolean {
+        var transformed = 0
+        for (f in fs.functions.values) {
+            transformed += findArrayRefs(f, fs)
+        }
+        return transformed > 0
+    }
+
+    private fun findArrayRefs(f: Function, fs: FunctionSet): Int {
+        val definedArrays = mutableSetOf<Int>()
+        val usedArrays = mutableSetOf<Int>()
+        f.arguments.filterIsInstance<Variable.array>().forEach { definedArrays += it.id }
+        for (insn in f.instructions) {
+            if (insn !is Instruction.Assignment) {
+                continue
+            }
+            val expr = insn.expression
+            if (expr is Expression.Operation) {
+                val args = expr.arguments.asList
+                when (expr.opcode) {
+                    DEFINE_ARRAY -> definedArrays += (args[0] as Element.Access).variable.id
+                }
+            }
+            val args = when (expr) {
+                is Expression.Operation -> expr.arguments.asList
+                is Expression.Proc -> expr.arguments.asList
+                is Expression.ClientScript -> expr.arguments.asList
+                else -> emptyList()
+            }
+            for (arg in args) {
+                if (arg !is Element.Pointer || arg.variable !is Variable.array) {
+                    continue
+                }
+                usedArrays += arg.variable.id
+            }
+        }
+        val undeclaredArrays = usedArrays - definedArrays
+        for (argIndex in undeclaredArrays) {
+            replaceFunctionArgument(f, fs, argIndex)
+        }
+        return undeclaredArrays.size
+    }
+
+    private fun replaceFunctionArgument(f: Function, fs: FunctionSet, argIndex: Int) {
+        val oldVar = f.arguments[argIndex]
+        val newVar = Variable.array(f.id, 0)
+        val newVars = f.arguments.toMutableList()
+
+        newVars[argIndex] = newVar
+        f.arguments = newVars
+
+        val t = fs.typings.of(newVar)
+        val ts = fs.typings.args(f.id, f.arguments.map { it.stackType }).toMutableList()
+        ts[argIndex] = t
+
+        fs.typings.remove(oldVar)
+        fs.typings.args[f.id] = ts
+        transformCalls(f.id, fs, argIndex)
     }
 }
