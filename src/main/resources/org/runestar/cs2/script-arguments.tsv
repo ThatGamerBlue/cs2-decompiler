@@ -27,7 +27,6 @@
 1330	component,component,component,component,component,component,component,component,component,component,component,component,component
 1404	int,obj,int,string,boolean
 1406	int,boolean
-1450	component,namedobj,int,component,component,component
 1495	string,component,component
 1584	string,string,string,int,text
 1685	int,text,flags

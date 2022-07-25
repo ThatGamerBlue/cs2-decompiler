@@ -617,6 +617,10 @@
 616	int
 617	int
 618	int
+619	boolean
+620	boolean
+621	boolean
+622	boolean
 658	int
 659	int
 660	string

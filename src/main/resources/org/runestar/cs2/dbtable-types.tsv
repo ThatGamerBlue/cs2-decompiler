@@ -33,4 +33,14 @@
 528	namedobj,int
 544	namedobj,int
 560	namedobj,int
+592	int
+608	int
+624	boolean
+640	int
+656	string
+672	boolean
 4096	string,namedobj,string
+8192	string
+8208	graphic,int,int
+8224	int,int
+8240	component

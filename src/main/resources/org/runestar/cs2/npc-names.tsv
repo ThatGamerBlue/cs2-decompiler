@@ -5680,7 +5680,7 @@
 5718	undead_lumberjack
 5719	undead_lumberjack
 5720	undead_lumberjack
-5721	lanthus
+5721	lanthus_multi
 5722	barricade
 5723	barricade
 5724	barricade
@@ -11466,6 +11466,7 @@
 11647	plague_cow_multi
 11648	plague_cow_multi
 11649	high_priest_multi
+11650	lanthus
 11658	gilbert
 11664	arena_guard_fronk
 11665	arena_guard_nikkolas
