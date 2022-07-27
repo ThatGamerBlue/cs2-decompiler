@@ -969,24 +969,34 @@ interface Command {
         NPC_TYPE(listOf(), listOf(NPC)),
         NC_NAME(listOf(NPC), listOf(STRING)),
         NPC_FIND(listOf(_NPC_UID), listOf(BOOLEAN)),
+        _6761(listOf(NPC, INT, INT), listOf(STRING)),
+        _6762(listOf(NPC, INT, INT), listOf(STRING)),
 
         LOC_NAME(listOf(), listOf(STRING)),
         LOC_COORD(listOf(), listOf(_COORD)),
         LOC_TYPE(listOf(), listOf(LOC)),
         LOC_FIND(listOf(_COORD, LOC), listOf(BOOLEAN)),
+        _6806(listOf(LOC, INT), listOf(STRING)),
+        _6807(listOf(LOC, INT, INT), listOf(STRING)),
+        LC_NAME(listOf(LOC), listOf(STRING)),
 
         OBJ_NAME(listOf(), listOf(STRING)),
         OBJ_COORD(listOf(), listOf(_COORD)),
         OBJ_TYPE(listOf(), listOf(OBJ)),
         _6853(listOf(), listOf(INT)),
+        _6854(listOf(OBJ, INT), listOf(INT)),
+        _6857(listOf(OBJ, INT), listOf(STRING)),
+        _6858(listOf(OBJ, INT, INT), listOf(STRING)),
 
         PLAYER_NAME(listOf(), listOf(STRING)),
+        _6901(listOf(), listOf(BOOLEAN)),
         _6902(listOf(), listOf(INT)),
         _6903(listOf(INT), listOf(_COORD)),
         PLAYER_UID(listOf(), listOf(_PLAYER_UID)),
         SELF_PLAYER_UID(listOf(), listOf(_PLAYER_UID)),
 
         _6950(listOf(), listOf(_COORD)),
+        _6951(listOf(_COORD), listOf(BOOLEAN)),
 
         _7000(listOf(INT, COLOUR, INT, INT, INT), listOf()),
         HIGHLIGHT_NPC_ON(listOf(_NPC_UID, INT, INT), listOf()),
@@ -1028,6 +1038,11 @@ interface Command {
         HIGHLIGHT_TILE_OFF(listOf(_COORD, INT, INT), listOf()),
         _7038(listOf(_COORD, INT, INT), listOf(BOOLEAN)),
         _7039(listOf(INT), listOf()),
+        _7040(listOf(INT, COLOUR, INT, INT, INT), listOf()),
+        _7041(listOf(STRING, INT), listOf()),
+        _7042(listOf(STRING, INT), listOf()),
+        _7043(listOf(STRING, INT), listOf(BOOLEAN)),
+        _7044(listOf(INT), listOf()),
 
         GET_ACTIVE_MINIMENU_ENTRY_TYPE(listOf(), listOf(MINIMENU_ENTRY_TYPE)),
         GET_ACTIVE_MINIMENU_ENTRY(listOf(), listOf(STRING, STRING)),
@@ -1050,10 +1065,10 @@ interface Command {
         _7203(listOf(INT, INT, INT, INT, INT), listOf(NEWVAR)),
         _7204(listOf(_COORD, INT, INT, INT, INT, INT), listOf(NEWVAR)),
         _7205(listOf(), listOf(INT)),
-        _7206(listOf(), listOf(INT)),
+        _7206(listOf(INT), listOf(NEWVAR)),
         _7207(listOf(), listOf(INT)),
         _7208(listOf(), listOf(INT)),
-        _7209(listOf(), listOf(INT)),
+        _7209(listOf(_COORD, INT), listOf(NEWVAR)),
         _7210(listOf(INT), listOf()),
         _7211(listOf(INT), listOf()),
         _7212(listOf(INT), listOf()),
@@ -1061,6 +1076,7 @@ interface Command {
         _7214(listOf(_COORD, INT), listOf()),
         SETMINIMAPLOCK(listOf(BOOLEAN), listOf()),
         _7252(listOf(INT), listOf()),
+        _7254(listOf(INT), listOf()),
 
         _7451(listOf(INT), listOf(INT)),
         _7453(listOf(INT), listOf(BOOLEAN)),
@@ -1068,6 +1084,7 @@ interface Command {
         _7455(listOf(INT), listOf(BOOLEAN)),
         _7456(listOf(INT), listOf(BOOLEAN)),
         _7460(listOf(), listOf(INT)),
+        _7462(listOf(INT, INT), listOf()),
 
         DB_FINDNEXT(listOf(), listOf(DBROW)),
         DB_GETFIELDCOUNT(listOf(DBROW, DBCOLUMN), listOf(INT)),
@@ -1140,6 +1157,7 @@ interface Command {
         CC_SETONCLANCHANNELTRANSMIT,
         CC_SETONKEYDOWN,
         CC_SETONKEYUP,
+        _1433,
         CC_SETONCRMVIEWLOAD,
         IF_SETONCLICK,
         IF_SETONHOLD,
@@ -1172,6 +1190,7 @@ interface Command {
         IF_SETONCLANCHANNELTRANSMIT,
         IF_SETONKEYDOWN,
         IF_SETONKEYUP,
+        _2433,
         IF_SETONCRMVIEWLOAD
         ;
 
