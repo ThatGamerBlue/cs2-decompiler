@@ -621,6 +621,9 @@
 620	boolean
 621	boolean
 622	boolean
+623	dbrow
+624	graphic
+625	int
 658	int
 659	int
 660	string
