@@ -929,6 +929,7 @@
 1741	door
 1742	door
 1743	door
+1747	skull_slope
 1749	door
 1753	grapevine
 1754	grapevine
@@ -9331,7 +9332,6 @@
 15480	portal
 15481	portal
 15482	portal_multi
-15483	skull_slope
 15484	display_case_multi
 15485	display_case_multi
 15487	rope

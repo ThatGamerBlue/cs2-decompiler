@@ -39,6 +39,13 @@
 342	buff_cannon_broken
 343	clue_scroll
 344	clue_scroll_helper
+345	display_a_warning_on_login_if_there_are_items_stored_in_an_item_retrieval_service
+346	max_hit_hitsplats
+347	max_hit_hitsplats_threshold
+348	camera_effects
+349	show_the_camera_effect_when_in_baba_yagas_house
+350	show_the_camera_effect_when_on_the_fishing_trawler
+351	show_the_camera_effect_after_looting_the_barrows_chest
 450	varrock
 451	grand_exchange
 452	lumbridge

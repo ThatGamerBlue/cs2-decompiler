@@ -127,8 +127,9 @@
 61472	coord
 61488	string
 65536	loc
-65552	coord
-65568	string
+65552	loc
+65568	coord
+65584	string
 69632	coord
 69648	coord
 69664	string

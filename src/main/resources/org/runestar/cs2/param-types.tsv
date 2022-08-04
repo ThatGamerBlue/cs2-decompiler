@@ -624,6 +624,8 @@
 623	dbrow
 624	graphic
 625	int
+626	int
+627	int
 658	int
 659	int
 660	string
