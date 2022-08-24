@@ -45,6 +45,7 @@
 3623	boolean,text,graphic,component
 3649	component,component,boolean
 3739	colour,string
+3726	component,int,string,colour,colour
 4140	component,component,component,component,component,boolean,boolean
 4179	string,int,int
 4212	string,component
@@ -54,6 +55,7 @@
 4407	int,int,string,int,int
 4484	string,string,string,string,string,string,string,string,string,string,string,string,boolean
 4653	boolean,string
+4848	component,component,component,component,colour,colour,component,component
 5258	component,component,component,component,component,component
 5474	coord,loc,locshape,int,int,colour,int
 5910	component,dbrow,inv,int,int
