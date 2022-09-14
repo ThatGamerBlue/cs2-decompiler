@@ -2271,6 +2271,9 @@
 9386	essence_pile_elemental
 9397	rewards_guardian
 9400	earth_energy
+9419	kephriti_walk_f
+9420	tumekens_damaged_guardian_ready
+9421	akkhito_walk_f
 9425	menaphite_akh_walk_f
 9426	menaphite_akh_ready
 9430	shadow_rift_ready
@@ -2350,3 +2353,4 @@
 9768	akkhas_phantom_walk_b
 9794	orb_of_lightning_ready
 9808	fire
+9810	akkhito_walk_b
