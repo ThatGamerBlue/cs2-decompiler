@@ -1451,7 +1451,7 @@
 2611	table
 2612	cupboard
 2613	cupboard
-2614	coffin
+2614	dynamite_p
 2615	coffin
 2616	stairs
 2617	stairs
@@ -24765,8 +24765,11 @@
 46225	crate_multi
 46226	mounted_max_cape
 46227	strange_tablet
-46228	strange_tablet
+46228	strange_tablet_multi
 46229	strange_chest
 46230	strange_chest
 46231	cam_the_camel
 46232	strange_chest_multi
+46237	coffin
+46238	strange_tablet
+46239	strange_tablet

@@ -320,7 +320,6 @@
 346	[clientscript,pattern_cards_confirm_op]
 347	[clientscript,pattern_cards_confirm_reset]
 348	[clientscript,poh_menu_init]
-350	[proc,sw_world]
 353	[clientscript,stonepanel_light]
 354	[proc,stonepanel_light]
 355	[clientscript,stonepanel_blue]
@@ -4744,6 +4743,12 @@
 6582	[proc,toa_time_update_timer]
 6583	[proc,toa_hud_statusrefresh]
 6585	[clientscript,toa_hud_statusnames]
+6586	[clientscript,toa_raid_summary_init]
+6587	[proc,toa_raid_summary_init]
+6588	[clientscript,toa_raid_summary_timetab]
+6589	[proc,toa_raid_summary_timetab]
+6591	[clientscript,toa_raid_summary_selectedborder]
+6593	[clientscript,toa_raid_summary_mobile_tooltip]
 6594	[clientscript,toa_partylist_init]
 6595	[proc,toa_partylist_setsize]
 6596	[clientscript,toa_partylist_setsize]
@@ -4758,6 +4763,7 @@
 6607	[proc,toa_partylist_sortbutton_draw]
 6608	[clientscript,toa_partylist_clicksort]
 6609	[clientscript,toa_invocations_init]
+6611	[clientscript,toa_lobby_hud_init]
 6614	[clientscript,toa_hud_nameflasher]
 6615	[clientscript,toa_partydetails_init]
 6616	[proc,toa_partydetails_setsize]
@@ -4831,3 +4837,5 @@
 6774	[clientscript,toa_scoreboard_tab_select]
 6786	23313
 6787	23312
+6813	22033
+6814	22032
