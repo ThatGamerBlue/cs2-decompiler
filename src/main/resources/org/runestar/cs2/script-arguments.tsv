@@ -59,3 +59,4 @@
 5474	coord,loc,locshape,int,int,colour,int
 5910	component,dbrow,inv,int,int
 6003	obj,int,mes,boolean,int,boolean,int,int
+6845	boolean,int
