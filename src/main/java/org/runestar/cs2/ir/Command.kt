@@ -580,6 +580,7 @@ interface Command {
         GETBRIGHTNESS(listOf(), listOf(INT)),
         SETANTIDRAG(listOf(BOOLEAN), listOf()),
         _3184(listOf(INT), listOf()),
+        _3189(listOf(SEQ), listOf()),
 
         SOUND_SYNTH(listOf(SYNTH, INT, INT), listOf()),
         SOUND_SONG(listOf(INT), listOf()),

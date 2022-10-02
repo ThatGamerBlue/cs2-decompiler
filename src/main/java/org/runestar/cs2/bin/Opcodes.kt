@@ -358,6 +358,7 @@ const val SETBRIGHTNESS = 3181
 const val GETBRIGHTNESS = 3182
 const val SETANTIDRAG = 3183
 const val _3184 = 3184
+const val _3189 = 3189
 const val SOUND_SYNTH = 3200
 const val SOUND_SONG = 3201
 const val SOUND_JINGLE = 3202
