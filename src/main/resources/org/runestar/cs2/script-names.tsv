@@ -2263,7 +2263,6 @@
 2882	[clientscript,if_flash_component_timer]
 2884	[clientscript,cc_flash_component]
 2885	[clientscript,cc_flash_component_timer]
-2886	[clientscript,hp_hud_fade_in_check]
 2887	[clientscript,hp_hud_fade_in]
 2888	[proc,hp_hud_fade_in]
 2889	[clientscript,hp_hud_fade_out]
@@ -4702,7 +4701,6 @@
 6440	[proc,herbiboar_helper_highlight_disable]
 6441	[clientscript,herbiboar_helper_highlight_clear]
 6442	[proc,herbiboar_helper_highlight_clear]
-6443	[clientscript,herbiboar_helper_highlight_enable]
 6444	[proc,herbiboar_helper_highlight_enable]
 6445	[proc,settings_buff_cannon_decay]
 6446	[proc,settings_helper_tog]
@@ -4808,7 +4806,6 @@
 6674	[proc,cannon_overlay]
 6675	[clientscript,cannon_overlay_transmit]
 6676	[proc,cannon_overlay_create]
-6683	[clientscript,herbiboar_helper_transmit]
 6693	-477
 6694	[proc,loadnpc_default]
 6695	[proc,npc_name_setup]

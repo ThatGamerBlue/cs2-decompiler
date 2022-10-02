@@ -19367,12 +19367,16 @@
 33834	plant_door
 33835	plant
 33836	current
+33838	footprints
 33839	seaweed
 33840	mushroom
 33841	smelly_mushroom
+33842	footprints
+33843	footprints
 33844	tunnel
 33845	tunnel
 33846	mushroom
+33847	footprints
 33848	driftwood
 33849	muddy_patch
 33850	rock
@@ -25604,6 +25608,7 @@
 46589	gloves_of_ruin
 46590	robe_bottom_of_ruin
 46591	robe_top_of_ruin
+46592	socks_of_ruin
 46593	hood_of_ruin
 46594	robe_bottom_of_ruin
 46595	robe_top_of_ruin
