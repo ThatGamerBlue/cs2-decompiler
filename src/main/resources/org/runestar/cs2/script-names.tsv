@@ -4834,8 +4834,10 @@
 6774	[clientscript,toa_scoreboard_tab_select]
 6786	23313
 6787	23312
+6791	[clientscript,speedrunning_rewards_init]
 6813	22033
 6814	22032
+6819	[clientscript,questjournal_init]
 6846	11261221
 6847	11261477
 6848	11193381
