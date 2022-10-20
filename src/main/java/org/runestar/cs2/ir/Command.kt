@@ -790,7 +790,7 @@ interface Command {
         APPEND_SIGNNUM(listOf(STRING, INT), listOf(STRING)),
         LOWERCASE(listOf(STRING), listOf(STRING)),
         FROMDATE(listOf(INT), listOf(STRING)),
-        TEXT_GENDER(listOf(STRING, STRING), listOf(STRING)),
+        TEXT_BODYTYPE(listOf(STRING, STRING), listOf(STRING)),
         TOSTRING(listOf(INT), listOf(STRING)),
         COMPARE(listOf(STRING, STRING), listOf(INT)),
         PARAHEIGHT(listOf(STRING, WIDTH, FONTMETRICS), listOf(HEIGHT)),
@@ -808,6 +808,7 @@ interface Command {
         STRING_INDEXOF_CHAR(listOf(STRING, CHAR), listOf(INDEX)),
         STRING_INDEXOF_STRING(listOf(STRING, STRING, INDEX), listOf(INDEX)),
         UPPERCASE(listOf(STRING), listOf(STRING)),
+        TEXT_GENDER(listOf(STRING, STRING, STRING), listOf(STRING)),
 
         OC_NAME(listOf(OBJ), listOf(STRING)),
         OC_OP(listOf(OBJ, OPINDEX), listOf(OP)),
