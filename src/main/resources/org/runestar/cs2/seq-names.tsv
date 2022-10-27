@@ -1788,6 +1788,7 @@
 7323	quiescent_snow_storm
 7324	cave_lizard_ready
 7325	cave_lizard_walk_f
+7327	generous_treater_walk_f
 7329	lacey_ready
 7332	knight_of_varlamore_ready
 7334	large_hole
@@ -2103,11 +2104,13 @@
 8461	crab_ready
 8489	adventurer_jon_ready
 8490	banner
+8492	generous_treater_walk_f
 8497	basilisk_sentinel_ready
 8498	basilisk_sentinel_walk_f
 8509	the_jormungand_ready
 8512	the_jormungand_ready
 8518	the_jormungand_ready
+8521	generous_treater_ready
 8526	summoned_soul_ready
 8527	summoned_soul_walk_f
 8534	sleepwalker_walk_f
@@ -2356,3 +2359,4 @@
 9794	orb_of_lightning_ready
 9808	fire
 9810	akkhito_walk_b
+9836	spooky_dog_ready

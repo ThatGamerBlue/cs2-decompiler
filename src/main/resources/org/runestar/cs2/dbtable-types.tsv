@@ -39,7 +39,6 @@
 640	int
 656	string
 672	boolean
-4096	string,namedobj,string
 8192	string
 8208	graphic,int,int
 8224	int,int
@@ -190,3 +189,9 @@
 126976	string,string,string
 131072	graphic,int,int,int,string,string,string
 135168	graphic,string,int
+139264	int
+139280	int
+139296	namedobj
+139312	string
+139328	string
+139344	string

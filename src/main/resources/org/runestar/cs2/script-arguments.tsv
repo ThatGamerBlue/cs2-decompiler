@@ -7,7 +7,7 @@
 255	string,coord
 264	boolean
 390	boolean
-450	text,flags,flags,flags,flags,flags
+450	text,flags,flags,flags,flags,flags,flags
 495	text,boolean
 582	enum,component,component,component,text,component
 603	text,component,component,component,component,text
