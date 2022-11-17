@@ -1,7 +1,6 @@
 package org.runestar.cs2
 
 import org.runestar.cs2.bin.ScriptName
-import org.runestar.cs2.bin.StackType
 import org.runestar.cs2.bin.Type
 import org.runestar.cs2.ir.PROTOTYPE_LOOKUP_TABLE
 import org.runestar.cs2.ir.Prototype
