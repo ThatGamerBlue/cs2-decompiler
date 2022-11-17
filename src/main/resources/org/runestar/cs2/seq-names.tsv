@@ -388,7 +388,7 @@
 1868	lamp
 1869	fireplace
 1875	table
-1879	ali_the_snake_charmer_ready
+1879	surma_ready
 1881	dung
 1900	snake_ready
 1908	portal
@@ -1208,10 +1208,10 @@
 5345	golden_sheep_ready
 5350	pillar
 5351	machine
-5370	alices_husband_ready
-5371	alices_husband_ready
-5372	alices_husband_walk_f
-5373	alices_husband_walk_f
+5370	malcolm_ready
+5371	malcolm_ready
+5372	malcolm_walk_f
+5373	malcolm_walk_f
 5385	chicken_walk_f
 5386	chicken_ready
 5393	penance_ranger_ready
@@ -1944,8 +1944,6 @@
 7938	leak
 7939	fountain_of_uhld
 7940	fremennik_drummer
-7941	soldier
-7945	soldier
 7946	vorkath_ready
 7947	vorkath_walk_f
 7948	vorki_ready

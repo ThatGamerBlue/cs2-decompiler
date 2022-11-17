@@ -11,7 +11,7 @@
 450	text,flags,flags,flags,flags,flags,flags
 495	text,boolean
 582	enum,component,component,component,text,component
-603	text,component,component,component,component,text
+603	text,component,component,component,component,text,int
 609	string,int,settextalignh,graphic,fontmetrics,int,int,component
 610	string,string,component
 618	component,component,component,boolean
@@ -58,5 +58,6 @@
 5258	component,component,component,component,component,component
 5474	coord,loc,locshape,int,int,colour,int
 5910	component,dbrow,inv,int,int
+5949	int,int,int,boolean,boolean,boolean,boolean
 6003	obj,int,mes,boolean,int,boolean,int,int
 6845	boolean,int

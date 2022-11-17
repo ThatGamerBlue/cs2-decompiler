@@ -714,7 +714,7 @@
 713	clue_scroll
 714	radimus_notes
 715	radimus_notes
-716	bull_roarer
+716	bullroarer
 717	scrawled_note
 718	a_scribbled_note
 719	scrumpled_note
@@ -5448,7 +5448,7 @@
 5603	shears
 5604	magnet
 5605	knife
-5606	makeover_voucher
+5606	dummy_agility_arena_ticket
 5607	grain
 5608	fox
 5609	chicken
@@ -16529,7 +16529,7 @@
 16783	placeholder_tankard
 16784	placeholder_radimus_notes
 16785	placeholder_radimus_notes
-16786	placeholder_bull_roarer
+16786	placeholder_bullroarer
 16787	placeholder_scrawled_note
 16788	placeholder_a_scribbled_note
 16789	placeholder_scrumpled_note
@@ -16967,7 +16967,7 @@
 17221	placeholder_prototype_dart_tip
 17222	placeholder_shantay_pass
 17223	placeholder_sailing_book
-17224	placeholder_makeover_voucher
+17224	dummy_alviss
 17225	placeholder_mining_prop
 17226	placeholder_heavy_box
 17227	placeholder_empty_box
