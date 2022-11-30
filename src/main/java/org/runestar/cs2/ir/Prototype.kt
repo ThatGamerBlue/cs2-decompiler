@@ -112,8 +112,8 @@ val DEVICEOPTION = Prototype(Type.INT, "deviceoption")
 val GAMEOPTION = Prototype(Type.INT, "gameoption")
 val SETTING = Prototype(Type.INT, "setting")
 
-val DBTABLE = Prototype(Type.INT, "dbtable")
-val DBCOLUMN = Prototype(Type.INT, "dbcolumn")
+val DBTABLE = Prototype(Type.DBTABLE)
+val DBCOLUMN = Prototype(Type.DBCOLUMN)
 val DBFIELD = Prototype(Type.INT, "dbfield")
 
 val PROTOTYPE_LOOKUP_TABLE = thisClass.declaredFields

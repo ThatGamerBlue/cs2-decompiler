@@ -39,6 +39,8 @@ enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
     SYNTH('P'),
     TOPLEVELINTERFACE('F'),
     TYPE,
+    DBTABLE,
+    DBCOLUMN,
     ;
 
     val desc = desc.toByte(CP1252)
