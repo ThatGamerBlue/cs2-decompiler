@@ -23234,6 +23234,7 @@
 41439	torch
 41441	torch
 41448	giant_boulder
+41468	vorkath
 41474	goblin_decorations
 41477	giant_boulder
 41479	pebbles
@@ -23504,7 +23505,7 @@
 41809	spirit_angler_boots
 41810	tome_of_water_empty
 41811	tome_of_water
-41812	tiny_tempor
+41812	tempoross
 41814	tiny_tempor
 41815	tempoross
 41819	sleeping_bag
@@ -25808,3 +25809,5 @@
 46827	strange_vine
 46828	strange_vine
 46829	strange_vine
+46831	stone_chest
+46832	stone_chest
