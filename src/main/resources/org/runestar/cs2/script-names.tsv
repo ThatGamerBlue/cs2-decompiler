@@ -337,7 +337,6 @@
 378	[clientscript,menu_indexed]
 379	[proc,menu_createentry_indexed]
 381	[clientscript,settings_side_brightness_init]
-383	[proc,pvpw_check]
 384	[proc,wilderness_level]
 385	[clientscript,pvp_icons_layout]
 386	[proc,pvp_icons_layout]
@@ -1788,7 +1787,6 @@
 2244	[clientscript,logout_button_text]
 2246	[proc,hp_bar_reset]
 2247	[proc,macro_pinball_score]
-2248	[proc,deadman_mode]
 2249	[clientscript,cc_deleteall]
 2251	[clientscript,chatbox_open_input]
 2252	[clientscript,bugreport_home]
@@ -4841,3 +4839,5 @@
 6848	11193381
 6849	11193893
 6923	[clientscript,hw22_communitygoal_current_state_transmit]
+6949	67345
+6950	67344

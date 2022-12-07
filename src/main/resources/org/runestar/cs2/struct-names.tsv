@@ -526,7 +526,6 @@
 3711	iron_loot_restriction_messages
 3729	popout_windows
 3730	other_notifications
-3731	timers_and_notifications
 3732	slayer_helper
 3733	logout_notifier
 3734	poison_damage
@@ -658,3 +657,6 @@
 4387	deposit_in_the_party_chest
 4388	pull_the_lever_for_the_party_chest
 4389	get_drops_from_party_balloons
+4390	confirmations
+4391	charter_ships_confirmation
+4392	farming_protection_payment_confirmation
