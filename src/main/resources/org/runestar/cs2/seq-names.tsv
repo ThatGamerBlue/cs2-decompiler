@@ -1003,6 +1003,7 @@
 4536	gianne_jnr_ready
 4537	zul_cheray_ready
 4538	perrdur_ready
+4539	goose_ready
 4557	table
 4559	aspidistra_plant
 4560	oaknocks_machine
@@ -2189,6 +2190,7 @@
 8884	electrified_harpoonfish_cannon
 8895	tempoross_ready
 8899	tempoross_ready
+8917	saunders_ready
 8933	sacred_forge
 8934	security_barrier
 8939	ancient_guardian_walk_f
@@ -2357,4 +2359,9 @@
 9794	orb_of_lightning_ready
 9808	fire
 9810	akkhito_walk_b
+9813	paola_walk_f
+9814	paola_ready
 9836	spooky_dog_ready
+9843	christmas_portal
+9844	santa_claus_walk_f
+9852	santa_claus_ready

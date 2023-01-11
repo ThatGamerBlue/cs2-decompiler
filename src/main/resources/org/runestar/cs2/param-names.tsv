@@ -1,4 +1,5 @@
 23	levelrequire
+41	zamorakitem
 336	spell_spellbook
 365	magic_runetype_1
 366	magic_runecount_1
@@ -6,6 +7,14 @@
 368	magic_runecount_2
 369	magic_runetype_3
 370	magic_runecount_3
+451	wear_op1
+452	wear_op2
+453	wear_op3
+454	wear_op4
+455	wear_op5
+456	wear_op6
+457	wear_op7
+458	wear_op8
 596	spell_button
 597	spell_graphic1_on
 598	spell_graphic1_off

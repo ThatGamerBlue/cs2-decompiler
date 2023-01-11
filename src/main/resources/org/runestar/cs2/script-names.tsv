@@ -4834,10 +4834,14 @@
 6813	22033
 6814	22032
 6819	[clientscript,questjournal_init]
+6842	[proc,toa_raid_level]
 6846	11261221
 6847	11261477
 6848	11193381
 6849	11193893
+6850	[proc,text_client]
+6851	[proc,int_client]
 6923	[clientscript,hw22_communitygoal_current_state_transmit]
+6941	[proc,pvp_world]
 6949	67345
 6950	67344
