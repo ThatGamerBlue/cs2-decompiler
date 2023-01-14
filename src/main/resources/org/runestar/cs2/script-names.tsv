@@ -548,7 +548,6 @@
 631	[clientscript,friend_update]
 633	[proc,int_to_bool]
 634	[proc,displayname_draw]
-635	[clientscript,displayname_lookup]
 637	[proc,debug_mes_info]
 638	[proc,debug_mes_warn]
 639	[clientscript,poh_menagerie_initlist]
@@ -4845,3 +4844,5 @@
 6941	[proc,pvp_world]
 6949	67345
 6950	67344
+7022	222993
+7023	222992

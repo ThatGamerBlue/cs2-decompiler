@@ -970,7 +970,7 @@ interface Command {
         _6752(listOf(), listOf(INT)),
         NPC_TYPE(listOf(), listOf(NPC)),
         NC_NAME(listOf(NPC), listOf(STRING)),
-        NPC_FIND(listOf(_NPC_UID), listOf(BOOLEAN)),
+        NPC_FINDUID(listOf(_NPC_UID), listOf(BOOLEAN)),
         _6761(listOf(NPC, INT, INT), listOf(STRING)),
         _6762(listOf(NPC, INT, INT), listOf(STRING)),
 
@@ -1221,7 +1221,9 @@ interface Command {
                             state.pop(StackType.INT).also { assign(state.typings.of(it), state.typings.of(INV)) }
                         }
                         IF_SETONVARTRANSMIT, CC_SETONVARTRANSMIT -> {
-                            Element.Pointer(Variable.varp(state.popValue().int))
+                            val variable = Variable.varp(state.popValue().int)
+                            state.typings.of(variable)
+                            Element.Pointer(variable)
                         }
                         else -> error(this)
                     }
