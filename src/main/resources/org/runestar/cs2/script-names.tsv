@@ -1786,6 +1786,7 @@
 2244	[clientscript,logout_button_text]
 2246	[proc,hp_bar_reset]
 2247	[proc,macro_pinball_score]
+2248	-256987
 2249	[clientscript,cc_deleteall]
 2251	[clientscript,chatbox_open_input]
 2252	[clientscript,bugreport_home]
@@ -2010,9 +2011,6 @@
 2563	[clientscript,membership_benefits_view]
 2564	[clientscript,membership_benefits_close_benefit_hover]
 2565	[clientscript,membership_benefits_close_benefit]
-2566	[clientscript,membership_benefits_prompt_init]
-2567	[clientscript,membership_benefits_prompt_hide_bonds]
-2568	[proc,membership_benefits_prompt_hide_bonds]
 2569	[proc,membership_benefits_prompt_button_init]
 2570	[clientscript,membership_benefits_prompt_button_draw]
 2571	[proc,membership_benefits_prompt_button_draw]
@@ -2463,12 +2461,6 @@
 3144	[proc,target_system_redraw]
 3151	[clientscript,boardgames_draughts_options_update_selections]
 3152	[proc,boardgames_draughts_options_update_selections]
-3153	[clientscript,offer_banner_init]
-3154	[proc,offer_banner_close]
-3155	[clientscript,offer_banner]
-3156	[proc,offer_banner]
-3157	[clientscript,offer_button]
-3158	[proc,offer_button]
 3160	[proc,league_world]
 3161	[clientscript,clear_chat_all]
 3162	[clientscript,league_icon_flash]
@@ -3458,7 +3450,6 @@
 4544	-388061
 4545	-388317
 4546	-393181
-4547	[proc,fishing_spot_indicator_setup]
 4548	[clientscript,fishing_spot_indicator_vartransmit]
 4549	[clientscript,fishing_spot_indicator_invtransmit]
 4550	[clientscript,fishing_spot_indicator_stattransmit]

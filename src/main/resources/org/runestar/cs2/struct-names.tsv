@@ -676,3 +676,5 @@
 4457	buff_time_till_next_decay_hit
 4458	show_warning_on_exiting_ferox_enclave_on_a_high_risk_world
 4459	show_warning_on_taking_a_canoe_to_the_wilderness_on_a_high_risk_world
+4461	minimap_zoom_level
+4462	precise_combat_level

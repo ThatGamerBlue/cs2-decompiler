@@ -185,6 +185,7 @@
 115008	int
 115024	int
 115040	int
+115056	int
 122880	string,string,string
 126976	string,string,string
 131072	graphic,int,int,int,string,string,string

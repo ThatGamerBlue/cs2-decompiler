@@ -1076,8 +1076,10 @@ interface Command {
         _7212(listOf(INT), listOf()),
         _7213(listOf(INT), listOf()),
         _7214(listOf(_COORD, INT), listOf()),
-        SETMINIMAPLOCK(listOf(BOOLEAN), listOf()),
-        _7252(listOf(INT), listOf()),
+
+        MINIMAP_LOCK(listOf(BOOLEAN), listOf()),
+        MINIMAP_SETZOOM(listOf(INT), listOf()),
+        MINIMAP_ZOOM(listOf(), listOf(INT)),
         _7254(listOf(INT), listOf()),
 
         _7451(listOf(INT), listOf(INT)),
