@@ -85,7 +85,7 @@
 476	abyssal_sire
 477	barrows_chests
 478	bryophyta
-479	callisto
+479	callisto_and_artio
 480	cerberus
 481	chaos_elemental
 482	chaos_fanatic
@@ -107,8 +107,8 @@
 498	thermonuclear_smoke_devil
 499	the_inferno
 500	the_fight_caves
-501	venenatis
-502	vetion
+501	venenatis_and_spindel
+502	vetion_and_calvarion
 503	vorkath
 504	wintertodt
 505	zulrah
@@ -672,3 +672,7 @@
 4452	show_dialogue_in_the_chatbox
 4453	show_message_box_text_in_the_chatbox
 4455	phantom_muspah
+4456	wilderness_cave_decay
+4457	buff_time_till_next_decay_hit
+4458	show_warning_on_exiting_ferox_enclave_on_a_high_risk_world
+4459	show_warning_on_taking_a_canoe_to_the_wilderness_on_a_high_risk_world

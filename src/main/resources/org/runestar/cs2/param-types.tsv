@@ -1734,8 +1734,12 @@
 1733	string
 1734	int
 1735	int
+1736	int
+1737	boolean
 1738	int
 1739	int
 1740	int
 1741	int
 1742	int
+1743	int
+1744	int
