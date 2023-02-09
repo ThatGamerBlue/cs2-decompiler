@@ -4865,6 +4865,16 @@
 6813	22033
 6814	22032
 6819	[clientscript,questjournal_init]
+6820	[clientscript,questjournal_overview_init]
+6821	[clientscript,questjournal_overview_setup]
+6822	[proc,questjournal_overview_setup]
+6823	[clientscript,questjournal_overview_button_op]
+6824	[clientscript,questjournal_overview_button_reset]
+6832	[proc,questjournal_overview_quest_requirement]
+6833	[proc,questjournal_overview_skill_requirement]
+6834	[proc,questjournal_overview_combat_requirement]
+6835	[proc,questjournal_overview_qp_requirement]
+6836	[proc,questjournal_overview_misc_requirement]
 6842	[proc,toa_raid_level]
 6846	11261221
 6847	11261477
