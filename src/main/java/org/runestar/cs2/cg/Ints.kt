@@ -25,12 +25,12 @@ import org.runestar.cs2.OBJ_NAMES
 import org.runestar.cs2.PARAM_NAMES
 import org.runestar.cs2.PLATFORMTYPE_NAMES
 import org.runestar.cs2.SEQ_NAMES
-import org.runestar.cs2.SETTING_NAMES
 import org.runestar.cs2.SETPOSH_NAMES
 import org.runestar.cs2.SETPOSV_NAMES
 import org.runestar.cs2.SETSIZE_NAMES
 import org.runestar.cs2.SETTEXTALIGNH_NAMES
 import org.runestar.cs2.SETTEXTALIGNV_NAMES
+import org.runestar.cs2.SETTING_NAMES
 import org.runestar.cs2.STAT_NAMES
 import org.runestar.cs2.STRUCT_NAMES
 import org.runestar.cs2.SYNTH_NAMES
@@ -42,6 +42,7 @@ import org.runestar.cs2.util.loadNotNull
 import org.runestar.cs2.util.map
 import org.runestar.cs2.util.mapIndexed
 import org.runestar.cs2.util.orElse
+import java.util.TreeMap
 
 private val VALUE = Loader { it.toString() }
 
@@ -167,6 +168,13 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
     this[DBCOLUMN] = NULL.orElse(DBCOLUMNS)
 }
 
+val TYPE_SYMBOLS = mutableMapOf<Type, TreeMap<Int, String>>()
 fun intConstantToString(n: Int, prototype: Prototype): String {
-    return (PROTOTYPES[prototype] ?: PROTOTYPES.getValue(Prototype(prototype.type))).loadNotNull(n)
+    val name = (PROTOTYPES[prototype] ?: PROTOTYPES.getValue(Prototype(prototype.type))).loadNotNull(n)
+
+    // store the name for possible dumping later
+    val names = TYPE_SYMBOLS.getOrPut(prototype.type) { TreeMap() }
+    names[n] = name
+
+    return name
 }
