@@ -27402,7 +27402,7 @@
 27804	cake_hat
 27805	placeholder_cake_hat
 27806	bob_the_cat_slippers
-27807	placeholder_bob_the_cat_slippers
+27807	dummy_bob_the_cat_slippers
 27808	jad_slippers
 27809	placeholder_jad_slippers
 27810	dragon_candle_dagger
@@ -27412,9 +27412,9 @@
 27814	jad_plush
 27815	placeholder_jad_plush
 27816	stray_dog_plush
-27817	placeholder_stray_dog_plush
+27817	dummy_stray_dog_plush
 27818	gnome_child_plush
-27819	placeholder_gnome_child_plush
+27819	dummy_gnome_child_plush
 27820	10th_birthday_balloons
 27821	placeholder_10th_birthday_balloons
 27822	oldschool_jumper
@@ -27425,3 +27425,4 @@
 27827	oldschool_jumper
 27828	silver_partyhat
 27829	placeholder_silver_partyhat
+27830	placeholder_oldschool_jumper
