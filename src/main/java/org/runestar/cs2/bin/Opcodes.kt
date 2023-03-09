@@ -848,5 +848,5 @@ const val DB_GETROWTABLE = 7505
 const val DB_GETROW = 7506
 const val DB_FIND_FILTER_WITH_COUNT = 7507
 const val DB_FIND = 7508
-const val DB_FINDALL = 7509
-const val DB_FIND_FILTER = 7510
+const val DB_FIND_FILTER = 7509
+const val DB_FINDALL = 7510
