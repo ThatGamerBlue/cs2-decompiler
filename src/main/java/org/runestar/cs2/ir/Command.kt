@@ -134,11 +134,18 @@ interface Command {
             val column = checkNotNull(state.peekValue()).int
             val tupleIndex = (column and 0xf) - 1
             val columnVar = state.pop(StackType.INT)
-            if (tupleIndex != -1) {
-                val valueType = state.dbtableTypes.load(column and 0xf.inv())?.get(tupleIndex)
-                    ?: error("Missing types for DB Column ID: $column for Script ID: ${state.scriptId}")
-                assign(state.typings.of(value), state.typings.of(valueType))
+            val valueType = if (tupleIndex != -1) {
+                state.dbtableTypes.load(column and 0xf.inv())?.get(tupleIndex)
+            } else {
+                // assume column has a single value if tuple index isn't defined
+                state.dbtableTypes.load(column and 0xf.inv())?.get(0)
             }
+
+            if (valueType == null) {
+                error("Missing type for DB Column ID: $column for Script ID: ${state.scriptId}")
+            }
+
+            assign(state.typings.of(value), state.typings.of(valueType))
             assign(state.typings.of(columnVar), state.typings.of(DBCOLUMN))
             val defs = if (id == DB_FIND_WITH_COUNT || id == DB_FIND_FILTER_WITH_COUNT) listOf(Type.INT) else emptyList()
             val defStackTypes = defs.map { it.stackType }
@@ -319,7 +326,7 @@ interface Command {
         CC_FIND(listOf(COMPONENT, COMSUBID), listOf(BOOL), true),
         IF_FIND(listOf(COMPONENT), listOf(BOOLEAN), true),
         _202(listOf(NEWVAR), listOf(BOOL)),
-        _203(listOf(INT, COMSUBID), listOf(BOOL)),
+        _203(listOf(NEWVAR, COMSUBID), listOf(BOOL)),
 
         CC_SETPOSITION(listOf(X, Y, SETPOSH, SETPOSV), listOf(), true),
         CC_SETSIZE(listOf(WIDTH, HEIGHT, SETSIZE, SETSIZE), listOf(), true),
