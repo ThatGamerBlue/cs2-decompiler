@@ -83,6 +83,7 @@
 624	graphic
 626	int
 627	int
+630	int
 659	int
 660	string
 661	loc
@@ -635,3 +636,13 @@
 1729	boolean
 1733	string
 1737	boolean
+1751	component
+1752	string
+1753	int
+1754	string
+1755	synth
+1756	graphic
+1757	graphic
+1758	int
+1759	int
+1760	obj
