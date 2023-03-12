@@ -974,7 +974,7 @@ interface Command {
 
         NPC_NAME(listOf(), listOf(STRING)),
         NPC_UID(listOf(), listOf(_NPC_UID)),
-        _6752(listOf(), listOf(INT)),
+        NPC_SPAWNCYCLE(listOf(), listOf(INT)),
         NPC_TYPE(listOf(), listOf(NPC)),
         NC_NAME(listOf(NPC), listOf(STRING)),
         NPC_FINDUID(listOf(_NPC_UID), listOf(BOOLEAN)),
@@ -1001,7 +1001,7 @@ interface Command {
         _6901(listOf(), listOf(BOOLEAN)),
         _6902(listOf(), listOf(INT)),
         _6903(listOf(INT), listOf(_COORD)),
-        PLAYER_UID(listOf(), listOf(_PLAYER_UID)),
+        UID(listOf(), listOf(_PLAYER_UID)),
         SELF_PLAYER_UID(listOf(), listOf(_PLAYER_UID)),
 
         _6950(listOf(), listOf(_COORD)),

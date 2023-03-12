@@ -25,6 +25,7 @@
 61	cat_naming
 62	cave_goblin_markers
 63	champions_scroll
+80	toplevel_spectator
 96	darkness_dark
 97	darkness_light
 98	darkness_medium
@@ -47,6 +48,9 @@
 150	keldagrim_map
 151	keldagrim_story1
 152	keldagrim_titles
+161	toplevel_osrs_stretch
+164	toplevel_pre_eoc
+165	toplevel_display
 182	logout
 185	macro_combilock
 186	macro_evil_bob
@@ -190,7 +194,7 @@
 545	dragon_slayer_qip_elvarg
 546	dragon_slayer_qip_elvarg_fly
 547	dragon_slayer_qip_map
-548	toplevel
+548	toplevel_fixed
 553	snapshot_main
 559	pattern_cards
 560	cws_warning_9
@@ -218,3 +222,4 @@
 585	kr_pyramid_escape
 588	kr_picklock
 590	poh_jewellery_box
+601	toplevel_osm

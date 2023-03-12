@@ -1136,6 +1136,8 @@
 1172	windowmode_icons,3
 1178	resize_map_mask
 1179	resize_compass_mask
+1180	pre_eoc_stones,0
+1181	pre_eoc_stones,1
 1182	fixed_minimap_cover
 1183	fixed_map_mask
 1184	fixed_compass_mask
@@ -1363,6 +1365,9 @@
 1406	tiny_combat_staticons,5
 1407	tiny_combat_staticons,6
 1408	iron_icons,5
+1409	pvpa_rankicons,0
+1410	pvpa_rankicons,1
+1411	pvpa_rankicons,2
 1412	refresh
 1413	side_icons,17
 1414	sideicons_interface,17
@@ -1561,6 +1566,7 @@
 1612	keyboard_key_left
 1613	keyboard_key_middle
 1614	keyboard_key_right
+1616	osm_drag_camera
 1617	options_slider,8
 1622	options_slider,9
 1625	clickcircle_filled
@@ -1577,6 +1583,14 @@
 1637	orb_filler,13
 1638	options_slider,10
 1639	options_slider,11
+1640	osm_status_icons,0
+1641	osm_status_icons,1
+1642	osm_status_icons,2
+1643	osm_status_icons,3
+1644	osm_status_icons,4
+1645	osm_status_icons,5
+1646	osm_status_icons,6
+1647	osm_status_icons,7
 1648	leafytree_tiled
 1649	titlebutton_large
 1653	options_icons,50
@@ -2145,6 +2159,8 @@
 2240	getting_started_with_ranged
 2241	honing_my_aim
 2242	sharpshooter
+2243	logo_speedrunning
+2246	close_arrows,0
 2247	brown_border
 2248	button_brown_small
 2249	rightarrow_small_stone,0
@@ -4132,6 +4148,11 @@
 4510	giants_foundry_hud_bar,60
 4511	giants_foundry_hud_bar,61
 4512	giants_foundry_hud_bar,62
+4517	pvpa_rankicons,3
+4518	pvpa_rankicons,4
+4519	pvpa_rankicons,5
+4520	pvpa_rankicons,6
+4521	pvpa_rankicons,7
 4522	pvpa_heart
 4523	mod_icons_interface,50
 4524	mod_icons_interface,51
@@ -4157,6 +4178,9 @@
 4550	worldmap_marker,6
 4551	worldmap_marker,7
 4552	worldmap_marker,8
+4553	worldmap_marker_mini,0
+4554	worldmap_marker_mini,1
+4555	worldmap_marker_mini,2
 4556	hitmark,27
 4557	hitmark,28
 4558	hitmark,29
@@ -4170,6 +4194,9 @@
 4665	fog02
 4666	fog03
 4667	skulls01
+4668	close_arrows,1
+4669	close_arrows,2
+4670	close_arrows,3
 4671	worldswitcher_stars,7
 4692	v2_stone_button_in,16
 4693	v2_stone_button_in,17
@@ -4187,3 +4214,13 @@
 4705	v2_stone_button_out,21
 4706	v2_stone_button_out,22
 4707	v2_stone_button_out,23
+4728	leftarrow_small_highlight
+4729	rightarrow_small_highlight
+4738	combination_lock
+4739	combination_lock_join,0
+4740	combination_lock_join,1
+4741	combination_lock_join,2
+4742	combination_lock_arrows,0
+4743	combination_lock_arrows,1
+4744	combination_lock_arrows,2
+4745	combination_lock_arrows,3
