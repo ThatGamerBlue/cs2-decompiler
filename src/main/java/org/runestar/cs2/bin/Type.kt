@@ -24,7 +24,7 @@ enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
     MAPELEMENT('µ'),
     MODEL('m'),
     NAMEDOBJ('O'),
-    NEWVAR('-'),
+    ENTITYOVERLAY('-'),
     NPC('n'),
     NPC_UID('u'),
     OBJ('o'),
