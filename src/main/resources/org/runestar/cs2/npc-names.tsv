@@ -6550,7 +6550,7 @@
 6598	zombie
 6599	mandrith
 6600	runite_golem
-6601	rocks
+6601	runite_rocks
 6602	numpty
 6603	rogue
 6604	mammoth
@@ -11904,18 +11904,6 @@
 12105	elias_white
 12107	skeleton_hellhound
 12108	greater_skeleton_hellhound
-12109	warmhandz
-12110	patty_seer
-12111	archmage_sedridor
-12112	king_roald
-12113	gnome_child
-12114	thurgo
-12115	general_bentnoze
-12116	general_wartface
-12117	elvarg_multi
-12118	elvarg
-12119	alvarg
-12120	party_pete
 12121	sir_pear_visor
 12122	sir_pear_visor
 12123	crystalline_hunllef
@@ -11928,9 +11916,6 @@
 12130	tumekens_warden
 12131	elidinis_warden
 12132	obelisk
-12133	warmhandz_multi
-12134	warmhandz_multi
-12135	warmhandz_multi
 12136	sir_pear_visor_multi
 12137	dallas_jones
 12138	bob
