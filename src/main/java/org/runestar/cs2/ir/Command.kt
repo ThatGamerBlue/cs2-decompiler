@@ -37,8 +37,8 @@ interface Command {
             add(DBGetField)
             add(DbFind(DB_FIND))
             add(DbFind(DB_FIND_WITH_COUNT))
-            add(DbFind(DB_FIND_FILTER))
-            add(DbFind(DB_FIND_FILTER_WITH_COUNT))
+            add(DbFind(DB_FIND_REFINE))
+            add(DbFind(DB_FIND_REFINE_WITH_COUNT))
             addAll(BranchCompare.values().asList())
             addAll(Discard.values().asList())
             addAll(Assign.values().asList())
@@ -147,7 +147,7 @@ interface Command {
 
             assign(state.typings.of(value), state.typings.of(valueType))
             assign(state.typings.of(columnVar), state.typings.of(DBCOLUMN))
-            val defs = if (id == DB_FIND_WITH_COUNT || id == DB_FIND_FILTER_WITH_COUNT) listOf(Type.INT) else emptyList()
+            val defs = if (id == DB_FIND_WITH_COUNT || id == DB_FIND_REFINE_WITH_COUNT) listOf(Type.INT) else emptyList()
             val defStackTypes = defs.map { it.stackType }
             val operation = Expression.Operation(defStackTypes, id, Expression(columnVar, value))
             val operationTyping = state.typings.of(operation)
@@ -598,12 +598,12 @@ interface Command {
         GETVOLUMESOUNDS(listOf(), listOf(INT)),
         SETVOLUMEAREASOUNDS(listOf(INT), listOf()),
         GETVOLUMEAREASOUNDS(listOf(), listOf(INT)),
-        SETCLIENTOPTION(listOf(INT, INT), listOf()),
-        GETCLIENTOPTION(listOf(INT), listOf(INT)),
-        SETDEVICEOPTION(listOf(DEVICEOPTION, INT), listOf()),
-        SETGAMEOPTION(listOf(GAMEOPTION, INT), listOf()),
-        GETDEVICEOPTION(listOf(DEVICEOPTION), listOf(INT)),
-        GETGAMEOPTION(listOf(GAMEOPTION), listOf(INT)),
+        CLIENTOPTION_SET(listOf(INT, INT), listOf()),
+        CLIENTOPTION_GET(listOf(INT), listOf(INT)),
+        DEVICEOPTION_SET(listOf(DEVICEOPTION, INT), listOf()),
+        GAMEOPTION_SET(listOf(GAMEOPTION, INT), listOf()),
+        DEVICEOPTION_GET(listOf(DEVICEOPTION), listOf(INT)),
+        GAMEOPTION_GET(listOf(GAMEOPTION), listOf(INT)),
 
         CLIENTCLOCK(listOf(), listOf(CLOCK)),
         INV_GETOBJ(listOf(INV, SLOT), listOf(OBJ)),
@@ -1099,9 +1099,9 @@ interface Command {
 
         DB_FINDNEXT(listOf(), listOf(DBROW)),
         DB_GETFIELDCOUNT(listOf(DBROW, DBCOLUMN), listOf(INT)),
-        DB_FINDALL_WITH_COUNT(listOf(DBTABLE), listOf(INT)),
+        DB_LISTALL_WITH_COUNT(listOf(DBTABLE), listOf(INT)),
         DB_GETROWTABLE(listOf(DBROW), listOf(DBTABLE)),
-        DB_FINDALL(listOf(DBTABLE), listOf()),
+        DB_LISTALL(listOf(DBTABLE), listOf()),
         ;
 
         override val id = opcodes.getValue(name)
