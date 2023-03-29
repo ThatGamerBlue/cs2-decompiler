@@ -681,3 +681,4 @@
 4490	player_trade_options
 4491	ignore_list_remove_permanently_banned_accounts_daily
 4492	ignore_list_remove_permanently_muted_accounts_daily
+4493	disable_level_up_interface
