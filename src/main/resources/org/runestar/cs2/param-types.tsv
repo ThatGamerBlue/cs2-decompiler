@@ -486,6 +486,7 @@
 1393	graphic
 1394	graphic
 1395	graphic
+1397	int
 1398	boolean
 1401	int
 1402	int

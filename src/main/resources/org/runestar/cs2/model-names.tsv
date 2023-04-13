@@ -2658,6 +2658,7 @@
 4495	barricade
 4508	saradomin_page_1
 4522	rusty_casket
+4523	cave
 4528	doorway
 4545	staircase
 4546	staircase
@@ -4184,7 +4185,7 @@
 7168	belladonna_seed_3
 7169	belladonna_seed_4
 7170	belladonna_seed_5
-7171	birds_egg
+7171	boss_helper_tool
 7172	bird_nest
 7173	bird_nest
 7174	bird_nest
@@ -25912,7 +25913,9 @@
 46954	morgiana
 46955	guard
 46956	guard
+46957	blood_ancient_sceptre
 46958	ancient_sceptre
+46959	blood_ancient_sceptre
 46960	venator_bow_uncharged
 46961	venator_bow_uncharged
 46962	bow_sword
@@ -25983,6 +25986,7 @@
 47179	muphin
 47180	muphin
 47184	broken_window
+47186	blood_ancient_sceptre
 47187	ancient_sceptre
 47189	bow_sword
 47193	smelly_hole
@@ -26164,3 +26168,14 @@
 47639	nest_hat
 47640	nest_hat
 47641	nest_hat
+47642	virtus_mask
+47643	virtus_robe_bottom
+47645	virtus_robe_top
+47647	virtus_mask
+47648	virtus_robe_bottom
+47649	virtus_robe_top
+47651	virtus_mask
+47652	virtus_mask
+47653	virtus_robe_bottom
+47655	virtus_robe_top
+47656	virtus_mask
