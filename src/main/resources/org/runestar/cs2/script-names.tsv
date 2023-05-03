@@ -448,7 +448,6 @@
 499	[proc,makeover_drawmodels]
 500	[clientscript,makeover_indicator]
 501	[proc,makeover_indicator]
-502	[clientscript,makeover_hair_setup]
 503	[proc,league_rewards_draw]
 504	[clientscript,bankmain_switchtab]
 505	[proc,bankmain_finishbuilding]
