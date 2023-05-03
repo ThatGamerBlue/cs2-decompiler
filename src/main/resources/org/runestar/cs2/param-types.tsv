@@ -471,6 +471,7 @@
 1350	enum
 1351	int
 1352	boolean
+1358	boolean
 1371	int
 1372	string
 1373	string

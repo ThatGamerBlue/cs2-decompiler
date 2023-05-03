@@ -18797,7 +18797,6 @@
 32948	lift
 32949	gibbet
 32962	big_pirate_hat
-32963	easter_bunny
 32964	easter_egg_helm
 32965	easter_egg_helm
 32966	fighter_torso
@@ -24725,7 +24724,6 @@
 44144	wooden_pole
 44145	blunt_scimitars
 44146	vat_dirty
-44147	easter_bunny
 44155	churning_machine
 44157	easter_hat
 44158	crate_ring
@@ -26149,7 +26147,6 @@
 47604	staircase
 47605	diamond_speedrun_trophy
 47606	diamond_speedrun_trophy
-47608	wilough
 47609	nest_hat
 47610	nest_hat
 47612	nest_hat
@@ -26158,9 +26155,6 @@
 47615	giant_bronze_dagger
 47616	giant_bronze_dagger
 47617	eastfloor_spade
-47618	easter_egg_half
-47620	crate
-47621	crate
 47628	nest_hat
 47629	nest_hat
 47630	eastfloor_spade
@@ -26385,3 +26379,5 @@
 47943	female_hair
 47944	suzie
 47945	rio_the_parrot
+47946	bank_chest
+47948	bank_chest
