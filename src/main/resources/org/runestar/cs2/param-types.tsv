@@ -13,6 +13,7 @@
 186	model
 191	stat
 258	int
+295	int
 336	int
 363	string
 365	obj
@@ -472,6 +473,8 @@
 1351	int
 1352	boolean
 1358	boolean
+1360	string
+1361	int
 1371	int
 1372	string
 1373	string
