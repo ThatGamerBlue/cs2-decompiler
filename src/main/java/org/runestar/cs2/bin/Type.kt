@@ -15,6 +15,7 @@ enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
     ENUM('g'),
     FONTMETRICS('f'),
     GRAPHIC('d'),
+    IDKIT('K'),
     INT('i'),
     INTERFACE('a'),
     INV('v'),
