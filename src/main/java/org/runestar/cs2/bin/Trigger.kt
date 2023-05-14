@@ -17,6 +17,7 @@ enum class Trigger(val id: Int, val subjectType: Prototype? = null) {
     worldmapelementmouserepeat(17, MAPELEMENT),
     loadnpc(35, NPC),
     loadloc(37, LOC),
+    trigger_45(45),
     trigger_47(47),
     trigger_48(48),
     trigger_49(49),

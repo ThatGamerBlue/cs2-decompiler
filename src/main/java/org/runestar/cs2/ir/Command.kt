@@ -367,6 +367,14 @@ interface Command {
         CC_SETCRM_URL(listOf(STRING), listOf(), true),
         CC_SETCRM_TEXTFONT(listOf(INT, FONTMETRICS), listOf(), true),
         CC_SETCRM_SERVERTARGETS(listOf(STRING, INT), listOf(), true),
+        CC_SETINPUT_SELECTCOLOUR(listOf(COLOUR), listOf(), true),
+        CC_SETINPUT_SELECTBGCOLOUR(listOf(COLOUR), listOf(), true),
+        CC_SETINPUT_WIDTH(listOf(INT), listOf(), true),
+        CC_SETINPUT_FOCUS(listOf(BOOLEAN), listOf(), true),
+        CC_SETINPUT_CARET(listOf(INT), listOf(), true),
+        CC_SETINPUT_WRAPMODE(listOf(INT), listOf(), true),
+        CC_SETINPUT_SUBMITMODE(listOf(INT), listOf(), true),
+        CC_SETINPUT_ACCEPTMODE(listOf(INT), listOf(), true),
 
         CC_SETOBJECT(listOf(OBJ, NUM), listOf(), true),
         CC_SETNPCHEAD(listOf(NPC), listOf(), true),
@@ -413,8 +421,9 @@ interface Command {
         CC_GETFILLCOLOUR(listOf(), listOf(COLOUR), true),
         _1613(listOf(), listOf(INT), true),
         CC_GETMODELTRANSPARENT(listOf(), listOf(BOOLEAN), true),
-        _1615(listOf(), listOf(INT)),
-        _1616(listOf(), listOf(INT)),
+        _1615(listOf(), listOf(INT), true),
+        _1616(listOf(), listOf(INT), true),
+        _1624(listOf(), listOf(BOOLEAN), true),
 
         CC_GETINVOBJECT(listOf(), listOf(OBJ), true),
         CC_GETINVCOUNT(listOf(), listOf(COUNT), true),
@@ -427,7 +436,7 @@ interface Command {
         CC_GETOP(listOf(INT), listOf(OP), true),
         CC_GETOPBASE(listOf(), listOf(OPBASE), true),
 
-        CC_CALLONRESIZE(listOf(BOOLEAN), listOf()),
+        CC_CALLONRESIZE(listOf(BOOLEAN), listOf(), true),
         CC_TRIGGEROP(listOf(OPINDEX), listOf(), true),
 
         IF_SETPOSITION(listOf(X, Y, SETPOSH, SETPOSV, COMPONENT), listOf()),
@@ -517,6 +526,7 @@ interface Command {
         IF_GETMODELTRANSPARENT(listOf(COMPONENT), listOf(BOOLEAN)),
         _2615(listOf(COMPONENT), listOf(INT)),
         _2616(listOf(COMPONENT), listOf(INT)),
+        _2624(listOf(COMPONENT), listOf(BOOLEAN)),
 
         IF_GETINVOBJECT(listOf(COMPONENT), listOf(OBJ)),
         IF_GETINVCOUNT(listOf(COMPONENT), listOf(COUNT)),
@@ -535,6 +545,7 @@ interface Command {
 
         MES(listOf(_MES), listOf()),
         ANIM(listOf(SEQ, INT), listOf()),
+        MES_TYPED(listOf(CHATTYPE, STRING), listOf()),
         IF_CLOSE(listOf(), listOf()),
         RESUME_COUNTDIALOG(listOf(STRING), listOf()),
         RESUME_NAMEDIALOG(listOf(STRING), listOf()),
@@ -604,6 +615,7 @@ interface Command {
         GAMEOPTION_SET(listOf(GAMEOPTION, INT), listOf()),
         DEVICEOPTION_GET(listOf(DEVICEOPTION), listOf(INT)),
         GAMEOPTION_GET(listOf(GAMEOPTION), listOf(INT)),
+        _3217(listOf(DEVICEOPTION), listOf(INT, INT)),
 
         CLIENTCLOCK(listOf(), listOf(CLOCK)),
         INV_GETOBJ(listOf(INV, SLOT), listOf(OBJ)),
@@ -639,6 +651,7 @@ interface Command {
         ENUM_GETOUTPUTCOUNT(listOf(_ENUM), listOf(COUNT)),
 
         KEYHELD(listOf(KEY), listOf(BOOLEAN)),
+        _3501(listOf(KEY), listOf(BOOLEAN)),
 
         FRIEND_COUNT(listOf(), listOf(COUNT)),
         FRIEND_GETNAME(listOf(INDEX), listOf(USERNAME, USERNAME)),
@@ -764,6 +777,8 @@ interface Command {
         TRADINGPOST_GETOFFERCOUNT(listOf(INT), listOf(INT)),
         TRADINGPOST_GETOFFERPRICE(listOf(INT), listOf(INT)),
         TRADINGPOST_GETOFFERITEM(listOf(INT), listOf(INT)),
+        STOCKMARKET_ISTRADEABLE(listOf(OBJ), listOf(BOOLEAN)),
+        STOCKMARKET_GETVALUE(listOf(OBJ), listOf(INT, INT)),
 
         ADD(listOf(INT, INT), listOf(INT)),
         SUB(listOf(INT, INT), listOf(INT)),
@@ -781,6 +796,8 @@ interface Command {
         INVPOW(listOf(INT, INT), listOf(INT)),
         AND(listOf(INT, INT), listOf(INT)),
         OR(listOf(INT, INT), listOf(INT)),
+        MIN(listOf(INT, INT), listOf(INT)),
+        MAX(listOf(INT, INT), listOf(INT)),
         SCALE(listOf(INT, INT, INT), listOf(INT)),
         BITCOUNT(listOf(INT), listOf(INT)),
         TOGGLEBIT(listOf(INT, INT), listOf(INT)),
@@ -996,6 +1013,10 @@ interface Command {
         _6854(listOf(_COORD, OBJ), listOf(BOOLEAN)),
         _6857(listOf(OBJ, INT), listOf(STRING)),
         _6858(listOf(OBJ, INT, INT), listOf(STRING)),
+        _6859(listOf(_COORD, INT), listOf(BOOLEAN)),
+        OBJ_DESPAWNTIME(listOf(), listOf(INT)),
+        OBJ_REVEALTIME(listOf(), listOf(INT)),
+        OBJ_OWNER(listOf(), listOf(INT)),
 
         PLAYER_NAME(listOf(), listOf(STRING)),
         _6901(listOf(), listOf(BOOLEAN)),
@@ -1065,8 +1086,8 @@ interface Command {
         TARGETMODE_ACTIVE(listOf(), listOf(BOOLEAN)),
         GET_MINIMENU_LENGTH(listOf(), listOf(INT)),
         _7120(listOf(INT), listOf(INT)),
-        _7121(listOf(INT, INT), listOf(INT)),
-        _7122(listOf(INT, INT), listOf(INT)),
+        _7121(listOf(_COORD, INT), listOf(OBJ)),
+        _7122(listOf(_COORD, INT), listOf(INT)),
 
         _7200(listOf(INT, INT, INT, INT, INT), listOf(ENTITYOVERLAY)),
         _7201(listOf(INT, INT, INT, INT, INT), listOf(ENTITYOVERLAY)),
@@ -1089,6 +1110,12 @@ interface Command {
         MINIMAP_ZOOM(listOf(), listOf(INT)),
         MINIMAP_SETICONVISZOOM(listOf(INT), listOf()),
 
+        _7401(listOf(STRINGVECTOR, STRING, INT), listOf()),
+        _7404(listOf(STRINGVECTOR, STRING, INT), listOf()),
+        _7406(listOf(STRINGVECTOR, INT), listOf(STRING)),
+        _7407(listOf(STRINGVECTOR), listOf(INT)),
+        _7408(listOf(STRINGVECTOR, STRING, INT, INT), listOf(INT)),
+        _7409(listOf(STRINGVECTOR), listOf()),
         _7451(listOf(INT), listOf(INT)),
         _7453(listOf(INT), listOf(BOOLEAN)),
         _7454(listOf(INT), listOf(BOOLEAN)),
@@ -1102,6 +1129,24 @@ interface Command {
         DB_LISTALL_WITH_COUNT(listOf(DBTABLE), listOf(INT)),
         DB_GETROWTABLE(listOf(DBROW), listOf(DBTABLE)),
         DB_LISTALL(listOf(DBTABLE), listOf()),
+
+        _7600(listOf(STRING, INT, INT, INT), listOf()),
+        _7601(listOf(), listOf(INT)),
+        _7602(listOf(INT), listOf(STRING)),
+        _7603(listOf(STRING), listOf(INT)),
+        _7604(listOf(STRING), listOf(INT)),
+        _7605(listOf(INT, INT, INT), listOf(INT)),
+        _7606(listOf(INT), listOf(INT)),
+        _7609(listOf(STRING), listOf(INT)),
+        _7611(listOf(STRING, INT), listOf(OBJ, INT)),
+        _7613(listOf(), listOf()),
+        _7614(listOf(STRING), listOf()),
+        _7616(listOf(STRING), listOf()),
+        _7617(listOf(STRING), listOf()),
+        _7619(listOf(), listOf(INT)),
+        _7620(listOf(INT), listOf(STRING)),
+        _7621(listOf(), listOf()),
+        _7628(listOf(STRING, OBJ, INT, INT), listOf()),
         ;
 
         override val id = opcodes.getValue(name)
@@ -1170,6 +1215,8 @@ interface Command {
         CC_SETONKEYUP,
         _1433,
         CC_SETONCRMVIEWLOAD,
+        CC_SETONINPUTFOCUS,
+        CC_SETONINPUTSUBMIT,
         IF_SETONCLICK,
         IF_SETONHOLD,
         IF_SETONRELEASE,
