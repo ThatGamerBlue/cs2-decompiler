@@ -4888,7 +4888,6 @@
 6772	[clientscript,toa_scoreboard_tab_update]
 6773	[proc,toa_scoreboard_tab_update]
 6774	[clientscript,toa_scoreboard_tab_select]
-6775	version.dat
 6776	[clientscript,makeover_init]
 6786	23313
 6787	23312

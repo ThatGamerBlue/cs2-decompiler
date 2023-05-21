@@ -32,6 +32,7 @@
 1584	string,string,string,int,text
 1685	int,text,flags
 1701	interface,overlayinterface
+1905	component
 2046	int,string,int,obj,obj,obj,obj,obj,obj,obj,obj,obj,obj,int
 2498	int,boolean,boolean
 2523	boolean,int
