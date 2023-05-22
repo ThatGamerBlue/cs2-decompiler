@@ -19,6 +19,7 @@ enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
     INT('i'),
     INTERFACE('a'),
     INV('v'),
+    STRINGVECTOR('¸'),
     LOC('l'),
     LOCSHAPE('H'),
     MAPAREA('`', "wma"),

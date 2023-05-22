@@ -166,6 +166,8 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
     this[DBROW] = unknown(DBROW)
     this[DBTABLE] = DBTABLES
     this[DBCOLUMN] = NULL.orElse(DBCOLUMNS)
+
+    this[STRINGVECTOR] = unknown(STRINGVECTOR)
 }
 
 val TYPE_SYMBOLS = mutableMapOf<Type, TreeMap<Int, String>>()
