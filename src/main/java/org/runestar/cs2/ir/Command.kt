@@ -320,13 +320,13 @@ interface Command {
     ) : Command {
         CC_CREATE(listOf(COMPONENT, IFTYPE, COMSUBID), listOf(), true),
         CC_DELETE(listOf(), listOf(), true),
-        CC_DELETEALL(listOf(COMPONENT), listOf()),
-        CC_CREATE_ENTITYOVERLAY(listOf(ENTITYOVERLAY, IFTYPE, COMSUBID), listOf()),
-        CC_DELETEALL_ENTITYOVERLAY(listOf(ENTITYOVERLAY), listOf()),
+        CC_DELETEALL(listOf(COMPONENT), listOf(), true),
+        CC_CREATE_ENTITYOVERLAY(listOf(ENTITYOVERLAY, IFTYPE, COMSUBID), listOf(), true),
+        CC_DELETEALL_ENTITYOVERLAY(listOf(ENTITYOVERLAY), listOf(), true),
         CC_FIND(listOf(COMPONENT, COMSUBID), listOf(BOOL), true),
         IF_FIND(listOf(COMPONENT), listOf(BOOLEAN), true),
-        IF_FIND_ENTITYOVERLAY(listOf(ENTITYOVERLAY), listOf(BOOL)),
-        CC_FIND_ENTITYOVERLAY(listOf(ENTITYOVERLAY, COMSUBID), listOf(BOOL)),
+        IF_FIND_ENTITYOVERLAY(listOf(ENTITYOVERLAY), listOf(BOOL), true),
+        CC_FIND_ENTITYOVERLAY(listOf(ENTITYOVERLAY, COMSUBID), listOf(BOOL), true),
 
         CC_SETPOSITION(listOf(X, Y, SETPOSH, SETPOSV), listOf(), true),
         CC_SETSIZE(listOf(WIDTH, HEIGHT, SETSIZE, SETSIZE), listOf(), true),
@@ -1086,7 +1086,7 @@ interface Command {
         COMPONENT_FIND_ACTIVE_MINIMENU_ENTRY(listOf(), listOf(BOOLEAN)),
         TARGETMODE_ACTIVE(listOf(), listOf(BOOLEAN)),
         GET_MINIMENU_LENGTH(listOf(), listOf(INT)),
-        OBJSTACK_SIZE(listOf(INT), listOf(INT)),
+        OBJSTACK_SIZE(listOf(_COORD), listOf(INT)),
         OBJSTACK_OBJ(listOf(_COORD, INT), listOf(OBJ)),
         OBJSTACK_COUNT(listOf(_COORD, INT), listOf(INT)),
 
@@ -1163,6 +1163,7 @@ interface Command {
         private val defStackTypes = defs.map { it.stackType }
 
         override fun translate(state: InterpreterState): Instruction {
+            require(o || !state.operand.boolean) { "non-zero operand: $this" }
             val dot = o && state.operand.boolean
             val opArgs = Expression(state.pop(args.size))
             assign(state.typings.of(opArgs), state.typings.of(args))
