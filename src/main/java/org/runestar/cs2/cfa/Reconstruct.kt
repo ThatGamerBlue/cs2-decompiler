@@ -44,6 +44,7 @@ private fun reconstructBlock(
             val casesBlocks = mutableMapOf<Construct.SwitchCase, Int>()
             val switch = Construct.Switch(tail.expression, cases)
             seq.next = switch
+            val next = flow.blocks.next(block)
             for (v in tail.cases.values.toSet()) {
                 val keys = LinkedHashSet<Int>()
                 for (e in tail.cases) {
@@ -54,9 +55,16 @@ private fun reconstructBlock(
                 cases.add(case)
                 val dst = flow.blocks.block(v)
                 casesBlocks[case] = dst.index
-                after = reconstructBlock(flow, nxt, dst, dst) ?: after
+
+                val otherCaseBypassesEdge = tail.cases.values.any { it != v && findDescendants(flow, flow.blocks.block(it), block).contains(dst) }
+                val defaultCaseBypassesEdge = findDescendants(flow, next, block).contains(dst)
+                after = (if (!otherCaseBypassesEdge && !defaultCaseBypassesEdge) {
+                    reconstructBlock(flow, nxt, dst, dst)
+                } else {
+                    // the fail edge doesn't dominate the fail block (there's a second path through another case or the default), so the case is empty
+                    dst
+                }) ?: after
             }
-            val next = flow.blocks.next(block)
             val default = Construct.Seq()
             after = reconstructBlock(flow, default, next, next) ?: after
             if (default.instructions.isNotEmpty() || default.next != null) {
@@ -88,10 +96,22 @@ private fun reconstructBlock(
                 seq.next = iff
                 val branch = Construct.Branch(tail.expression as Expression.Operation, Construct.Seq())
                 iff.branches.add(branch)
-                val afterIf = reconstructBlock(flow, branch.body, pass, pass)
+                val afterIf = if (!findDescendants(flow, fail, block).contains(pass)) {
+                    reconstructBlock(flow, branch.body, pass, pass)
+                } else {
+                    // the pass edge doesn't dominate the pass block (there's a second path through
+                    // the fail block), so the pass branch is empty
+                    pass
+                }
                 val elze = Construct.Seq()
                 iff.elze = elze
-                val afterElze = reconstructBlock(flow, elze, fail, fail)
+                val afterElze = if (!findDescendants(flow, pass, block).contains(fail)) {
+                    reconstructBlock(flow, elze, fail, fail)
+                } else {
+                    // the fail edge doesn't dominate the fail block (there's a second path through
+                    // the pass block), so the pass branch is empty
+                    fail
+                }
                 if (elze.instructions.isEmpty() && elze.next == null) {
                     iff.elze = null
                 } else if (elze.instructions.isEmpty() && elze.next is Construct.If && elze.next!!.next == null) {
@@ -120,4 +140,20 @@ private fun reconstructBlock(
         }
     }
     return null
+}
+
+private fun findDescendants(flow: FlowGraph, start: BasicBlock, stop: BasicBlock): HashSet<BasicBlock> {
+    val result = HashSet<BasicBlock>()
+    val queue = ArrayDeque<BasicBlock>()
+    queue.add(start)
+
+    while (!queue.isEmpty()) {
+        val block = queue.removeFirst()
+
+        if (block != stop && result.add(block)) {
+            queue.addAll(flow.graph.immediateSuccessors(block))
+        }
+    }
+
+    return result
 }
