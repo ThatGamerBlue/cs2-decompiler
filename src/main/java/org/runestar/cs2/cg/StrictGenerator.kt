@@ -263,6 +263,17 @@ private class Writer(
         }
     }
 
+    /**
+     * Resets [inCalc] to `false` so that math within [block] requires `calc(...)`, then
+     * restores the original value of [inCalc].
+     */
+    private inline fun saveAndRestoreCalc(crossinline block: () -> Unit) {
+        val wasInCalc = inCalc
+        inCalc = false
+        block()
+        inCalc = wasInCalc
+    }
+
     private fun appendOperation(expr: Expression.Operation) {
         val args = expr.arguments.asList
         val opcode = expr.opcode
@@ -273,11 +284,15 @@ private class Writer(
                 return
             }
             PUSH_ARRAY_INT -> {
-                appendVarAccess(args[0] as Element.Access).append('(').appendExpr(args[1]).append(')')
+                saveAndRestoreCalc {
+                    appendVarAccess(args[0] as Element.Access).append('(').appendExpr(args[1]).append(')')
+                }
                 return
             }
             POP_ARRAY_INT -> {
-                appendVarAccess(args[0] as Element.Access).append('(').appendExpr(args[1]).append(") = ").appendExpr(args[2])
+                saveAndRestoreCalc {
+                    appendVarAccess(args[0] as Element.Access).append('(').appendExpr(args[1]).append(") = ").appendExpr(args[2])
+                }
                 return
             }
             JOIN_STRING -> {
@@ -312,7 +327,9 @@ private class Writer(
             }
             append(expr.opcodeName)
             if (args.isNotEmpty()) {
-                append('(').appendExprs(args).append(')')
+                saveAndRestoreCalc {
+                    append('(').appendExprs(args).append(')')
+                }
             }
         }
     }
@@ -389,7 +406,9 @@ private class Writer(
             append(scriptName.name)
         }
         if (args.isNotEmpty()) {
-            append('(').appendExprs(args).append(')')
+            saveAndRestoreCalc {
+                append('(').appendExprs(args).append(')')
+            }
         }
     }
 
