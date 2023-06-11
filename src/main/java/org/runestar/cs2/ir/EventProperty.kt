@@ -8,11 +8,11 @@ enum class EventProperty(val magic: Value, val prototype: Prototype) : Element {
     mousex(Value(Int.MIN_VALUE + 1), MOUSEX),
     mousey(Value(Int.MIN_VALUE + 2), MOUSEY),
     com(Value(Int.MIN_VALUE + 3), COMPONENT),
-    opindex(Value(Int.MIN_VALUE + 4), OPINDEX),
+    op(Value(Int.MIN_VALUE + 4), OPINDEX),
     comsubid(Value(Int.MIN_VALUE + 5), COMSUBID),
-    drop(Value(Int.MIN_VALUE + 6), DROP),
-    dropsubid(Value(Int.MIN_VALUE + 7), DROPSUBID),
-    key(Value(Int.MIN_VALUE + 8), KEY),
+    com2(Value(Int.MIN_VALUE + 6), DROP),
+    comsubid2(Value(Int.MIN_VALUE + 7), DROPSUBID),
+    keycode(Value(Int.MIN_VALUE + 8), KEY),
     keychar(Value(Int.MIN_VALUE + 9), KEYCHAR),
     ;
 
