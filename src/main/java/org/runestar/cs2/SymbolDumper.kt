@@ -36,12 +36,15 @@ fun main() {
  */
 private fun dumpVars(saveDir: Path, fs: FunctionSet) {
     val typeToName = mapOf(
-        Variable.varp::class to "var",
+        Variable.varp::class to "varp",
         Variable.varbit::class to "varbit",
         Variable.varcint::class to "varcint",
         Variable.varcstring::class to "varcstring",
         Variable.varclan::class to "varclan",
         Variable.varclansetting::class to "varclansetting",
+    )
+    val typeToSymbolPrefix = mapOf(
+        Variable.varp::class to "var",
     )
 
     val variableByType = fs.typings.variables.entries.asSequence()
@@ -51,14 +54,15 @@ private fun dumpVars(saveDir: Path, fs: FunctionSet) {
 
     for ((klazz, variables) in variableByType) {
         val name = typeToName[klazz]
-        val saveFile = saveDir.resolve("${name}s.tsv")
+        val symbolPrefix = typeToSymbolPrefix[klazz] ?: name
+        val saveFile = saveDir.resolve("${name}.tsv")
         val writer = Files.newBufferedWriter(saveFile, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)
         writer.use {
             for ((variable, typing) in variables) {
                 if (variable !is Variable.varbit) {
-                    it.write("${variable.id}\t${name}${variable.id}\t${typing.type}\n")
+                    it.write("${variable.id}\t${symbolPrefix}${variable.id}\t${typing.type}\n")
                 } else {
-                    it.write("${variable.id}\t${name}${variable.id}\n")
+                    it.write("${variable.id}\t${symbolPrefix}${variable.id}\n")
                 }
             }
         }
@@ -69,11 +73,11 @@ private fun dumpVars(saveDir: Path, fs: FunctionSet) {
  * Dumps all references of different types.
  */
 private fun dumpAll(saveDir: Path) {
-    val skippedTypes = setOf(Type.INT, Type.BOOLEAN, Type.CHAR, Type.COORD, Type.NPC_UID, Type.TYPE)
+    val skippedTypes = setOf(
+        Type.INT, Type.BOOLEAN, Type.CHAR, Type.COORD, Type.NPC_UID, Type.TYPE, Type.ENTITYOVERLAY
+    )
     val typeToName = mapOf(
-        Type.CATEGORY to "categories",
-        Type.FONTMETRICS to "fontmetrics",
-        Type.NAMEDOBJ to "objs",
+        Type.NAMEDOBJ to "obj",
     )
 
     // merge objs into namedobjs
@@ -88,7 +92,7 @@ private fun dumpAll(saveDir: Path) {
 }
 
 private fun dumpSymbolType(typeToName: Map<Type, String>, type: Type, saveDir: Path, symbols: TreeMap<Int, String>) {
-    val saveFileName = typeToName[type] ?: "${type.literal}s"
+    val saveFileName = typeToName[type] ?: type.literal
     val saveFile = saveDir.resolve("$saveFileName.tsv")
     val writer = Files.newBufferedWriter(saveFile, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)
     writer.use {
