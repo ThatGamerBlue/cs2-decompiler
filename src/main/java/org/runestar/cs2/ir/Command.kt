@@ -1130,6 +1130,7 @@ interface Command {
         _7460(listOf(), listOf(INT)),
         _7462(listOf(INT, INT), listOf()),
 
+        DB_FINDBYINDEX(listOf(INT), listOf(DBROW)),
         DB_FINDNEXT(listOf(), listOf(DBROW)),
         DB_GETFIELDCOUNT(listOf(DBROW, DBCOLUMN), listOf(INT)),
         DB_LISTALL_WITH_COUNT(listOf(DBTABLE), listOf(INT)),

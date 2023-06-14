@@ -15040,7 +15040,7 @@
 15294	placeholder_pet_kril_tsutsaroth
 15295	placeholder_baby_mole
 15296	placeholder_prince_black_dragon
-15297	deflect_magic
+15297	dampen_magic
 15298	placeholder_kalphite_princess
 15299	placeholder_pet_smoke_devil
 15300	placeholder_pet_kraken
@@ -25084,10 +25084,10 @@
 25482	cert_runescroll_of_bloodbark
 25483	placeholder_runescroll_of_bloodbark
 25484	soulreaper_axe
-25485	ring_of_true_blood
-25486	ring_of_true_ice
-25487	ring_of_true_smoke
-25488	ring_of_true_shadow
+25485	ultor_ring
+25486	magus_ring
+25487	ventor_ring
+25488	bellator_ring
 25489	blood_ancient_sceptre
 25490	ice_ancient_sceptre
 25491	smoke_ancient_sceptre
@@ -25539,7 +25539,7 @@
 25939	dummy_priest_gown
 25940	placeholder_anim_offhand
 25941	anim_offhand
-25942	dummy_priest_gown
+25942	protect_item
 25943	placeholder_anim_offhand
 25944	anim_offhand
 25945	vindication
@@ -25548,7 +25548,7 @@
 25948	rebuke
 25949	placeholder_anim_offhand
 25950	anim_offhand
-25951	gambit
+25951	intensify
 25952	placeholder_anim_offhand
 25953	anim_offhand
 25954	glacies_vow
@@ -25584,8 +25584,8 @@
 25984	purge
 25985	elidinis_ward
 25986	placeholder_elidinis_ward
-25987	deflect_ranged
-25988	deflect_melee
+25987	dampen_ranged
+25988	dampen_melee
 25989	vaporise
 25990	sigil_of_resilience
 25991	sigil_of_resilience
@@ -27724,3 +27724,7 @@
 28127	placeholder_poets_jacket
 28128	love_crossbow
 28129	placeholder_love_crossbow
+28130	strange_icon
+28131	dummy_unicorn_horn_dust
+28132	dusty_lamp
+28133	crypt_map

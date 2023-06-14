@@ -652,3 +652,6 @@
 1759	int
 1760	obj
 1784	string
+1787	int
+1788	string
+1789	graphic

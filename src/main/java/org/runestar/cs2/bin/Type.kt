@@ -24,6 +24,7 @@ enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
     LOCSHAPE('H'),
     MAPAREA('`', "wma"),
     MAPELEMENT('µ'),
+    MIDI('M'),
     MODEL('m'),
     NAMEDOBJ('O'),
     ENTITYOVERLAY('-'),

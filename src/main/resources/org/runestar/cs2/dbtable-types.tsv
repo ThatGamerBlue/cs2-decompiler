@@ -113,7 +113,7 @@
 49216	dbrow
 53248	int
 53264	int
-53280	int
+53280	dbrow
 53296	string
 53312	dbrow
 53328	dbrow
@@ -239,3 +239,13 @@
 167936	namedobj
 167952	string
 167968	string
+180224	string
+180240	string
+180256	string
+180272	int
+180288	midi
+180304	int,int
+180320	int
+180336	boolean
+180352	boolean
+180368	int
