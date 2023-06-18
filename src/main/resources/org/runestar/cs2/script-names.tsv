@@ -4486,6 +4486,8 @@
 7141	[clientscript,omnishop_main_setup]
 7142	[proc,omnishop_main_setup]
 7143	[proc,omnishop_main_list_setup]
+7144	[proc,omnishop_main_list_item_setup]
+7145	[clientscript,omnishop_main_list_item_select]
 7146	[clientscript,omnishop_main_info_setup]
 7147	[proc,omnishop_main_info_setup]
 7148	[clientscript,omnishop_main_info_closebutton_click]
