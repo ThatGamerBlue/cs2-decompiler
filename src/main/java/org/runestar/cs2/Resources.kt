@@ -40,7 +40,7 @@ val INTERFACE_NAMES = readNames("interface-names.tsv")
 val DBTABLE_NAMES = readNames("dbtable-names.tsv")
 val DBCOLUMN_NAMES = readNames("dbcolumn-names.tsv") {
     val split = it.split(",");
-    split[0].toInt() shl 12 or split[1].toInt() shl 4
+    (split[0].toInt() shl 12) or (split[1].toInt() shl 4)
 }
 val INV_NAMES = readNames("inv-names.tsv")
 val LOC_NAMES = readNames("loc-names.tsv")
