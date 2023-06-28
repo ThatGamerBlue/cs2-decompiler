@@ -3222,6 +3222,7 @@
 4512	[proc,standard_autocast_spellpos]
 4513	[clientscript,stat_boosts_hud_update_enabled]
 4514	[clientscript,stat_boosts_hud_update_displays]
+4519	[proc,stat_boosts_hud_update_timer_targets]
 4522	[proc,stat_boosts_hud_debug_mes]
 4526	849187
 4527	2426403

@@ -712,7 +712,7 @@ interface Command {
         _3656(listOf(BOOLEAN), listOf()),
         _3657(listOf(BOOLEAN), listOf()),
 
-        STEAM_SETACHIVEMENT(listOf(STRING, INT, INT), listOf(INT)),
+        STEAM_SETACHIEVEMENT(listOf(STRING, INT, INT), listOf(INT)),
         STEAM_SETSTAT(listOf(STRING, INT, INT), listOf(INT)),
         STEAM_STORESTATS(listOf(), listOf(INT)),
 
