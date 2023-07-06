@@ -655,3 +655,6 @@
 1787	int
 1788	string
 1789	graphic
+1791	int
+1792	int
+1793	boolean

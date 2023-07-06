@@ -1403,6 +1403,7 @@
 1752	[proc,worldmap_elements_chooseposition]
 1757	[proc,worldmap_elements_marker]
 1766	[clientscript,helper_agility_highlight_obstacles]
+1783	[proc,buff_bar_mobile_tooltip]
 1817	[clientscript,keyboard_show_string]
 1838	[proc,keyboard_show_string]
 1847	[proc,worldmap_element_tooltip]

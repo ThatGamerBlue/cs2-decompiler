@@ -1993,6 +1993,7 @@
 8077	nylocas_athanatos_walk_f
 8080	pestilent_bloat_ready
 8081	pestilent_bloat_walk_f
+8084	friendly_bees_ready
 8086	chamber
 8087	hanging_hand
 8090	the_maiden_of_sugadinti
@@ -2396,3 +2397,4 @@
 10011	callisto_cub_ready
 10028	desecrated_tomb
 10060	suzie_ready
+10084	friendly_forester_ready
