@@ -5781,10 +5781,10 @@
 5820	fishing_spot
 5821	fishing_spot
 5822	ice_troll_king
-5823	ice_troll_runt
-5824	ice_troll_male
-5825	ice_troll_female
-5826	ice_troll_grunt
+5823	frenzied_ice_troll_runt
+5824	frenzied_ice_troll_male
+5825	frenzied_ice_troll_female
+5826	frenzied_ice_troll_grunt
 5827	bork_sigmundson
 5828	ice_troll_runt
 5829	ice_troll_male

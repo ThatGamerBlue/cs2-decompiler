@@ -15,6 +15,10 @@
 258	int
 295	int
 336	int
+347	int
+348	int
+349	int
+350	int
 363	string
 365	obj
 366	int
@@ -23,6 +27,7 @@
 369	obj
 370	int
 385	int
+393	int
 401	int
 434	stat
 435	stat
@@ -118,6 +123,7 @@
 689	string
 690	enum
 709	int
+726	int
 729	string
 732	string
 733	obj
