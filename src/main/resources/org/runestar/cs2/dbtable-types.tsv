@@ -198,9 +198,11 @@
 139344	string
 143360	int
 143376	int
-143392	dbrow
-143408	boolean
+143392	int
+143408	dbrow
+143424	boolean
 147456	string
+147472	graphic
 151552	string
 151568	idkit
 151584	idkit

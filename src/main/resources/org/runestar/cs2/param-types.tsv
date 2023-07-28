@@ -665,3 +665,8 @@
 1792	int
 1793	boolean
 1799	boolean
+1800	string
+1801	string
+1802	string
+1803	boolean
+1804	boolean

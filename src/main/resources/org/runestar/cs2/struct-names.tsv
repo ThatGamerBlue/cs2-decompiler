@@ -76,7 +76,7 @@
 467	troll_stronghold
 468	catherby
 469	ghorrock
-470	carrallangar
+470	carrallanger
 471	bosses
 472	raids
 473	clues
@@ -275,8 +275,8 @@
 2793	enable_tablet_warnings
 2794	disable_teleport_warnings
 2795	enable_teleport_warnings
-2797	show_warning_when_casting_carrallangar_teleport
-2798	show_warning_when_using_tablet_carrallangar
+2797	show_warning_when_casting_carrallanger_teleport
+2798	show_warning_when_using_tablet_carrallanger
 2825	soul_wars
 2851	select_function_mode
 2852	interface_scaling
@@ -723,3 +723,7 @@
 4553	forestry
 4554	loot_tracker_source_ignore_list
 4555	ground_items_maximum_lines_shown
+4652	duke_sucellus
+4653	vardorvis
+4654	the_whisperer
+4655	the_leviathan
