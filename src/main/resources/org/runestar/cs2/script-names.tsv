@@ -1404,10 +1404,12 @@
 1757	[proc,worldmap_elements_marker]
 1766	[clientscript,helper_agility_highlight_obstacles]
 1783	[proc,buff_bar_mobile_tooltip]
+1796	12177957
 1817	[clientscript,keyboard_show_string]
 1838	[proc,keyboard_show_string]
 1847	[proc,worldmap_element_tooltip]
 1854	[proc,helper_agility_highlight_obstacles]
+1864	12178213
 1905	[clientscript,bugreport_textinput]
 1935	[proc,instance_check]
 1937	[clientscript,bookofscrolls_init]
