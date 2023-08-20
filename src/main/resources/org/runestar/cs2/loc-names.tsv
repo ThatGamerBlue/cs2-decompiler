@@ -25533,8 +25533,8 @@
 47574	corrupted_seed
 47575	corrupted_seed
 47576	floating_column
-47578	entrails
-47579	entrails
+47578	entrails_multi
+47579	entrails_multi
 47580	scoreboard
 47581	scoreboard
 47582	scoreboard
@@ -26493,3 +26493,9 @@
 49552	strange_pool_multi
 49553	strange_shrine_multi
 49554	strange_shrine
+49555	entrails
+49556	entrails
+49557	chest_multi
+49558	chest
+49559	chest
+49560	chest
