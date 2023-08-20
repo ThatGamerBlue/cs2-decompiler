@@ -20,7 +20,7 @@
 765	boolean,int
 972	int,int,int,int,string,int,obj,obj,obj,obj
 1045	int,int
-1074	inv,text,obj,int
+1074	inv,text,obj,int,boolean
 1104	boolean,boolean,string
 1149	string,text,int,int
 1169	text,int
