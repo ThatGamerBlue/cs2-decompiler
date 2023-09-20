@@ -24213,10 +24213,10 @@
 24606	cert_blighted_super_restore_1
 24607	blighted_ancient_ice_sack
 24608	placeholder_blighted_ancient_ice_sack
-24609	blighted_bind_sack
-24610	placeholder_blighted_bind_sack
-24611	blighted_snare_sack
-24612	placeholder_blighted_snare_sack
+24609	dummy_priest_gown
+24610	dummy_priest_gown
+24611	dummy_priest_gown
+24612	dummy_priest_gown
 24613	blighted_entangle_sack
 24614	placeholder_blighted_entangle_sack
 24615	blighted_teleport_spell_sack
@@ -26300,7 +26300,7 @@
 26701	saikas_hood_broken
 26702	saikas_veil_broken
 26703	saikas_shroud_broken
-26704	blighted_wave_sack
+26704	dummy_priest_gown
 26705	blighted_surge_sack
 26706	scroll_of_imbuing
 26707	dragon_claws_ornament_kit
@@ -26685,7 +26685,7 @@
 27086	rune_pouch
 27087	dummy_needle
 27088	dummy_alviss
-27089	placeholder_blighted_wave_sack
+27089	dummy_priest_gown
 27090	placeholder_blighted_surge_sack
 27091	placeholder_scroll_of_imbuing
 27092	placeholder_dragon_claws_ornament_kit

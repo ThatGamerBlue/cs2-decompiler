@@ -732,3 +732,11 @@
 4658	convert_save_to_beta_worlds
 4677	loot_key_broadcasts
 4678	loot_key_broadcast_value
+4680	looting_bag_store_all
+4681	looting_bag_ignore_supplies
+4682	always_empty_rune_pouches_on_death
+4683	always_empty_tackle_boxes_on_death
+4684	always_empty_bolt_pouches_on_death
+4685	always_empty_seed_boxes_on_death
+4686	always_empty_essence_pouches_on_death
+4687	always_empty_herb_sacks_on_death
