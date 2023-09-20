@@ -46,19 +46,23 @@ private fun dumpVars(saveDir: Path, fs: FunctionSet) {
     val typeToSymbolPrefix = mapOf(
         Variable.varp::class to "var",
     )
+    val typeToFileName = mapOf(
+        Variable.varcint::class to "varc",
+        Variable.varcstring::class to "varc",
+    )
 
     val variableByType = fs.typings.variables.entries.asSequence()
         .sortedBy { it.key.id }
         .filter { it.key is Variable.Global }
-        .groupBy { it.key::class }
+        .groupBy { if (it.key::class == Variable.varcstring::class) Variable.varcint::class else it.key::class }
 
     for ((klazz, variables) in variableByType) {
-        val name = typeToName[klazz]
-        val symbolPrefix = typeToSymbolPrefix[klazz] ?: name
-        val saveFile = saveDir.resolve("${name}.tsv")
+        val fileName = typeToFileName[klazz] ?: typeToName[klazz]
+        val saveFile = saveDir.resolve("$fileName.sym")
         val writer = Files.newBufferedWriter(saveFile, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)
         writer.use {
             for ((variable, typing) in variables) {
+                val symbolPrefix = typeToSymbolPrefix[variable::class] ?: typeToName[variable::class]
                 if (variable !is Variable.varbit) {
                     it.write("${variable.id}\t${symbolPrefix}${variable.id}\t${typing.type}\n")
                 } else {
@@ -93,7 +97,7 @@ private fun dumpAll(saveDir: Path) {
 
 private fun dumpSymbolType(typeToName: Map<Type, String>, type: Type, saveDir: Path, symbols: TreeMap<Int, String>) {
     val saveFileName = typeToName[type] ?: type.literal
-    val saveFile = saveDir.resolve("$saveFileName.tsv")
+    val saveFile = saveDir.resolve("$saveFileName.sym")
     val writer = Files.newBufferedWriter(saveFile, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)
     writer.use {
         for ((id, _name) in symbols) {
