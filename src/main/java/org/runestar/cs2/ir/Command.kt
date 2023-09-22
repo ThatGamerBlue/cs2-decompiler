@@ -1152,6 +1152,7 @@ interface Command {
         LOOTTRACKER_LOOTGET_BYID(listOf(INT, INT), listOf(OBJ, INT)),
         LOOTTRACKER_CLEAR_DATA(listOf(), listOf()),
         LOOTTRACKER_LOOTDEL_BYNAME(listOf(STRING), listOf()),
+        LOOTTRACKER_LOOTDEL_BYID(listOf(INT), listOf()),
         LOOTTRACKER_IGNORELOOTADD(listOf(STRING), listOf()),
         LOOTTRACKER_IGNORELOOTDEL(listOf(STRING), listOf()),
         LOOTTRACKER_IGNORELOOTCOUNT(listOf(), listOf(INT)),
