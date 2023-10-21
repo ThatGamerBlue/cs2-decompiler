@@ -742,3 +742,4 @@
 4687	always_empty_herb_sacks_on_death
 4688	enable_new_style_skill_guide_interface
 4689	reset_beta_world_save
+4690	options_on_the_compass_for_orienting_the_camera_also_set_its_vertical_angle
