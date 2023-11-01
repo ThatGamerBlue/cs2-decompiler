@@ -1711,6 +1711,7 @@
 2411	[proc,time_convert_ms]
 2413	[clientscript,steelbox_background]
 2414	[proc,show_storebutton]
+2424	[clientscript,stonebutton_init]
 2425	[proc,stonebutton_init]
 2469	[proc,meslayer_button_draw]
 2470	[clientscript,meslayer_mode7_button]

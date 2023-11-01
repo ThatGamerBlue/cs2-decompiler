@@ -17,6 +17,7 @@
 618	component,component,component,boolean
 624	int,int,string,length,flags,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int
 750	string,boolean,enum,boolean
+722	boolean
 765	boolean,int
 972	int,int,int,int,string,int,obj,obj,obj,obj
 1045	int,int

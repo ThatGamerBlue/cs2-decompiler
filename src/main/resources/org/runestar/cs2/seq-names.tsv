@@ -2467,3 +2467,11 @@
 10466	human_food
 10469	advisor
 10487	spirit_tree
+10528	friendly_ent_ready
+10537	entling_ready
+10538	entling_walk_f
+10541	dryad_ready
+10549	ritual_circle_green_ready
+10555	fox_trap_ready
+10605	end_of_rainbow
+10618	pheasant_ready
