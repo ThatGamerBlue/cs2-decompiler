@@ -8625,6 +8625,7 @@
 8795	cert_saw
 8796	sinister_offering
 8797	dummy_baby_red_dragon
+8799	dummy_security_guard
 8800	dummy_iffie
 8804	dummy_lumbridge_guide
 8826	dummy_soldier
@@ -28250,3 +28251,9 @@
 28669	pheasant
 28670	fox
 28671	web_cloak
+28672	fancier_boots
+28673	placeholder_fancier_boots
+28674	sturdy_beehive_parts
+28675	placeholder_sturdy_beehive_parts
+28676	beehive_style_1
+28677	beehive_style_2

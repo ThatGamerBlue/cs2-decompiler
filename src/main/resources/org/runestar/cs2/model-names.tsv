@@ -7772,6 +7772,7 @@
 12796	bow_and_arrow
 12799	lumbridge_guide
 12805	iffie
+12809	security_guard
 12811	dart
 12812	hoop
 12813	kettle
@@ -26636,8 +26637,8 @@
 48240	forestry_boots
 48241	leprechaun_charm
 48242	felling_axe_handle
-48243	complete_bee_hive
-48244	unfinished_bee_hive
+48243	complete_beehive
+48244	unfinished_beehive
 48247	thriving_sapling
 48248	struggling_sapling
 48249	struggling_sapling
@@ -26654,7 +26655,7 @@
 48261	wild_mushrooms
 48262	wild_mushrooms
 48263	wild_mushrooms
-48264	friendly_bees
+48264	agitated_bees
 48265	woodcutting_leprechaun
 48266	forestry_hat
 48267	forestry_hat
@@ -27423,8 +27424,8 @@
 49892	pheasant
 49893	pheasant_tail_feathers
 49894	petal_circlet
-49895	bee_hive
-49896	unfinished_bee_hive
+49895	beehive
+49896	unfinished_beehive
 49899	fox_trap
 49902	pheasant_nest
 49903	pheasant_nest
@@ -27443,3 +27444,9 @@
 49916	friendly_ent
 49917	pruned_entling
 49919	web_cloak
+49920	fancier_boots
+49921	fancier_boots
+49922	fancier_boots
+49923	sturdy_beehive_parts
+49924	beehive_style_1
+49925	beehive_style_2

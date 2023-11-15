@@ -750,6 +750,8 @@
 3405	cauldron
 3406	cauldron
 3407	explosion
+3415	count_check_walk_f
+3418	count_check_ready
 3424	crab_ready
 3426	crab_walk_f
 3431	mudskipper_ready
@@ -895,6 +897,7 @@
 4037	giant_sea_snake_ready
 4070	skotos_walk_f
 4073	farmer_gricoller_ready
+4075	security_guard_ready
 4124	cooking_pot
 4125	oil_lamp
 4126	flowers
@@ -1995,7 +1998,7 @@
 8077	nylocas_athanatos_walk_f
 8080	pestilent_bloat_ready
 8081	pestilent_bloat_walk_f
-8084	friendly_bees_ready
+8084	agitated_bees_ready
 8086	chamber
 8087	hanging_hand
 8090	the_maiden_of_sugadinti
