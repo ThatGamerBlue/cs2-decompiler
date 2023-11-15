@@ -2254,6 +2254,10 @@
 9228	runestone_basalt
 9255	dwarf_multicannon
 9258	the_sage_ready
+9264	leagues_assistant_walk_f
+9265	leagues_assistant_walk_b
+9266	leagues_assistant_walk_l
+9267	leagues_assistant_walk_r
 9275	revenant_maledictus_walk_f
 9276	revenant_maledictus_ready
 9298	preacher_ready
@@ -2478,3 +2482,4 @@
 10555	fox_trap_ready
 10605	end_of_rainbow
 10618	pheasant_ready
+10636	leagues_assistant_ready

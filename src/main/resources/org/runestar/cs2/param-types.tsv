@@ -193,7 +193,6 @@
 873	int
 874	string
 875	string
-876	int
 877	int
 878	enum
 879	string
@@ -673,3 +672,18 @@
 1819	boolean
 1820	boolean
 1831	boolean
+1848	int
+1849	int
+1850	int
+1851	int
+1852	int
+1853	graphic
+1854	graphic
+1855	boolean
+1856	graphic
+1857	enum
+1858	string
+1859	coord
+1860	boolean
+1862	boolean
+1863	int
