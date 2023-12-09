@@ -58,11 +58,13 @@
 16448	dbrow
 16464	int
 16480	dbrow
+16496	boolean
 20480	int
 20496	int
 20512	dbrow
 20528	dbrow
 20544	int
+20560	boolean
 24576	int
 24592	int
 24608	string
@@ -70,6 +72,7 @@
 24640	dbrow
 24656	dbrow
 24672	int
+24688	boolean
 28672	int
 28688	int
 28704	string
@@ -77,6 +80,7 @@
 28736	dbrow
 28752	dbrow
 28768	int
+28784	boolean
 32768	int
 32784	int
 32800	string
@@ -88,6 +92,7 @@
 32896	loc
 32912	coord
 32928	int
+32944	boolean
 36864	int
 36880	int
 36896	string
@@ -100,6 +105,7 @@
 37008	dbrow
 37024	dbrow
 37040	int
+37056	boolean
 40960	int
 40976	int
 40992	string
@@ -108,18 +114,21 @@
 41040	dbrow
 41056	dbrow
 41072	int
+41088	boolean
 45056	int
 45072	int
 45088	string
 45104	dbrow
 45120	dbrow
 45136	int
+45152	boolean
 49152	int
 49168	int
 49184	dbrow
 49200	dbrow
 49216	dbrow
 49232	int
+49248	boolean
 53248	int
 53264	int
 53280	dbrow
@@ -127,6 +136,7 @@
 53312	dbrow
 53328	dbrow
 53344	int
+53360	boolean
 57344	int
 57360	int
 57376	string
