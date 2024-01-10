@@ -1006,6 +1006,7 @@
 4536	gianne_jnr_ready
 4537	zul_cheray_ready
 4538	perrdur_ready
+4539	goose_ready
 4557	table
 4559	aspidistra_plant
 4560	oaknocks_machine
@@ -2483,3 +2484,10 @@
 10605	end_of_rainbow
 10618	pheasant_ready
 10636	leagues_assistant_ready
+10657	anti_santa_walk_f
+10658	anti_santa_walk_b
+10659	anti_santa_walk_r
+10660	anti_santa_walk_l
+10661	anti_santa_ready
+10666	santa_claus_walk_f
+10674	santa_claus_ready

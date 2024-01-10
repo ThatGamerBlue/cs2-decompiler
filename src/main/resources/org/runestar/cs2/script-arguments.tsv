@@ -7,8 +7,9 @@
 253	flags,flags,flags,flags,flags,flags,string,string,int,boolean
 255	string,coord
 264	boolean
+299	boolean,boolean,boolean
 390	boolean
-450	text,flags,flags,flags,flags,flags,flags
+450	text,flags,flags,flags,flags,flags,flags,flags
 495	text,boolean
 582	enum,component,component,component,text,component
 603	text,component,component,component,component,text,int
