@@ -117,6 +117,8 @@ val DBTABLE = Prototype(Type.DBTABLE)
 val DBCOLUMN = Prototype(Type.DBCOLUMN)
 val DBFIELD = Prototype(Type.INT, "dbfield")
 
+val SCRIPT = Prototype(Type.SCRIPT)
+
 val PROTOTYPE_LOOKUP_TABLE = thisClass.declaredFields
     .filter { it.type == Prototype::class.java }
     .associate { it.name.toLowerCase() to it.get(null) as Prototype }

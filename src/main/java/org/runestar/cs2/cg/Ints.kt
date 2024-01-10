@@ -94,13 +94,13 @@ private val DBCOLUMNS = Loader {
 
 private fun cst(prefix: String, loader: Loader<String>) = loader.prefix('^' + prefix + '_').orElse(NULL).orElse(VALUE)
 
-private fun Loader<String>.idSuffix() = mapIndexed { id, n -> n + '_' + id }
+private fun Loader<String>.idSuffix(separator: String = "_") = mapIndexed { id, n -> n + separator + id }
 
 private fun unique(prototype: Prototype, loader: Loader<String>) = loader.orElse(unknown(prototype))
 
 private fun uniqueExhaustive(loader: Loader<String>) = loader.orElse(NULL)
 
-private fun unknown(prototype: Prototype) = NULL.orElse(Loader(prototype.identifier).idSuffix())
+private fun unknown(prototype: Prototype, separator: String = "_") = NULL.orElse(Loader(prototype.identifier).idSuffix(separator))
 
 private fun nonUnique(prototype: Prototype, loader: Loader<String>) = NULL.orElse(loader.orElse(Loader(prototype.identifier)).idSuffix())
 
@@ -168,6 +168,8 @@ private val PROTOTYPES = HashMap<Prototype, Loader<String>>().apply {
     this[DBCOLUMN] = NULL.orElse(DBCOLUMNS)
 
     this[STRINGVECTOR] = unknown(STRINGVECTOR)
+
+    this[SCRIPT] = unknown(SCRIPT, separator = "")
 }
 
 val TYPE_SYMBOLS = mutableMapOf<Type, TreeMap<Int, String>>()

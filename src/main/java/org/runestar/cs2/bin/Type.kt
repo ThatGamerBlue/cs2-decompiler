@@ -44,6 +44,7 @@ enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
     TYPE,
     DBTABLE,
     DBCOLUMN,
+    SCRIPT,
     ;
 
     val desc = desc.toByte(CP1252)

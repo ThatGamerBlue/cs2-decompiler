@@ -45,6 +45,7 @@ interface Command {
             addAll(Basic.values().asList())
             addAll(ClientScript.values().asList())
             addAll(Param.values().asList())
+            addAll(ShiftOpSet.values().asList())
         }
 
         fun loader(commands: Iterable<Command>): Loader<Command> = Loader(commands.associateBy { it.id })
@@ -980,15 +981,10 @@ interface Command {
         _6698(listOf(), listOf(_COORD)),
         WORLDMAP_ELEMENTCOORD(listOf(), listOf(_COORD)),
 
-        SHIFTOP_NPC_SET(listOf(INT, STRING, INT), listOf()),
         SHIFTOP_NPC_DEL(listOf(INT), listOf()),
-        SHIFTOP_LOC_SET(listOf(INT, STRING, INT), listOf()),
         SHIFTOP_LOC_DEL(listOf(INT), listOf()),
-        SHIFTOP_OBJ_SET(listOf(INT, STRING, INT), listOf()),
         SHIFTOP_OBJ_DEL(listOf(INT), listOf()),
-        SHIFTOP_PLAYER_SET(listOf(INT, STRING, INT), listOf()),
         SHIFTOP_PLAYER_DEL(listOf(INT), listOf()),
-        SHIFTOP_TILE_SET(listOf(INT, STRING, INT), listOf()),
         SHIFTOP_TILE_DEL(listOf(INT), listOf()),
 
         NPC_NAME(listOf(), listOf(STRING)),
@@ -1348,6 +1344,30 @@ interface Command {
             val def = state.push(paramType.stackType)
             assign(operationTyping, state.typings.of(paramPrototype))
             return Instruction.Assignment(def, operation)
+        }
+    }
+
+    enum class ShiftOpSet(private val trigger: Trigger) : Command {
+
+        SHIFTOP_NPC_SET(Trigger.shiftopnpc),
+        SHIFTOP_LOC_SET(Trigger.shiftoploc),
+        SHIFTOP_OBJ_SET(Trigger.shiftopobj),
+        SHIFTOP_PLAYER_SET(Trigger.shiftopplayer),
+        SHIFTOP_TILE_SET(Trigger.shiftoptile),
+        ;
+
+        override val id = opcodes.getValue(name)
+
+        override fun translate(state: InterpreterState): Instruction {
+            val scriptId = checkNotNull(state.peekValue()).int
+            state.callGraph.call(state.scriptId, scriptId, trigger)
+            val script = state.pop(StackType.INT)
+            assign(state.typings.of(script), state.typings.of(SCRIPT))
+            val text = state.pop(StackType.STRING)
+            assign(state.typings.of(text), state.typings.of(STRING))
+            val op = state.pop(StackType.INT)
+            assign(state.typings.of(op), state.typings.of(OPINDEX))
+            return Instruction.Assignment(Expression.Operation(emptyList(), id, Expression(op, text, script)))
         }
     }
 }

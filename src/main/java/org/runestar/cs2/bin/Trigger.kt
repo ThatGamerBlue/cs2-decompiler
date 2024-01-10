@@ -5,7 +5,7 @@ import org.runestar.cs2.ir.MAPELEMENT
 import org.runestar.cs2.ir.NPC
 import org.runestar.cs2.ir.Prototype
 
-enum class Trigger(val id: Int, val subjectType: Prototype? = null) {
+enum class Trigger(val id: Int = -1, val subjectType: Prototype? = null) {
 
     opworldmapelement1(10, MAPELEMENT),
     opworldmapelement2(11, MAPELEMENT),
@@ -28,6 +28,12 @@ enum class Trigger(val id: Int, val subjectType: Prototype? = null) {
     trigger_80(80),
     trigger_81(81),
     trigger_82(82),
+
+    shiftopnpc,
+    shiftoploc,
+    shiftopobj,
+    shiftopplayer,
+    shiftoptile,
     ;
 
     companion object {
