@@ -2035,7 +2035,7 @@
 8198	kaht_balam_ready
 8199	ketsal_kuk_ready
 8200	ekans_chan_ready
-8201	arcis_ready
+8201	asteros_arceuus_ready
 8202	lord_trobin_arceuus_ready
 8203	lord_trobin_arceuus_ready
 8204	fishing_spot_ready
@@ -2491,3 +2491,7 @@
 10661	anti_santa_ready
 10666	santa_claus_walk_f
 10674	santa_claus_ready
+10680	bandit_ready
+10682	guard_walk_f
+10683	guard_ready
+10684	guard_ready
