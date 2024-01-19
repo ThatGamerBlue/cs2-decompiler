@@ -83,7 +83,6 @@
 618	int
 619	boolean
 620	boolean
-621	boolean
 622	boolean
 623	dbrow
 624	graphic
@@ -689,3 +688,4 @@
 1862	boolean
 1863	int
 1866	int
+1868	boolean

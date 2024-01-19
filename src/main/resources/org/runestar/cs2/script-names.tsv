@@ -1527,7 +1527,6 @@
 2163	[proc,makeover_unlockedcolour]
 2164	[clientscript,xpdrops_setposition]
 2165	[proc,xpdrops_setposition]
-2174	[proc,tournament_beta_world]
 2175	[proc,nosavegame_world]
 2176	[clientscript,logout_layout_update]
 2179	[proc,deadman_spectator_names]
