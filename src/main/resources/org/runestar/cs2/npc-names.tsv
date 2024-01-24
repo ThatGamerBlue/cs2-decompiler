@@ -7161,6 +7161,12 @@
 7216	maniacal_monkey
 7217	guard_multi
 7218	guard_multi
+7219	scurry
+7220	rat_boss_test_npc
+7221	scurrius
+7222	scurrius
+7223	giant_rat
+7226	historian_aldo
 7227	miriam
 7228	traxi
 7229	raeli
@@ -7539,6 +7545,8 @@
 7612	krato
 7613	ektheme
 7614	archeio
+7615	historian_aldo
+7616	scurry
 7617	mountain_guide_multi
 7618	mountain_guide_multi
 7619	stuliette
@@ -12366,6 +12374,7 @@
 12603	barbarian_bartender
 12604	waitress
 12605	goose
+12606	historian_aldo_multi
 12630	trader_stan
 12631	trader_stan
 12632	trader_crewmember

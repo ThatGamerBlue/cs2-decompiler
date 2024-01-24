@@ -8482,6 +8482,10 @@
 14195	statue
 14196	chest
 14197	chest
+14203	broken_bars
+14204	sewage_water
+14205	food_pile
+14206	food_pile
 14209	herbs
 14212	wall
 14213	wall
@@ -26691,6 +26695,11 @@
 49998	portal
 49999	steps_multi
 50000	steps
+50003	corpse
+50004	corpse
+50007	roots
+50008	roots
+50009	roots
 50034	tree
 50035	tree_stump
 50036	snow_shark

@@ -2495,3 +2495,6 @@
 10682	guard_walk_f
 10683	guard_ready
 10684	guard_ready
+10687	scurry_ready
+10690	rat_boss_test_npc_walk_f
+10715	scurry_walk_f
