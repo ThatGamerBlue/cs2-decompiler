@@ -376,6 +376,8 @@ interface Command {
         CC_INPUT_SETWRAPMODE(listOf(INT), listOf(), true),
         CC_INPUT_SETSUBMITMODE(listOf(INT), listOf(), true),
         CC_INPUT_SETACCEPTMODE(listOf(INT), listOf(), true),
+        CC_CRMVIEW_INIT(listOf(STRING, STRING, STRING), listOf(), true),
+        CC_CRMVIEW_DISMISS(listOf(), listOf(BOOLEAN), true),
 
         CC_SETOBJECT(listOf(OBJ, NUM), listOf(), true),
         CC_SETNPCHEAD(listOf(NPC), listOf(), true),
