@@ -44,7 +44,6 @@
 3413	string,int,boolean,boolean,component
 3343	text,text,colour
 3532	enum,boolean,boolean
-3623	boolean,text,graphic,component
 3649	component,component,boolean
 3739	colour,string
 3726	component,int,string,colour,colour

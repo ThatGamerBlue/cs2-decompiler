@@ -1143,7 +1143,7 @@ interface Command {
         LOOTTRACKER_SOURCEQUERY_NEW(listOf(INT, INT, INT), listOf(INT)),
         LOOTTRACKER_SOURCEQUERY_GET(listOf(INT), listOf(INT)),
         LOOTTRACKER_SOURCEQUERY_CLEAR(listOf(), listOf()),
-        LOOTTRACKER_SOURCEGET(listOf(STRING, INT), listOf(INT)),
+        LOOTTRACKER_GETDROPLIMIT(listOf(), listOf(INT)),
         LOOTTRACKER_LOOTCOUNT_BYNAME(listOf(STRING), listOf(INT)),
         LOOTTRACKER_LOOTCOUNT_BYID(listOf(INT), listOf(INT)),
         LOOTTRACKER_LOOTGET_BYNAME(listOf(STRING, INT), listOf(OBJ, INT)),
@@ -1162,6 +1162,7 @@ interface Command {
         LOOTTRACKER_IGNORESOURCEGET(listOf(INT), listOf(STRING)),
         LOOTTRACKER_IGNORESOURCECLEAR(listOf(), listOf()),
         LOOTTRACKER_LOOTADD(listOf(STRING, OBJ, INT, INT), listOf()),
+        LOOTTRACKER_SOURCEDROPNAME(listOf(INT), listOf(STRING)),
         ;
 
         override val id = opcodes.getValue(name)
