@@ -10936,7 +10936,7 @@
 11161	flighted_ogre_arrow_3
 11162	flighted_ogre_arrow_4
 11163	flighted_ogre_arrow_5
-11164	restored_shield
+11164	dummy_leaves
 11165	phoenix_crossbow
 11166	cert_phoenix_crossbow
 11167	phoenix_crossbow
@@ -11295,7 +11295,6 @@
 11523	zamorak_mix_1
 11524	cert_zamorak_mix_1
 11525	feather
-11526	dummy_sheep_bones_1
 11527	dummy_sheep_bones_1
 11528	dummy_sheep_bones_1
 11529	dummy_sheep_bones_1
@@ -17612,7 +17611,7 @@
 17865	placeholder_intel_report
 17866	placeholder_broken_shield
 17867	placeholder_broken_shield
-17868	placeholder_restored_shield
+17868	dummy_leaves
 17869	placeholder_phoenix_crossbow
 17870	placeholder_phoenix_crossbow
 17871	placeholder_phoenix_crossbow
@@ -28378,3 +28377,21 @@
 28800	antique_lamp
 28801	scurry
 28802	placeholder_scurry
+28803	grubby_key
+28804	bottle
+28805	bottle_of_mist
+28806	imbued_barronite
+28807	shield_of_arrav
+28808	list_of_elders
+28809	elias_white
+28810	zombie_axe
+28811	cert_zombie_axe
+28812	placeholder_zombie_axe
+28813	broken_zombie_axe
+28814	cert_broken_zombie_axe
+28815	placeholder_broken_zombie_axe
+28816	stone_tablet
+28817	granite_tablet
+28818	slate_tablet
+28819	shale_tablet
+28820	antique_lamp
