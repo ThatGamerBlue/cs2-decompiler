@@ -278,3 +278,8 @@
 249936	stat,int
 249952	int
 249968	int
+253952	string
+253968	int,string,graphic
+253984	int
+254000	int
+254016	int
