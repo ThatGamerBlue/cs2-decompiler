@@ -3409,6 +3409,9 @@
 4857	[clientscript,ca_bosses_reviewsize]
 4859	[clientscript,ca_rewards_reviewsize]
 4861	[clientscript,ca_tasks_reviewsize]
+4903	[proc,skill_guide_subsection_strength]
+4904	[proc,skill_guide_data_strength]
+4908	13294373
 5167	[clientscript,helper_agility_highlight_course]
 5168	[proc,helper_agility_highlight_starts]
 5169	[proc,helper_agility_highlight_course]

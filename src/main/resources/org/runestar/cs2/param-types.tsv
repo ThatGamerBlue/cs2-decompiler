@@ -701,3 +701,17 @@
 1880	component
 1881	component
 1882	string
+1883	int
+1884	boolean
+1895	int
+1896	string
+1897	string
+1898	string
+1899	string
+1900	int
+1901	boolean
+1902	int
+1903	int
+1904	enum
+1910	int
+1914	int
