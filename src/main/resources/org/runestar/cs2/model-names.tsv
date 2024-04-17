@@ -18787,7 +18787,6 @@
 32948	lift
 32949	gibbet
 32962	big_pirate_hat
-32963	easter_bunny
 32964	easter_egg_helm
 32965	easter_egg_helm
 32966	fighter_torso
@@ -24709,7 +24708,6 @@
 44144	wooden_pole
 44145	blunt_scimitars
 44146	vat_dirty
-44147	easter_bunny
 44155	churning_machine
 44157	easter_hat
 44158	crate_ring
@@ -27871,7 +27869,6 @@
 50789	citizen
 50790	nelta_of_ralos
 50791	sunfire_fanatic_helm
-50792	dizanas_max_hood
 50794	pellem
 50795	gladiator
 50796	zuma
@@ -27901,7 +27898,6 @@
 50824	guild_hunter_teco_expert
 50826	pellem
 50827	victor
-50828	dizanas_max_cape
 50829	mixed_hide_cape
 50830	curator
 50831	curator
@@ -28030,7 +28026,6 @@
 50975	conara
 50977	attala
 50978	worker
-50979	dizanas_max_hood
 50980	harminia
 50983	imia
 50984	bandit
@@ -28073,7 +28068,6 @@
 51026	estate_agent
 51027	fisher
 51029	guild_hunter_wolf_master
-51030	dizanas_max_cape
 51032	avinia
 51033	guild_hunter_wolf_master
 51034	guild_hunter_legs
@@ -28343,7 +28337,6 @@
 52233	blue_moon_helm_broken
 52234	blue_moon_helm
 52235	sunfire_fanatic_helm
-52236	dizanas_max_hood
 52237	sunfire_fanatic_cuirass
 52238	eclipse_moon_chestplate
 52239	eclipse_moon_chestplate_broken
@@ -28364,7 +28357,6 @@
 52254	blood_moon_helm
 52255	eclipse_moon_helm
 52256	eclipse_moon_helm_broken
-52257	dizanas_max_cape_broken
 52258	echo_crystal
 52259	stolen_amulet
 52260	hunters_spear
@@ -28640,7 +28632,6 @@
 52687	citizen
 52688	guild_hunter_aco_expert
 52689	builder
-52690	dizanas_max_hood
 52691	gladiator
 52692	nelta_of_ralos
 52693	victor
@@ -28686,7 +28677,6 @@
 52736	eyatlalli
 52737	smol_heredit
 52738	sol_heredit
-52739	dizanas_max_hood
 52740	wealthy_citizen
 52741	nelta_of_ralos
 52742	thurid
@@ -28808,14 +28798,12 @@
 52900	book_of_egg
 52901	book_of_egg
 52902	book_of_egg
-52903	protester
 52911	crate
 52913	crate
 52914	crate
 52916	crate
 52917	crate
 52980	perch
-52982	easter_egg_bird
 53049	crate
 53051	pile_of_eggs
 53052	pile_of_eggs
@@ -28826,20 +28814,17 @@
 53062	easter_egg_rock
 53063	stolen_eggs
 53066	altar
-53067	easter_egg_mined
+53067	easter_egg_rock
 53068	easter_mine_cart
 53069	stolen_eggs
 53070	easter_egg_rock
 53072	unlit_brazier
 53075	pile_of_eggs
 53077	giant_egg
-53089	animated_egg
-53090	animated_egg
 53091	egg_priest_mitre
-53092	easter_egg_bird
 53093	egg_priest_mitre
 53096	egg_priest_robe
-53097	yolklore_of_ayaster
+53097	book_of_egg
 53098	egg_priest_necklace
 53099	egg_priest_mitre
 53100	egg_priest_robe_top
@@ -28860,3 +28845,11 @@
 53116	zombie_pirate
 53117	zombie_pirate
 53118	zombie_pirate
+53119	dizanas_max_hood
+53120	dizanas_max_cape
+53121	dizanas_max_cape
+53122	dizanas_max_cape_broken
+53123	dizanas_max_hood
+53124	dizanas_max_hood
+53125	dizanas_max_hood
+53126	dizanas_max_hood

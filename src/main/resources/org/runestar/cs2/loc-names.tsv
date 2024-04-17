@@ -27714,7 +27714,7 @@
 53024	collapsed_trap
 53045	crypt_staircase
 53046	crypt_staircase
-53048	unlit_brazier_multi
+53048	unlit_brazier
 53049	unlit_brazier
 53050	brazier
 53054	trail_of_chocolate
@@ -27793,10 +27793,11 @@
 53190	skeleton
 53191	skeleton
 53192	skeleton
-53214	easter_mine_cart_multi
-53215	easter_mine_cart_multi
-53216	easter_mine_cart_multi
-53217	easter_mine_cart_multi
-53218	easter_mine_cart_multi
+53214	easter_mine_cart
+53215	easter_mine_cart
+53216	easter_mine_cart
+53217	easter_mine_cart
+53218	easter_mine_cart
 53222	zombie_pirates_locker
 53224	agility_dispenser
+53225	spikes
