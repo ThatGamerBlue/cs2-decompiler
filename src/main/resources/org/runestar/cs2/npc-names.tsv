@@ -12768,14 +12768,13 @@
 13006	oryx
 13007	flies
 13008	flies
-13010	blood_moon
 13011	blood_moon
 13012	eclipse_moon
 13013	blue_moon
 13016	blood_moon_multi
 13017	blue_moon_multi
 13018	eclipse_moon_multi
-13019	eclipse_moon
+13019	eclipse_moon_multi
 13020	moon_shield
 13021	blood_jaguar
 13022	frozen_weapons_multi
@@ -13231,3 +13230,6 @@
 13482	animated_egg_multi
 13483	easter_bunny_multi
 13484	shifty_looking_priest_multi
+13485	enraged_blood_moon
+13486	enraged_blue_moon
+13487	enraged_eclipse_moon
