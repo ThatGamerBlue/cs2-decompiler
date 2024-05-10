@@ -4,6 +4,7 @@
 42	int
 87	enum
 123	int
+142	int
 148	int
 149	graphic
 150	namedobj

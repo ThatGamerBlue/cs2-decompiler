@@ -383,7 +383,7 @@ interface Command {
         CC_SETNPCHEAD(listOf(NPC), listOf(), true),
         CC_SETPLAYERHEAD_SELF(listOf(), listOf(), true),
         CC_SETOBJECT_NONUM(listOf(OBJ, NUM), listOf(), true),
-        CC_SETOBJECT_ALWAYS_NUM(listOf(OBJ, NUM), listOf(), true),
+        CC_SETOBJECT_ALWAYSNUM(listOf(OBJ, NUM), listOf(), true),
 
         CC_SETOP(listOf(OPINDEX, OP), listOf(), true),
         CC_SETDRAGGABLE(listOf(COMPONENT, INT), listOf(), true),
