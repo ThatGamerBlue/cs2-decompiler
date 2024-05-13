@@ -69,7 +69,6 @@ enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
                 1 -> return types.iterator().next()
                 2 -> {
                     if (OBJ in types && NAMEDOBJ in types) return OBJ
-                    if (FONTMETRICS in types && GRAPHIC in types) return FONTMETRICS
                 }
             }
             error(types)
@@ -81,7 +80,6 @@ enum class Type(desc: Char = 0.toChar(), literal: String? = null) {
                 1 -> return types.iterator().next()
                 2 -> {
                     if (OBJ in types && NAMEDOBJ in types) return NAMEDOBJ
-                    if (FONTMETRICS in types && GRAPHIC in types) return GRAPHIC
                 }
             }
             error(types)

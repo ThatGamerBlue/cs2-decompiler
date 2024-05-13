@@ -48,7 +48,9 @@ private val VALUE = Loader { it.toString() }
 
 private val NULL = Loader { if (it == -1) "null" else null }
 
-private fun Loader<String>.quote() = map { '"' + it + '"' }
+private fun Loader<String>.quote() = map {
+    if (it.contains(" ") || it.contains(",")) '"' + it + '"' else it
+}
 
 private fun Loader<String>.prefix(prefix: String) = map { prefix + it }
 
