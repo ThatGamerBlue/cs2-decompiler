@@ -309,7 +309,7 @@
 308	emblem_trader
 309	reacher
 310	ayesha
-311	iron_man_tutor
+311	ironman_tutor
 312	frog
 313	reacher
 314	dr_jekyll
@@ -7865,8 +7865,8 @@
 7938	revenant_dark_beast
 7939	revenant_knight
 7940	revenant_dragon
-7941	iron_man_tutor
-7942	iron_man_tutor_multi
+7941	ironman_tutor
+7942	ironman_tutor_multi
 7943	emblem_trader
 7945	gnome_banker_multi
 7946	fishing_spot
@@ -9346,7 +9346,7 @@
 9483	giant_rat
 9484	banker
 9485	brother_brace
-9486	iron_man_tutor
+9486	ironman_tutor
 9487	magic_instructor
 9488	chicken
 9489	veliaf_hurtz
@@ -11051,7 +11051,7 @@
 11228	r0ck_5masher
 11229	regent
 11230	group_storage_tutor
-11231	group_iron_tutor
+11231	group_ironman_tutor
 11232	the_sage
 11233	league_tutor
 11234	leagues_assistant

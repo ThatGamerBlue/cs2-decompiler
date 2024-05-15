@@ -570,12 +570,12 @@
 3741	buff_time_till_next_venom_hit
 3743	show_confirmation_when_paying_for_items_from_gravestone
 3744	hide_quests_in_progress
-3745	iron_group_chat
-3746	iron_group_chat
+3745	ironman_group_chat
+3746	ironman_group_chat
 3747	clan_broadcasts
 3748	clan_broadcasts
-3749	iron_group_broadcasts
-3750	iron_group_broadcasts
+3749	ironman_group_broadcasts
+3750	ironman_group_broadcasts
 3751	hide_completed_quests
 3752	hide_miniquests
 3753	hide_quests

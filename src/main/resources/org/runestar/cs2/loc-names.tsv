@@ -13469,6 +13469,8 @@
 23687	cupboard
 23688	cupboard
 23689	cupboard
+23690	food_barrel
+23691	gangplank
 23694	cube_pile
 23695	cylinder_pile
 23696	icosahedron_pile
@@ -16125,7 +16127,7 @@
 28856	vine
 28857	rope_ladder
 28858	rope_ladder
-28859	servants_moneybag
+28859	servants_money_bag
 28861	bank_chest
 28862	table
 28863	table
