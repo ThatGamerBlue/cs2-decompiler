@@ -325,7 +325,7 @@ interface Command {
         CC_CREATE_ENTITYOVERLAY(listOf(ENTITYOVERLAY, IFTYPE, COMSUBID), listOf(), true),
         CC_DELETEALL_ENTITYOVERLAY(listOf(ENTITYOVERLAY), listOf(), true),
         CC_FIND(listOf(COMPONENT, COMSUBID), listOf(BOOL), true),
-        IF_FIND(listOf(COMPONENT), listOf(BOOLEAN), true),
+        IF_FIND(listOf(COMPONENT), listOf(BOOL), true),
         IF_FIND_ENTITYOVERLAY(listOf(ENTITYOVERLAY), listOf(BOOL), true),
         CC_FIND_ENTITYOVERLAY(listOf(ENTITYOVERLAY, COMSUBID), listOf(BOOL), true),
 
@@ -632,7 +632,7 @@ interface Command {
         COORDX(listOf(_COORD), listOf(X)),
         COORDY(listOf(_COORD), listOf(Y)),
         COORDZ(listOf(_COORD), listOf(Z)),
-        MAP_MEMBERS(listOf(), listOf(BOOL)),
+        MAP_MEMBERS(listOf(), listOf(BOOLEAN)),
         INVOTHER_GETOBJ(listOf(INV, SLOT), listOf(OBJ)),
         INVOTHER_GETNUM(listOf(INV, SLOT), listOf(NUM)),
         INVOTHER_TOTAL(listOf(INV, OBJ), listOf(TOTAL)),
@@ -715,9 +715,9 @@ interface Command {
         _3656(listOf(BOOLEAN), listOf()),
         _3657(listOf(BOOLEAN), listOf()),
 
-        STEAM_SETACHIEVEMENT(listOf(STRING, INT, INT), listOf(INT)),
-        STEAM_SETSTAT(listOf(STRING, INT, INT), listOf(INT)),
-        STEAM_STORESTATS(listOf(), listOf(INT)),
+        STEAM_SETACHIEVEMENT(listOf(STRING, INT, INT), listOf(BOOLEAN)),
+        STEAM_SETSTAT(listOf(STRING, INT, INT), listOf(BOOLEAN)),
+        STEAM_STORESTATS(listOf(), listOf(BOOLEAN)),
 
         ACTIVECLANSETTINGS_FIND_LISTENED(listOf(), listOf(BOOLEAN)),
         ACTIVECLANSETTINGS_FIND_AFFINED(listOf(CLANTYPE), listOf(BOOLEAN)),
@@ -857,7 +857,7 @@ interface Command {
 
         CHAT_GETFILTER_PUBLIC(listOf(), listOf(CHATFILTER)),
         CHAT_SETFILTER(listOf(CHATFILTER, CHATFILTER, CHATFILTER), listOf()),
-        CHAT_SENDABUSEREPORT(listOf(STRING, INT, INT), listOf()),
+        CHAT_SENDABUSEREPORT(listOf(STRING, INT, BOOLEAN), listOf()),
         CHAT_GETHISTORY_BYTYPEANDLINE_OLD(listOf(CHATTYPE, INT), listOf(MESUID, CLOCK, USERNAME, STRING, _MES, INT)),
         CHAT_GETHISTORY_BYUID_OLD(listOf(MESUID), listOf(CHATTYPE, CLOCK, USERNAME, STRING, _MES, INT)),
         CHAT_GETFILTER_PRIVATE(listOf(), listOf(CHATFILTER)),
