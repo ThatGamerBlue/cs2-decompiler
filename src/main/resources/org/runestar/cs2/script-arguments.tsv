@@ -47,7 +47,7 @@
 3739	colour,string
 3726	component,int,string,colour,colour
 4140	component,component,component,component,component,boolean,boolean
-4179	string,int,int
+4179	string,int,boolean
 4212	string,component
 4290	string,component,boolean,int
 4316	string,int,int,int,boolean,component
