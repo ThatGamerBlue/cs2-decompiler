@@ -387,7 +387,6 @@
 389	reacher
 390	evil_bob
 391	evil_bob
-392	servant
 393	servant
 394	rod_fishing_spot
 395	cat
@@ -11463,7 +11462,7 @@
 11655	apmeken
 11656	apmeken
 11657	crondis
-11658	gilbert
+11658	gilbert_multi
 11659	crondis
 11660	crondis
 11661	scabaras
@@ -13176,6 +13175,20 @@
 13426	guild_hunter_fox
 13427	red_skink
 13428	red_skink
+13429	gilbert
+13430	gilbert
+13431	kit_breaker
+13432	kit_breaker
+13433	kit_breaker
+13434	kit_breaker
+13435	kit_breaker
+13436	kit_breaker
+13437	sir_kit_breaker
+13438	sir_kit_breaker
+13439	kit_breaker_multi
+13440	kit_breaker_multi
+13441	kit_breaker_multi
+13442	kit_breaker_multi
 13485	enraged_blood_moon
 13486	enraged_blue_moon
 13487	enraged_eclipse_moon
