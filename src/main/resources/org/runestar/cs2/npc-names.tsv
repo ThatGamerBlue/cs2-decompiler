@@ -387,6 +387,7 @@
 389	reacher
 390	evil_bob
 391	evil_bob
+392	trotters
 393	servant
 394	rod_fishing_spot
 395	cat
@@ -771,8 +772,8 @@
 774	skraeling
 775	fishmonger
 776	greengrocer
-777	ethereal_man
-778	ethereal_lady
+777	ethereal_being
+778	ethereal_being
 779	ethereal_numerator
 780	ethereal_expert
 781	ethereal_perceptive
@@ -5395,8 +5396,6 @@
 5431	frog
 5432	frog
 5433	caleb
-5434	frog_prince
-5435	frog_princess
 5436	niles
 5437	miles
 5438	giles
@@ -13189,6 +13188,10 @@
 13440	kit_breaker_multi
 13441	kit_breaker_multi
 13442	kit_breaker_multi
+13443	frog_prin
+13444	frog_prin
+13445	frog_prince
+13446	frog_princess
 13485	enraged_blood_moon
 13486	enraged_blue_moon
 13487	enraged_eclipse_moon
