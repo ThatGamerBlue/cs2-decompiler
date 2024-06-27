@@ -619,6 +619,9 @@ interface Command {
         DEVICEOPTION_GET(listOf(DEVICEOPTION), listOf(INT)),
         GAMEOPTION_GET(listOf(GAMEOPTION), listOf(INT)),
         DEVICEOPTION_GETRANGE(listOf(DEVICEOPTION), listOf(INT, INT)),
+        RT7_SETENABLED(listOf(BOOLEAN), listOf()),
+        RT7_SD(listOf(), listOf()),
+        RT7_HD(listOf(), listOf()),
 
         CLIENTCLOCK(listOf(), listOf(CLOCK)),
         INV_GETOBJ(listOf(INV, SLOT), listOf(OBJ)),

@@ -256,6 +256,7 @@
 164016	int
 164032	boolean
 164048	boolean
+164064	boolean
 167936	namedobj
 167952	string
 167968	string

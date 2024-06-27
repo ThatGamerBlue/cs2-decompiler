@@ -48,6 +48,7 @@
 461	graphic
 462	int
 465	obj
+474	boolean
 506	string
 509	int
 510	string
@@ -717,3 +718,4 @@
 1910	int
 1914	int
 1935	int
+1937	boolean

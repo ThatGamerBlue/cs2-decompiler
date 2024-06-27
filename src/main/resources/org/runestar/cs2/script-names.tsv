@@ -3996,7 +3996,6 @@
 5975	[proc,settings_questlist_completed_toggle]
 5976	[proc,settings_questlist_miniquests_toggle]
 5977	[proc,settings_questlist_quests_toggle]
-5985	[proc,cr_utility_module_v1_init]
 5989	[proc,quest_requirement_check]
 5991	[proc,quest_requirement_check_quest]
 5992	[proc,quest_requirement_check_skill]
