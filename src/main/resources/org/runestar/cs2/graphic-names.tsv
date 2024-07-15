@@ -4409,3 +4409,15 @@
 5586	combination_lock_arrows,5
 5587	combination_lock_arrows,6
 5588	combination_lock_arrows,7
+5609	standard_health_90,0
+5610	standard_health_90,1
+5611	standard_shield_90,0
+5612	standard_shield_90,1
+5613	standard_armour_90,0
+5614	standard_armour_90,1
+5615	standard_charge_90,0
+5616	standard_charge_90,1
+5617	standard_prayer_90,0
+5618	standard_prayer_90,1
+5619	standard_poison_90,0
+5620	standard_poison_90,1
