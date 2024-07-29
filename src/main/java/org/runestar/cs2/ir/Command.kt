@@ -15,6 +15,7 @@ import org.runestar.cs2.ir.PLAYER_UID as _PLAYER_UID
 import org.runestar.cs2.bin.string
 import org.runestar.cs2.util.Loader
 import org.runestar.cs2.util.loadNotNull
+import java.util.regex.Pattern
 
 interface Command {
 
@@ -30,6 +31,7 @@ interface Command {
             add(Enum)
             add(Proc)
             add(Return)
+            add(RuneliteCallback)
             add(JoinString)
             add(DefineArray)
             add(PushArrayInt)
@@ -1186,6 +1188,46 @@ interface Command {
             val opDefs = Expression(state.push(defStackTypes))
             assign(state.typings.of(operation), state.typings.of(opDefs))
             return Instruction.Assignment(opDefs, operation)
+        }
+    }
+
+    object RuneliteCallback : Command {
+        override val id = RUNELITE_CALLBACK
+
+        override fun translate(state: InterpreterState): Instruction {
+            val argTypes: ArrayList<Element.Access> = arrayListOf()
+            val returnTypes: List<StackType>
+            val callbackTypeVal = state.pop(StackType.STRING)
+            argTypes.add(0, callbackTypeVal)
+            val callbackStr = (callbackTypeVal.value as? Value.String)?.string ?: "dummy"
+            when (callbackStr) {
+                "mes" -> {
+                    argTypes.add(0, state.pop(StackType.INT))
+                    argTypes.add(0, state.pop(StackType.STRING))
+                    returnTypes = listOf()
+                }
+                "debug" -> {
+                    val debugTypeVal = state.pop(StackType.STRING)
+                    argTypes.add(0, debugTypeVal)
+                    val debugStr = (debugTypeVal.value as? Value.String)?.string ?: "unknown"
+                    val matcher = Pattern.compile("%(.)").matcher(debugStr)
+                    while (matcher.find()) {
+                        val character = matcher.group(1)[0]
+                        if (character == 'i' || character == 'd') {
+                            argTypes.add(0, state.pop(StackType.INT))
+                        } else if (character == 's') {
+                            argTypes.add(0, state.pop(StackType.STRING))
+                        }
+                    }
+                    returnTypes = listOf()
+                }
+                else -> {
+                    // clobber stack values for runelite_callback
+                    // idk how
+                    returnTypes = arrayListOf()
+                }
+            }
+            return Instruction.Assignment(Expression(state.push(returnTypes)), Expression.Operation(returnTypes, id, Expression(argTypes), false))
         }
     }
 
